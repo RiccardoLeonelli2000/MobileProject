@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyFitness</string>
+    <string name="title_activities">Le Mie Attività</string>
+    <string name="title_notifications">Notifiche</string>
+    <string name="profile">Profilo</string>
+    <string name="calendar">Calendario</string>
+</resources>
