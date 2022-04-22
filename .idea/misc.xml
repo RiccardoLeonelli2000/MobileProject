@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_baseline_android_24.xml" value="0.298" />
         <entry key="app/src/main/res/drawable-v24/ic_notifications_black_24dp.xml" value="0.298" />
+        <entry key="app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activities.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/card_home_layout.xml" value="0.1" />
@@ -15,6 +16,7 @@
         <entry key="app/src/main/res/layout/top_app_bar.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/top_app_bar.xml" value="0.35025641025641024" />
+        <entry key="app/src/main/res/menu/top_app_bar_menu.xml" value="0.35025641025641024" />
       </map>
     </option>
   </component>

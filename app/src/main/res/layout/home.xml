@@ -14,4 +14,6 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/card_home_layout"
         />
+
+    <include layout="@layout/top_app_bar"></include>
 </androidx.constraintlayout.widget.ConstraintLayout>
