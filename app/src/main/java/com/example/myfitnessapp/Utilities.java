@@ -15,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.navigation.NavigationBarView;
+
 import java.io.InputStream;
 
 public class Utilities {

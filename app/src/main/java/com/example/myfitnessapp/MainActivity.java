@@ -1,7 +1,9 @@
 package com.example.myfitnessapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -25,15 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.nav_view);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, homeFragment).commit();
+        Utilities.insertFragment(this, new HomeFragment(), HomeFragment.class.getSimpleName());
 
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_notifications);
         badgeDrawable.setVisible(true);
         badgeDrawable.setNumber(8);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, homeFragment).commit();
