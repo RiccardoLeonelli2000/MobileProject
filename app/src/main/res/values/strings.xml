@@ -7,4 +7,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="profile">Profile</string>
     <string name="calendar">Calendar</string>
+    <string name="add_new_workout">New workout</string>
 </resources>

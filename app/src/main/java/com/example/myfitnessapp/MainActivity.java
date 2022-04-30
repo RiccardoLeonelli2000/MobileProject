@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.badge.BadgeDrawable;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, homeFragment).commit();
                         return true;
-                    case R.id.navigation_dashboard:
+                    case R.id.navigation_activities:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, activitiesFragment).commit();
                         return true;
                     case R.id.navigation_notifications:
@@ -55,5 +56,21 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_app_bar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.app_bar_calendar) {
+            Utilities.insertFragment(this, new CalendarFragment(), CalendarFragment.class.getSimpleName());
+            return true;
+        }
+        return false;
     }
 }

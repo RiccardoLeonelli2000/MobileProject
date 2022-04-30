@@ -10,10 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_view"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/card_home_layout"
         />
 
-    <include layout="@layout/top_app_bar"></include>
 </androidx.constraintlayout.widget.ConstraintLayout>
