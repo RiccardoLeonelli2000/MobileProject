@@ -19,14 +19,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivitiesFragment extends Fragment {
+public class WorkoutsFragment extends Fragment {
 
     private WorkoutAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activities, container, false);
+        return inflater.inflate(R.layout.workouts, container, false);
     }
 
     @Override
@@ -34,8 +34,11 @@ public class ActivitiesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         final Activity activity = getActivity();
+
         if (activity != null){
+
             setRecyclerView(getActivity());
+            Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_workouts));
 
             FloatingActionButton floatingActionButton = view.findViewById(R.id.fab_add);
             floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -47,19 +50,19 @@ public class ActivitiesFragment extends Fragment {
             });
         }
         else {
-            Log.e("ActivitiesFragment", "Activity null");
+            Log.e("WorkoutsFragment", "Activity null");
         }
     }
 
 
     private void setRecyclerView(final Activity activity){
-        RecyclerView recyclerView = activity.findViewById(R.id.recycler_view_activities);
+        RecyclerView recyclerView = activity.findViewById(R.id.recycler_view_workouts);
         recyclerView.setHasFixedSize(true);
 
         List<WorkoutItem> list = new ArrayList<>();
-        list.add(new WorkoutItem("ic_baseline_fitness_center_24", "Workout 1"));
-        list.add(new WorkoutItem("ic_baseline_fitness_center_24", "Workout 2"));
-        list.add(new WorkoutItem("ic_baseline_fitness_center_24", "Workout 3"));
+        list.add(new WorkoutItem("Workout 1", "ic_baseline_fitness_center_24", "Petto+Bicipiti"));
+        list.add(new WorkoutItem("Workout 2","ic_baseline_fitness_center_24", "Gambe+Spalle"));
+        list.add(new WorkoutItem("Workout 3","ic_baseline_fitness_center_24", "Schiena+Tricipit"));
 
         this.adapter = new WorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
 
     HomeFragment homeFragment = new HomeFragment();
-    ActivitiesFragment activitiesFragment = new ActivitiesFragment();
+    WorkoutsFragment workoutsFragment = new WorkoutsFragment();
     NotificationsFragment notificationsFragment = new NotificationsFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, homeFragment).commit();
                         return true;
-                    case R.id.navigation_activities:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, activitiesFragment).commit();
+                    case R.id.navigation_workouts:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, workoutsFragment).commit();
                         return true;
                     case R.id.navigation_notifications:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, notificationsFragment).commit();

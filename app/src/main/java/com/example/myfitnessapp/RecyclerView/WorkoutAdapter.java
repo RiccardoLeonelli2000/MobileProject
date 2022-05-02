@@ -28,7 +28,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
     @NonNull
     @Override
     public WorkoutViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_home_layout, parent, false);
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_workout_layout, parent, false);
 
         return new WorkoutViewHolder(layoutView);
     }
@@ -36,7 +36,8 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull WorkoutViewHolder holder, int position) {
         WorkoutItem currentWorkoutItem = workoutItemList.get(position);
-        holder.textView.setText(currentWorkoutItem.getDescription());
+        holder.titleView.setText(currentWorkoutItem.getTitle());
+        holder.descriptionView.setText(currentWorkoutItem.getDescription());
 
         String image = currentWorkoutItem.getImageResource();
         if (image.contains("ic_")){

@@ -3,9 +3,10 @@
     <string name="image_home" translatable="false" />
     <string name="place_title" translatable="false" />
     <string name="title_home_navbar" translatable="false">Home</string>
-    <string name="title_activities">My activities</string>
+    <string name="title_workouts">Workouts</string>
     <string name="title_notifications">Notifications</string>
-    <string name="profile">Profile</string>
+    <string name="title_profile">Profile</string>
     <string name="calendar">Calendar</string>
     <string name="add_new_workout">New workout</string>
+    <string name="title_addWorkout">Add Workout</string>
 </resources>

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +34,7 @@ public class HomeFragment extends Fragment {
 
         final Activity activity = getActivity();
         if (activity != null){
+            Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.app_name));
             setRecyclerView(getActivity());
         }
         else {
@@ -46,8 +48,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<WorkoutItem> list = new ArrayList<>();
-        list.add(new WorkoutItem("ic_baseline_android_24", "Le Tue Attività"));
-        list.add(new WorkoutItem("ic_baseline_android_24", "Calendario"));
+        list.add(new WorkoutItem("card 1", "ic_baseline_android_24", "Le Tue Attività"));
+        list.add(new WorkoutItem("card 2", "ic_baseline_android_24", "Calendario"));
 
         this.adapter = new WorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);

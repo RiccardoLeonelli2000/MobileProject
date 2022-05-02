@@ -9,9 +9,9 @@
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/navigation_activities"
+        android:id="@+id/navigation_workouts"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_activities"
+        android:title="@string/title_workouts"
         app:showAsAction="ifRoom"/>
 
     <item
@@ -23,7 +23,7 @@
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="@string/profile"
+        android:title="@string/title_profile"
         app:showAsAction="ifRoom"/>
 
 </menu>

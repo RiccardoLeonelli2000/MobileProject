@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/single_card"
-    android:layout_margin="16dp"
+    android:layout_margin="10dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/cardview_default_radius"
     app:strokeWidth="1dp"
@@ -17,8 +17,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/workout_title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/place_title"
+            android:layout_margin="3dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+
         <ImageView
-            android:id="@+id/card_imageview"
+            android:id="@+id/workout_imageview"
             android:layout_width="match_parent"
             android:layout_height="108dp"
             android:background="@color/black"
@@ -27,7 +35,7 @@
             android:contentDescription="@string/image_home" />
 
         <TextView
-            android:id="@+id/card_textview"
+            android:id="@+id/workout_description_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/place_title"

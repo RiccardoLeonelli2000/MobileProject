@@ -11,12 +11,14 @@ import com.example.myfitnessapp.R;
 
 public class WorkoutViewHolder extends RecyclerView.ViewHolder {
 
+    TextView titleView;
     ImageView imageView;
-    TextView textView;
+    TextView descriptionView;
 
     public WorkoutViewHolder(@NonNull View itemView) {
         super(itemView);
-        imageView = itemView.findViewById(R.id.card_imageview);
-        textView = itemView.findViewById(R.id.card_textview);
+        titleView = itemView.findViewById(R.id.workout_title_textview);
+        imageView = itemView.findViewById(R.id.workout_imageview);
+        descriptionView = itemView.findViewById(R.id.workout_description_textview);
     }
 }
