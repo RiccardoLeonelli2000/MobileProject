@@ -12,14 +12,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myfitnessapp.RecyclerView.CardAdapter;
+import com.example.myfitnessapp.RecyclerView.WorkoutAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private CardAdapter adapter;
+    private WorkoutAdapter adapter;
 
     @Nullable
     @Override
@@ -45,11 +45,11 @@ public class HomeFragment extends Fragment {
         RecyclerView recyclerView = activity.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
 
-        List<CardItem> list = new ArrayList<>();
-        list.add(new CardItem("ic_baseline_android_24", "Le Tue Attività"));
-        list.add(new CardItem("ic_baseline_android_24", "Calendario"));
+        List<WorkoutItem> list = new ArrayList<>();
+        list.add(new WorkoutItem("ic_baseline_android_24", "Le Tue Attività"));
+        list.add(new WorkoutItem("ic_baseline_android_24", "Calendario"));
 
-        this.adapter = new CardAdapter(list, activity);
+        this.adapter = new WorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }
 }

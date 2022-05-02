@@ -10,35 +10,35 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myfitnessapp.CardItem;
+import com.example.myfitnessapp.WorkoutItem;
 import com.example.myfitnessapp.R;
 
 import java.util.List;
 
-public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
+public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
 
-    private List<CardItem> cardItemList;
+    private List<WorkoutItem> workoutItemList;
     Activity activity;
 
-    public CardAdapter(List<CardItem> list, Activity activity) {
-        this.cardItemList = list;
+    public WorkoutAdapter(List<WorkoutItem> list, Activity activity) {
+        this.workoutItemList = list;
         this.activity = activity;
     }
 
     @NonNull
     @Override
-    public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public WorkoutViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_home_layout, parent, false);
 
-        return new CardViewHolder(layoutView);
+        return new WorkoutViewHolder(layoutView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
-        CardItem currentCardItem = cardItemList.get(position);
-        holder.textView.setText(currentCardItem.getDescription());
+    public void onBindViewHolder(@NonNull WorkoutViewHolder holder, int position) {
+        WorkoutItem currentWorkoutItem = workoutItemList.get(position);
+        holder.textView.setText(currentWorkoutItem.getDescription());
 
-        String image = currentCardItem.getImageResource();
+        String image = currentWorkoutItem.getImageResource();
         if (image.contains("ic_")){
             Drawable drawable = AppCompatResources.getDrawable(activity, activity.getResources().getIdentifier(image, "drawable", activity.getPackageName()));
             holder.imageView.setImageDrawable(drawable);
@@ -47,6 +47,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder> {
 
     @Override
     public int getItemCount() {
-        return cardItemList.size();
+        return workoutItemList.size();
     }
 }

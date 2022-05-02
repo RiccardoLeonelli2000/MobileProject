@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.R;
 
-public class CardViewHolder extends RecyclerView.ViewHolder {
+public class WorkoutViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
     TextView textView;
 
-    public CardViewHolder(@NonNull View itemView) {
+    public WorkoutViewHolder(@NonNull View itemView) {
         super(itemView);
         imageView = itemView.findViewById(R.id.card_imageview);
         textView = itemView.findViewById(R.id.card_textview);

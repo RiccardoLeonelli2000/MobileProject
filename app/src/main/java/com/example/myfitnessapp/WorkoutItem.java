@@ -1,10 +1,10 @@
 package com.example.myfitnessapp;
 
-public class CardItem {
+public class WorkoutItem {
     private String imageResource;
     private String description;
 
-    public CardItem(String imageResource, String description){
+    public WorkoutItem(String imageResource, String description){
         this.imageResource = imageResource;
         this.description = description;
     }
