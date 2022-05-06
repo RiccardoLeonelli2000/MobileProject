@@ -5,7 +5,7 @@ public class WorkoutItem {
     private String imageResource;
     private String description;
 
-    public WorkoutItem(String title,String imageResource, String description){
+    public WorkoutItem(String title, String imageResource, String description){
         this.title = title;
         this.imageResource = imageResource;
         this.description = description;

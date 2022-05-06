@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myfitnessapp.RecyclerView.WorkoutAdapter;
+import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class WorkoutsFragment extends Fragment {
 
-    private WorkoutAdapter adapter;
+    private AllWorkoutAdapter adapter;
 
     @Nullable
     @Override
@@ -64,7 +64,7 @@ public class WorkoutsFragment extends Fragment {
         list.add(new WorkoutItem("Workout 2","ic_baseline_fitness_center_24", "Gambe+Spalle"));
         list.add(new WorkoutItem("Workout 3","ic_baseline_fitness_center_24", "Schiena+Tricipit"));
 
-        this.adapter = new WorkoutAdapter(list, activity);
+        this.adapter = new AllWorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }
 }

@@ -13,14 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myfitnessapp.RecyclerView.WorkoutAdapter;
+import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private WorkoutAdapter adapter;
+    private AllWorkoutAdapter adapter;
 
     @Nullable
     @Override
@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
         list.add(new WorkoutItem("card 1", "ic_baseline_android_24", "Le Tue Attività"));
         list.add(new WorkoutItem("card 2", "ic_baseline_android_24", "Calendario"));
 
-        this.adapter = new WorkoutAdapter(list, activity);
+        this.adapter = new AllWorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }
 }

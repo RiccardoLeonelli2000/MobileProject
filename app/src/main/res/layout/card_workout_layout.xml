@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/single_card"
+    android:id="@+id/workout_card"
     android:layout_margin="10dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/cardview_default_radius"
@@ -22,8 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/place_title"
-            android:layout_margin="3dp"
-            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
 
         <ImageView
             android:id="@+id/workout_imageview"

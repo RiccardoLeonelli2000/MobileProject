@@ -13,8 +13,10 @@
         <entry key="app/src/main/res/drawable/ic_baseline_fitness_center_24.xml" value="0.195" />
         <entry key="app/src/main/res/layout/activities.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/add_workout.xml" value="0.25769927536231885" />
+        <entry key="app/src/main/res/layout/add_exercise.xml" value="0.17299898682877407" />
+        <entry key="app/src/main/res/layout/add_workout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/calendar.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/card_exercise_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_home_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_workout_layout.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/layout/fab_add.xml" value="0.35572916666666665" />
@@ -23,6 +25,8 @@
         <entry key="app/src/main/res/layout/notifications.xml" value="0.1" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/top_app_bar.xml" value="0.17299898682877407" />
+        <entry key="app/src/main/res/layout/workout_details.xml" value="0.11730072463768115" />
+        <entry key="app/src/main/res/layout/workouts.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/top_app_bar.xml" value="0.35025641025641024" />
         <entry key="app/src/main/res/menu/top_app_bar_menu.xml" value="0.35025641025641024" />

@@ -9,4 +9,7 @@
     <string name="calendar">Calendar</string>
     <string name="add_new_workout">New workout</string>
     <string name="title_addWorkout">Add Workout</string>
+    <string name="add_exercise">Add Exercise</string>
+    <string name="images_for_exercise">Images for exercise</string>
+    <string name="elenco_esercizi">Elenco Esercizi</string>
 </resources>
