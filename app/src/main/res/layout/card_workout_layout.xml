@@ -24,6 +24,7 @@
             android:text="@string/place_title"
             android:layout_margin="5dp"
             android:textStyle="bold"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
 
         <ImageView

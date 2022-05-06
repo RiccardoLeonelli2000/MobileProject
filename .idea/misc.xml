@@ -11,10 +11,11 @@
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.298" />
         <entry key="app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.14" />
         <entry key="app/src/main/res/drawable/ic_baseline_fitness_center_24.xml" value="0.195" />
+        <entry key="app/src/main/res/drawable/ic_baseline_fitness_center_24_black.xml" value="0.357" />
         <entry key="app/src/main/res/layout/activities.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/add_exercise.xml" value="0.17299898682877407" />
-        <entry key="app/src/main/res/layout/add_workout.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/add_workout.xml" value="0.22" />
         <entry key="app/src/main/res/layout/calendar.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/card_exercise_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_home_layout.xml" value="0.25" />

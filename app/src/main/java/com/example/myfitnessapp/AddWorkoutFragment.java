@@ -65,9 +65,9 @@ public class AddWorkoutFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<ExerciseItem> list = new ArrayList<>();
-        list.add(new ExerciseItem("Panca Piana", " 5 serie", "10 ripetizioni"));
-        list.add(new ExerciseItem("Chest Press","3 serie", "12 ripetizioni"));
-        list.add(new ExerciseItem("Bicipiti con Bilancere","4 serie", "10 ripetizioni"));
+        list.add(new ExerciseItem("Panca Piana", " 5 serie", "10 ripetizioni", "1 Min"));
+        list.add(new ExerciseItem("Chest Press","3 serie", "12 ripetizioni", "1 Min"));
+        list.add(new ExerciseItem("Bicipiti con Bilancere","4 serie", "10 ripetizioni", "1 Min"));
 
         this.adapter = new WorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
