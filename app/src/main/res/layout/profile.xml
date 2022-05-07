@@ -23,7 +23,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/montserrat_bold"
         android:text="Riccardo Leonelli"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +71,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_bold"
                         android:text="Modify Profile"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
@@ -105,7 +103,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_bold"
                         android:text="Gym"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
@@ -146,7 +143,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_bold"
                         android:text="Message"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
@@ -179,7 +175,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_bold"
                         android:text="Music"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
@@ -220,7 +215,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_bold"
                         android:text="Notifications"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
@@ -253,7 +247,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_bold"
                         android:text="Setting"
                         android:textAlignment="center"
                         android:textColor="@color/white" />
