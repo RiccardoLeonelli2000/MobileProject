@@ -1,16 +1,14 @@
 package com.example.myfitnessapp.RecyclerView;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myfitnessapp.ExerciseItem;
+import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.R;
 
 import java.util.List;

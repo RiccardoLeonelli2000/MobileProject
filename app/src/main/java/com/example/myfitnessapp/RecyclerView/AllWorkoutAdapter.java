@@ -11,7 +11,7 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.R;
-import com.example.myfitnessapp.WorkoutItem;
+import com.example.myfitnessapp.Item.WorkoutItem;
 
 import java.util.List;
 

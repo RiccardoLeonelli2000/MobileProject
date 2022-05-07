@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Item.WorkoutItem;
 import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
 
 import java.util.ArrayList;

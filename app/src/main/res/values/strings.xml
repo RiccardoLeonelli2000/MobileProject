@@ -13,4 +13,5 @@
     <string name="images_for_exercise">Images for exercise</string>
     <string name="elenco_esercizi">Elenco Esercizi</string>
     <string name="workout_name">Workout Name</string>
+    <string name="images_for_notice" />
 </resources>

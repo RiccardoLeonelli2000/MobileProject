@@ -1,4 +1,4 @@
-package com.example.myfitnessapp;
+package com.example.myfitnessapp.Item;
 
 public class ExerciseItem {
     private String title;
