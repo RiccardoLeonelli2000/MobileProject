@@ -1,18 +1,32 @@
 package com.example.myfitnessapp;
 
+import static com.example.myfitnessapp.Utilities.REQUEST_IMAGE_CAPTURE;
+
 import androidx.annotation.NonNull;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.annotation.SuppressLint;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
+import com.example.myfitnessapp.ViewModel.AddViewModel;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity {
+
+
+public class MainActivity extends AppCompatActivity{
+
+
 
     BottomNavigationView bottomNavigationView;
 
@@ -20,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     WorkoutsFragment workoutsFragment = new WorkoutsFragment();
     NotificationsFragment notificationsFragment = new NotificationsFragment();
     ProfileFragment profileFragment = new ProfileFragment();
+
+    private AddViewModel addViewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        addViewModel = new ViewModelProvider(this).get(AddViewModel.class);
+
     }
 
     @Override
@@ -72,5 +92,18 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return false;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+            Bundle bundle = data.getExtras();
+            if (bundle != null){
+                Bitmap imageBitmap = (Bitmap) bundle.get("data");
+
+                addViewModel.setImageBitmap(imageBitmap);
+            }
+        }
     }
 }

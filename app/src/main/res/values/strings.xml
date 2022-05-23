@@ -14,4 +14,17 @@
     <string name="elenco_esercizi">Elenco Esercizi</string>
     <string name="workout_name">Workout Name</string>
     <string name="images_for_notice" />
+    <string name="title_addExercise">Add Exercise</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="bac"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string name="title_details">Workout Details</string>
+    <string name="delete_workout">Delete Workout</string>
+    <string name="modify_profile">Modify Profile</string>
+    <string name="birthday_date">Birthday date</string>
+    <string name="surname">Surname</string>
+    <string name="take_new_image_profile">Take new image profile</string>
+    <string name="name">Name</string>
+    <string name="image_captured">Image Captured</string>
+    <string name="save_profile">Save Profile</string>
 </resources>

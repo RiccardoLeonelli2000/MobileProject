@@ -8,19 +8,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-public class AddExerciseFragment extends Fragment {
-
+public class DetailsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.add_exercise, container,false);
+        return inflater.inflate(R.layout.workout_details, container,false);
     }
 
     @Override
@@ -35,10 +33,10 @@ public class AddExerciseFragment extends Fragment {
 
         final Activity activity = getActivity();
         if (activity != null){
-            Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addExercise));
+            Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_details));
         }
         else {
-            Log.e("AddWorkoutFragment", "Activity null");
+            Log.e("DetailsFragment", "Activity null");
         }
 
     }
@@ -49,3 +47,4 @@ public class AddExerciseFragment extends Fragment {
         menu.findItem(R.id.app_bar_calendar).setVisible(false);
     }
 }
+

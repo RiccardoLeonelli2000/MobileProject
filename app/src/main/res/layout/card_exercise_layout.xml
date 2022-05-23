@@ -43,7 +43,7 @@
         <TextView
             android:id="@+id/exercise_name"
             android:layout_width="0dp"
-            android:layout_height="22dp"
+            android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text=""
             android:textAlignment="center"
@@ -55,16 +55,16 @@
 
         <TextView
             android:id="@+id/exercise_sets"
-            android:layout_width="278dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/exercise_reps"
+            app:layout_constraintBottom_toTopOf="@+id/exercise_weights"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
 
         <TextView
-            android:id="@+id/exercise_reps"
+            android:id="@+id/exercise_weights"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text=""
@@ -76,13 +76,13 @@
 
         <TextView
             android:id="@+id/exercise_rest"
-            android:layout_width="278dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/exercise_reps" />
+            app:layout_constraintTop_toBottomOf="@+id/exercise_weights" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,20 +15,23 @@
         <entry key="app/src/main/res/font/montserrat_bold.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/activities.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/add_event_calendar.xml" value="0.30675675675675673" />
         <entry key="app/src/main/res/layout/add_exercise.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/layout/add_workout.xml" value="0.22" />
         <entry key="app/src/main/res/layout/calendar.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/calendar_cell.xml" value="0.30675675675675673" />
         <entry key="app/src/main/res/layout/card_exercise_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_home_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_notice_layout.xml" value="0.3076576576576577" />
         <entry key="app/src/main/res/layout/card_workout_layout.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/layout/fab_add.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/modify_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/myActivities.xml" value="0.14629629629629629" />
         <entry key="app/src/main/res/layout/notifications.xml" value="0.22" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/top_app_bar.xml" value="0.17299898682877407" />
-        <entry key="app/src/main/res/layout/workout_details.xml" value="0.11730072463768115" />
+        <entry key="app/src/main/res/layout/workout_details.xml" value="0.33" />
         <entry key="app/src/main/res/layout/workouts.xml" value="0.17299898682877407" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/top_app_bar.xml" value="0.35025641025641024" />

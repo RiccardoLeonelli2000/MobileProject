@@ -3,13 +3,13 @@ package com.example.myfitnessapp.Item;
 public class ExerciseItem {
     private String title;
     private String sets;
-    private String reps;
+    private String weights;
     private String rest;
 
-    public ExerciseItem(String title, String sets, String reps, String rest){
+    public ExerciseItem(String title, String sets, String weights, String rest){
         this.title = title;
         this.sets = sets;
-        this.reps = reps;
+        this.weights = weights;
         this.rest = rest;
     }
 
@@ -22,8 +22,8 @@ public class ExerciseItem {
         return sets;
     }
 
-    public String getReps() {
-        return reps;
+    public String getWeights() {
+        return weights;
     }
 
     public String getRest() {

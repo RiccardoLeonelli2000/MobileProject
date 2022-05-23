@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.RecyclerView.WorkoutAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,16 @@ public class AddWorkoutFragment extends Fragment {
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addWorkout));
             setRecyclerView(activity);
+
+            Button button = view.findViewById(R.id.add_exercise_button);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new AddExerciseFragment(),
+                            AddExerciseFragment.class.getSimpleName());
+                }
+            });
+
         }
         else {
             Log.e("AddWorkoutFragment", "Activity null");
@@ -65,9 +77,9 @@ public class AddWorkoutFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<ExerciseItem> list = new ArrayList<>();
-        list.add(new ExerciseItem("Panca Piana", " 5 serie", "10 ripetizioni", "1 Min"));
-        list.add(new ExerciseItem("Chest Press","3 serie", "12 ripetizioni", "1 Min"));
-        list.add(new ExerciseItem("Bicipiti con Bilancere","4 serie", "10 ripetizioni", "1 Min"));
+        list.add(new ExerciseItem("Panca Piana", " 5x5x5x5x5", "100Kg", "1 Min"));
+        list.add(new ExerciseItem("Chest Press","10x10x8x8", "80Kgx80Kgx60Kgx60Kg", "1 Min"));
+        list.add(new ExerciseItem("Bicipiti con Bilancere","10x10x10", "30Kg", "1 30 Min"));
 
         this.adapter = new WorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);

@@ -36,7 +36,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
         ExerciseItem currentExerciseItem = exerciseItemList.get(position);
         holder.titleView.setText(currentExerciseItem.getTitle());
         holder.setsView.setText(currentExerciseItem.getSets());
-        holder.repsView.setText(currentExerciseItem.getReps());
+        holder.weightsView.setText(currentExerciseItem.getWeights());
         holder.restView.setText(currentExerciseItem.getRest());
     }
 

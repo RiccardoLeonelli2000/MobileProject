@@ -22,12 +22,13 @@
             android:layout_height="wrap_content"
             android:background="@color/black"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.29" />
+            app:layout_constraintGuide_percent="0.18" />
 
         <ImageView
             android:id="@+id/exercise_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:background="@color/white"
             android:contentDescription="@string/images_for_notice"
             android:minWidth="48dp"
