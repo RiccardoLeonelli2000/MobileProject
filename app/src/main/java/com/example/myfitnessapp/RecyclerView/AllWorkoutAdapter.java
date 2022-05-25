@@ -37,7 +37,6 @@ public class AllWorkoutAdapter extends RecyclerView.Adapter<AllWorkoutViewHolder
     public void onBindViewHolder(@NonNull AllWorkoutViewHolder holder, int position) {
         WorkoutItem currentWorkoutItem = workoutItemList.get(position);
         holder.titleView.setText(currentWorkoutItem.getTitle());
-        holder.descriptionView.setText(currentWorkoutItem.getDescription());
 
         String image = currentWorkoutItem.getImageResource();
         if (image.contains("ic_")){

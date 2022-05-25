@@ -29,6 +29,14 @@ public class ProfileFragment extends Fragment {
         final Activity activity = getActivity();
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_profile));
+
+            view.findViewById(R.id.modify_profile_card).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new ModifyProfileFragment(),
+                            ModifyProfileFragment.class.getSimpleName());
+                }
+            });
         }
         else {
             Log.e("ProfileFragment", "Activity null");

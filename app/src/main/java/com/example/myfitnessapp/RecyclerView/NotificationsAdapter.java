@@ -8,17 +8,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.R;
 import com.example.myfitnessapp.Item.WorkoutItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsViewHolder> {
 
-    private List<NoticeItem> notificationsItemList;
+    private List<NoticeItem> notificationsItemList = new ArrayList<>();
     Activity activity;
 
     public NotificationsAdapter(List<NoticeItem> list, Activity activity) {
@@ -43,5 +45,13 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsView
     @Override
     public int getItemCount() {
         return notificationsItemList.size();
+    }
+
+    public void setNotifications(List<NoticeItem> list){
+        final NoticeItemDiffCallback diffCallback = new NoticeItemDiffCallback(this.notificationsItemList, list);
+        final DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
+
+        this.notificationsItemList = new ArrayList<>(list);
+        diffResult.dispatchUpdatesTo(this);
     }
 }

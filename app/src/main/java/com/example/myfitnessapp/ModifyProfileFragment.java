@@ -3,8 +3,11 @@ package com.example.myfitnessapp;
 import static com.example.myfitnessapp.Utilities.REQUEST_IMAGE_CAPTURE;
 
 import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -14,6 +17,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +29,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
 import com.example.myfitnessapp.ViewModel.AddViewModel;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class ModifyProfileFragment extends Fragment {
@@ -66,6 +78,7 @@ public class ModifyProfileFragment extends Fragment {
                 @Override
                 public void onChanged(Bitmap bitmap) {
                     imageView.setImageBitmap(bitmap);
+
                 }
             });
 
@@ -74,15 +87,50 @@ public class ModifyProfileFragment extends Fragment {
             saveProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Bitmap bitmap = addViewModel.getImageBitmap().getValue();
+                    if (bitmap != null) {
+                        saveImage(bitmap, activity);
+                    }
                     Utilities.insertFragment((AppCompatActivity) activity, new ProfileFragment(),
                             ProfileFragment.class.getSimpleName());
                 }
             });
+
+            TextInputLayout nameInputLayout = view.findViewById(R.id.name_textinput);
+            EditText nemeEditText = view.findViewById(R.id.name_edittext);
+
+            TextInputLayout surnameInputLayout = view.findViewById(R.id.surname_textinput);
+            EditText surnameEditText = view.findViewById(R.id.surname_edittext);
+
+
         }
         else {
             Log.e("ModifyProfile", "Activity null");
         }
 
+    }
+
+    private void saveImage(Bitmap bitmap, Activity activity) {
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.ITALY).format(new Date());
+        String name = "JPEG_"+timestamp+".jpg";
+        ContentResolver contentResolver = activity.getContentResolver();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, name);
+        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/jpg");
+
+        Uri imageURI = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
+        OutputStream outputStream = null;
+        try {
+            outputStream = contentResolver.openOutputStream(imageURI);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+            try {
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

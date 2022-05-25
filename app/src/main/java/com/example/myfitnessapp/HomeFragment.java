@@ -49,8 +49,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<WorkoutItem> list = new ArrayList<>();
-        list.add(new WorkoutItem("card 1", "ic_baseline_android_24", "Le Tue Attività"));
-        list.add(new WorkoutItem("card 2", "ic_baseline_android_24", "Calendario"));
+        list.add(new WorkoutItem("card 1", "ic_baseline_android_24"));
+        list.add(new WorkoutItem("card 2", "ic_baseline_android_24"));
 
         this.adapter = new AllWorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);

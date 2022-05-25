@@ -11,6 +11,8 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.myfitnessapp.Database.Repository;
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.R;
 
 public class AddViewModel extends AndroidViewModel {
@@ -18,10 +20,12 @@ public class AddViewModel extends AndroidViewModel {
     private final MutableLiveData<Bitmap> imageBitmap = new MutableLiveData<>();
     private Application application;
 
+    private Repository repository;
+
     public AddViewModel(@NonNull Application application) {
         super(application);
-        this.application = application;
-        initializeBitmap();
+        repository = new Repository(application);
+
 
     }
 
@@ -38,5 +42,9 @@ public class AddViewModel extends AndroidViewModel {
         Bitmap bitmap = drawableToBitmap(drawable);
 
         imageBitmap.setValue(bitmap);
+    }
+
+    public void addNoticeItem(NoticeItem noticeItem){
+        repository.addNotice(noticeItem);
     }
 }

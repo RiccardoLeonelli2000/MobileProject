@@ -1,14 +1,27 @@
 package com.example.myfitnessapp.Item;
 
-public class WorkoutItem {
-    private String title;
-    private String imageResource;
-    private String description;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-    public WorkoutItem(String title, String imageResource, String description){
+@Entity(tableName = "Workout")
+public class WorkoutItem {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "workout_id")
+    private int workoutId;
+
+    @ColumnInfo(name = "titleWorkout")
+    private String title;
+
+    @ColumnInfo(name = "image")
+    private String imageResource;
+
+
+    public WorkoutItem(String title, String imageResource){
         this.title = title;
         this.imageResource = imageResource;
-        this.description = description;
+
     }
 
     public String getImageResource() {
@@ -17,8 +30,12 @@ public class WorkoutItem {
 
     public  String getTitle() { return title; }
 
-    public String getDescription() {
-        return description;
+
+    public int getWorkoutId() {
+        return workoutId;
     }
 
+    public void setWorkoutId(int workoutId) {
+        this.workoutId = workoutId;
+    }
 }

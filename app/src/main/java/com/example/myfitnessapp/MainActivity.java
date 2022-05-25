@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity{
             Bundle bundle = data.getExtras();
             if (bundle != null){
                 Bitmap imageBitmap = (Bitmap) bundle.get("data");
-
                 addViewModel.setImageBitmap(imageBitmap);
             }
         }

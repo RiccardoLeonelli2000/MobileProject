@@ -36,12 +36,5 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic"
             android:contentDescription="@string/image_home" />
 
-        <TextView
-            android:id="@+id/workout_description_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/place_title"
-            android:layout_margin="3dp"
-            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>
