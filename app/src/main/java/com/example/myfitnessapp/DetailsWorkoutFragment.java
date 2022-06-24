@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-public class DetailsFragment extends Fragment {
+public class DetailsWorkoutFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,10 +33,10 @@ public class DetailsFragment extends Fragment {
 
         final Activity activity = getActivity();
         if (activity != null){
-            Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_details));
+            Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_detailsWorkout));
         }
         else {
-            Log.e("DetailsFragment", "Activity null");
+            Log.e("DetailsWorkoutFragment", "Activity null");
         }
 
     }

@@ -37,6 +37,23 @@ public class ProfileFragment extends Fragment {
                             ModifyProfileFragment.class.getSimpleName());
                 }
             });
+
+            view.findViewById(R.id.notfications_card).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new NotificationsFragment(),
+                            NotificationsFragment.class.getSimpleName());
+                }
+            });
+
+            view.findViewById(R.id.gym_localization_card).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new GymFragment(),
+                            GymFragment.class.getSimpleName());
+                }
+            });
+
         }
         else {
             Log.e("ProfileFragment", "Activity null");

@@ -4,19 +4,25 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
+import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.Item.NoticeItem;
+import com.example.myfitnessapp.Item.WorkoutItem;
 
 import java.util.List;
 
-public class Repository {
+public class NoticeItemRepository {
 
     private NoticeItemDAO noticeItemDAO;
     private LiveData<List<NoticeItem>> notificationsList;
 
-    public Repository(Application application){
+
+
+    public NoticeItemRepository(Application application){
         MyFitnessDatabase db = MyFitnessDatabase.getDatabase(application);
         noticeItemDAO = db.noticeItemDAO();
         notificationsList = noticeItemDAO.getNotifications();
+
+
     }
 
     public void addNotice(NoticeItem noticeItem){
@@ -31,6 +37,8 @@ public class Repository {
     public LiveData<List<NoticeItem>> getNotificationsList() {
         return notificationsList;
     }
+
+
 
 
 

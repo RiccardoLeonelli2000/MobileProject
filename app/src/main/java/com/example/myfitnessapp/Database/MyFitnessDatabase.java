@@ -18,6 +18,8 @@ import java.util.concurrent.Executors;
 public abstract class MyFitnessDatabase extends RoomDatabase {
 
     public abstract NoticeItemDAO noticeItemDAO();
+    public abstract WorkoutItemDAO workoutItemDAO();
+    public abstract ExerciseItemDAO exerciseItemDAO();
 
     private static volatile MyFitnessDatabase INSTANCE;
 
