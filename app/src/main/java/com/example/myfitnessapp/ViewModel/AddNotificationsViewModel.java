@@ -15,14 +15,14 @@ import com.example.myfitnessapp.Database.NoticeItemRepository;
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.R;
 
-public class AddViewModel extends AndroidViewModel {
+public class AddNotificationsViewModel extends AndroidViewModel {
 
     private final MutableLiveData<Bitmap> imageBitmap = new MutableLiveData<>();
     private Application application;
 
     private NoticeItemRepository noticeItemRepository;
 
-    public AddViewModel(@NonNull Application application) {
+    public AddNotificationsViewModel(@NonNull Application application) {
         super(application);
         noticeItemRepository = new NoticeItemRepository(application);
 

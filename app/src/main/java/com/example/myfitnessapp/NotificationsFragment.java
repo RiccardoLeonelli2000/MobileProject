@@ -14,25 +14,21 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.NoticeItem;
-import com.example.myfitnessapp.Item.WorkoutItem;
-import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
-import com.example.myfitnessapp.RecyclerView.NoticeItemDiffCallback;
 import com.example.myfitnessapp.RecyclerView.NotificationsAdapter;
-import com.example.myfitnessapp.ViewModel.ListViewModel;
+import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationsFragment extends Fragment {
     private NotificationsAdapter adapter;
-    private ListViewModel listViewModel;
+    private ListNotificationsViewModel listNotificationsViewModel;
 
     @Nullable
     @Override
@@ -49,8 +45,8 @@ public class NotificationsFragment extends Fragment {
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_notifications));
             setRecyclerView(activity);
 
-            listViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListViewModel.class);
-            listViewModel.getNotificationsList().observe(activity, new Observer<List<NoticeItem>>() {
+            listNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListNotificationsViewModel.class);
+            listNotificationsViewModel.getNotificationsList().observe(activity, new Observer<List<NoticeItem>>() {
                 @Override
                 public void onChanged(List<NoticeItem> cardItems) {
                     adapter.setNotifications(cardItems);

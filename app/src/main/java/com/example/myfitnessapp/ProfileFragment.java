@@ -54,6 +54,14 @@ public class ProfileFragment extends Fragment {
                 }
             });
 
+            view.findViewById(R.id.settings_card).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new SettingsFragment(),
+                            SettingsFragment.class.getSimpleName());
+                }
+            });
+
         }
         else {
             Log.e("ProfileFragment", "Activity null");

@@ -52,6 +52,8 @@ public class AddWorkoutFragment extends Fragment {
                 }
             });
 
+
+
         }
         else {
             Log.e("AddWorkoutFragment", "Activity null");

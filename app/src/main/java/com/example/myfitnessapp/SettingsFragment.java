@@ -37,7 +37,7 @@ public class SettingsFragment extends Fragment {
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_settings));
         }
         else {
-            Log.e("GymFragment", "Activity null");
+            Log.e("SettingsFragment", "Activity null");
         }
 
     }

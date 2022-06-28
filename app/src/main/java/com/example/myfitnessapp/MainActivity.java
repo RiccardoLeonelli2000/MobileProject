@@ -17,7 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-import com.example.myfitnessapp.ViewModel.AddViewModel;
+import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity{
     NotificationsFragment notificationsFragment = new NotificationsFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
-    private AddViewModel addViewModel;
+    private AddNotificationsViewModel addNotificationsViewModel;
 
 
     @Override
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        addViewModel = new ViewModelProvider(this).get(AddViewModel.class);
+        addNotificationsViewModel = new ViewModelProvider(this).get(AddNotificationsViewModel.class);
 
     }
 
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity{
             Bundle bundle = data.getExtras();
             if (bundle != null){
                 Bitmap imageBitmap = (Bitmap) bundle.get("data");
-                addViewModel.setImageBitmap(imageBitmap);
+                addNotificationsViewModel.setImageBitmap(imageBitmap);
             }
         }
     }

@@ -28,7 +28,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
-import com.example.myfitnessapp.ViewModel.AddViewModel;
+import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.FileNotFoundException;
@@ -71,10 +71,10 @@ public class ModifyProfileFragment extends Fragment {
                 }
             });
 
-            AddViewModel addViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddViewModel.class);
+            AddNotificationsViewModel addNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddNotificationsViewModel.class);
             ImageView imageView = view.findViewById(R.id.picture_displayed_imageview);
 
-            addViewModel.getImageBitmap().observe(getViewLifecycleOwner(), new Observer<Bitmap>() {
+            addNotificationsViewModel.getImageBitmap().observe(getViewLifecycleOwner(), new Observer<Bitmap>() {
                 @Override
                 public void onChanged(Bitmap bitmap) {
                     imageView.setImageBitmap(bitmap);
@@ -87,7 +87,7 @@ public class ModifyProfileFragment extends Fragment {
             saveProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Bitmap bitmap = addViewModel.getImageBitmap().getValue();
+                    Bitmap bitmap = addNotificationsViewModel.getImageBitmap().getValue();
                     if (bitmap != null) {
                         saveImage(bitmap, activity);
                     }
