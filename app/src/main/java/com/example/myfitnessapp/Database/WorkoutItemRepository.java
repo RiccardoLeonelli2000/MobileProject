@@ -36,4 +36,9 @@ public class WorkoutItemRepository {
     public LiveData<List<WorkoutItem>> getWorkouts() {
         return this.workouts;
     }
+
+    public int getLastWorkoutId(){
+        return workoutItemDAO.getLastWorkoutId();
+    }
+
 }

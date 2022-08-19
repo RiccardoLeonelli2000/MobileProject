@@ -5,7 +5,9 @@ import static com.example.myfitnessapp.Utilities.REQUEST_IMAGE_CAPTURE;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -28,6 +30,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.example.myfitnessapp.Item.ProfileItem;
 import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -60,6 +63,7 @@ public class ModifyProfileFragment extends Fragment {
         if (activity != null){
 
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.modify_profile));
+            SharedPreferences sharedPreferences = activity.getPreferences(Context.MODE_PRIVATE);
 
             view.findViewById(R.id.capture_button).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -72,15 +76,25 @@ public class ModifyProfileFragment extends Fragment {
             });
 
             AddNotificationsViewModel addNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddNotificationsViewModel.class);
-            ImageView imageView = view.findViewById(R.id.picture_displayed_imageview);
+            ImageView modifyImageView = view.findViewById(R.id.picture_displayed_imageview);
+            ImageView profileImageView = view.findViewById(R.id.picture_profile); //impostare immagine profilo in profile.xml TODO
 
             addNotificationsViewModel.getImageBitmap().observe(getViewLifecycleOwner(), new Observer<Bitmap>() {
                 @Override
                 public void onChanged(Bitmap bitmap) {
-                    imageView.setImageBitmap(bitmap);
+                    modifyImageView.setImageBitmap(bitmap);
 
                 }
             });
+
+            TextInputLayout nameInputLayout = view.findViewById(R.id.name_textinput);
+            EditText nameEditText = view.findViewById(R.id.name_edittext);
+
+            TextInputLayout surnameInputLayout = view.findViewById(R.id.surname_textinput);
+            EditText surnameEditText = view.findViewById(R.id.surname_edittext);
+
+            TextInputLayout dateInputLayout = view.findViewById(R.id.birthday_date_textinput);
+            EditText dateEditText = view.findViewById(R.id.birthday_date_edittext);
 
 
             Button saveProfile = view.findViewById(R.id.modify_profile_button);
@@ -96,11 +110,7 @@ public class ModifyProfileFragment extends Fragment {
                 }
             });
 
-            TextInputLayout nameInputLayout = view.findViewById(R.id.name_textinput);
-            EditText nemeEditText = view.findViewById(R.id.name_edittext);
 
-            TextInputLayout surnameInputLayout = view.findViewById(R.id.surname_textinput);
-            EditText surnameEditText = view.findViewById(R.id.surname_edittext);
 
 
         }

@@ -38,4 +38,5 @@ public class WorkoutItem {
     public void setWorkoutId(int workoutId) {
         this.workoutId = workoutId;
     }
+
 }

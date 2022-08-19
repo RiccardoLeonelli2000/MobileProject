@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.RecyclerView.WorkoutAdapter;
+import com.example.myfitnessapp.ViewModel.AddWorkoutViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -26,6 +27,8 @@ import java.util.List;
 public class AddWorkoutFragment extends Fragment {
 
     private WorkoutAdapter adapter;
+
+    private int workout_id;
 
     @Nullable
     @Override
@@ -86,4 +89,6 @@ public class AddWorkoutFragment extends Fragment {
         this.adapter = new WorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }
+
+
 }

@@ -15,7 +15,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.myfitnessapp.ViewModel.AddWorkoutViewModel;
+import com.google.android.material.textfield.TextInputEditText;
+
 public class AddExerciseFragment extends Fragment {
+
+
+    private AddWorkoutViewModel addWorkoutViewModel;
+    private int workoutId;
 
     @Nullable
     @Override
@@ -36,6 +43,15 @@ public class AddExerciseFragment extends Fragment {
         final Activity activity = getActivity();
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addExercise));
+
+            //workoutId = getLastWorkoutId()+1; TODO
+
+            TextInputEditText titleExercise = view.findViewById(R.id.title_exercise_edittext);
+            TextInputEditText repsExercise = view.findViewById(R.id.sets_exercise_edittext);
+            TextInputEditText weightsExercise = view.findViewById(R.id.weights_exercise_edittext);
+            TextInputEditText restExercise = view.findViewById(R.id.rest_exercise_edittext);
+
+
         }
         else {
             Log.e("AddWorkoutFragment", "Activity null");
@@ -47,5 +63,9 @@ public class AddExerciseFragment extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.findItem(R.id.app_bar_calendar).setVisible(false);
+    }
+
+    public int getLastWorkoutId(){
+        return this.addWorkoutViewModel.getLastWorkoutId();
     }
 }
