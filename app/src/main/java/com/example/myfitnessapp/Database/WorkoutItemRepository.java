@@ -37,8 +37,6 @@ public class WorkoutItemRepository {
         return this.workouts;
     }
 
-    public int getLastWorkoutId(){
-        return workoutItemDAO.getLastWorkoutId();
-    }
+
 
 }

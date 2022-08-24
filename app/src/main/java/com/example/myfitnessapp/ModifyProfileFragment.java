@@ -96,7 +96,7 @@ public class ModifyProfileFragment extends Fragment {
             EditText dateEditText = view.findViewById(R.id.birthday_date_edittext);
 
 
-            Button saveProfile = view.findViewById(R.id.modify_profile_button);
+            Button saveProfile = view.findViewById(R.id.add_exercise_button2);
             saveProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

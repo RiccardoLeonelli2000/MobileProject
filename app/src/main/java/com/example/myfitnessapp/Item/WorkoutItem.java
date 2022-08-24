@@ -14,18 +14,10 @@ public class WorkoutItem {
     @ColumnInfo(name = "titleWorkout")
     private String title;
 
-    @ColumnInfo(name = "image")
-    private String imageResource;
 
-
-    public WorkoutItem(String title, String imageResource){
+    public WorkoutItem(String title){
         this.title = title;
-        this.imageResource = imageResource;
 
-    }
-
-    public String getImageResource() {
-        return imageResource;
     }
 
     public  String getTitle() { return title; }

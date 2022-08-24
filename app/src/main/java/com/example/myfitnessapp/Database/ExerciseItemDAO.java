@@ -23,5 +23,8 @@ public interface ExerciseItemDAO {
     @Query("SELECT * FROM Exercise WHERE workoutId = :my_workout_id ORDER BY exercise_id")
     LiveData<List<ExerciseItem>> getExercisesInWorkout(int my_workout_id);
 
+    @Transaction
+    @Query("SELECT MAX(workout_id) FROM Workout")
+    int getLastWorkoutId();
 
 }

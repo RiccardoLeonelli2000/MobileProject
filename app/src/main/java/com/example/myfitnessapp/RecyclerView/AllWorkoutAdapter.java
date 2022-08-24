@@ -38,7 +38,7 @@ public class AllWorkoutAdapter extends RecyclerView.Adapter<AllWorkoutViewHolder
         WorkoutItem currentWorkoutItem = workoutItemList.get(position);
         holder.titleView.setText(currentWorkoutItem.getTitle());
 
-        String image = currentWorkoutItem.getImageResource();
+        String image = "ic_baseline_fitness_center_24";
         if (image.contains("ic_")){
             Drawable drawable = AppCompatResources.getDrawable(activity, activity.getResources().getIdentifier(image, "drawable", activity.getPackageName()));
             holder.imageView.setImageDrawable(drawable);

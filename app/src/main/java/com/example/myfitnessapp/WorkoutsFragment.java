@@ -61,9 +61,9 @@ public class WorkoutsFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<WorkoutItem> list = new ArrayList<>();
-        list.add(new WorkoutItem("Workout 1", "ic_baseline_fitness_center_24"));
-        list.add(new WorkoutItem("Workout 2","ic_baseline_fitness_center_24"));
-        list.add(new WorkoutItem("Workout 3","ic_baseline_fitness_center_24"));
+        list.add(new WorkoutItem("Workout 1"));
+        list.add(new WorkoutItem("Workout 2"));
+        list.add(new WorkoutItem("Workout 3"));
 
         this.adapter = new AllWorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);

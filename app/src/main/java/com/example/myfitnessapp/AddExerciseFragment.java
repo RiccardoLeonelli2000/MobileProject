@@ -14,14 +14,23 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.example.myfitnessapp.Item.ExerciseItem;
+import com.example.myfitnessapp.Item.WorkoutItem;
+import com.example.myfitnessapp.ViewModel.AddExerciseViewModel;
 import com.example.myfitnessapp.ViewModel.AddWorkoutViewModel;
 import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.List;
 
 public class AddExerciseFragment extends Fragment {
 
 
-    private AddWorkoutViewModel addWorkoutViewModel;
+    private AddExerciseViewModel exerciseViewModel;
+    private AddWorkoutViewModel workoutViewModel;
     private int workoutId;
 
     @Nullable
@@ -44,12 +53,27 @@ public class AddExerciseFragment extends Fragment {
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addExercise));
 
-            //workoutId = getLastWorkoutId()+1; TODO
+            exerciseViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddExerciseViewModel.class);
+            workoutId = exerciseViewModel.getLastWorkoutId();
 
             TextInputEditText titleExercise = view.findViewById(R.id.title_exercise_edittext);
             TextInputEditText repsExercise = view.findViewById(R.id.sets_exercise_edittext);
             TextInputEditText weightsExercise = view.findViewById(R.id.weights_exercise_edittext);
             TextInputEditText restExercise = view.findViewById(R.id.rest_exercise_edittext);
+            view.findViewById(R.id.add_exercise_button2).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if (titleExercise.getText() != null && repsExercise.getText() != null
+                            && weightsExercise.getText() != null && restExercise.getText() != null){
+                        ExerciseItem newExerciseItem = new ExerciseItem(titleExercise.getText().toString(), repsExercise.getText().toString(),weightsExercise.getText().toString(),restExercise.getText().toString());
+                        exerciseViewModel.addExerciseItem(newExerciseItem,workoutId);
+                        ((AppCompatActivity) activity).getSupportFragmentManager().popBackStack();
+                    }
+
+                }
+            });
+
 
 
         }
@@ -65,7 +89,4 @@ public class AddExerciseFragment extends Fragment {
         menu.findItem(R.id.app_bar_calendar).setVisible(false);
     }
 
-    public int getLastWorkoutId(){
-        return this.addWorkoutViewModel.getLastWorkoutId();
-    }
 }

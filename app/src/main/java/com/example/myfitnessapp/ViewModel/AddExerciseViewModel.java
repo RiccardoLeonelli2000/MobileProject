@@ -34,4 +34,8 @@ public class AddExerciseViewModel extends AndroidViewModel {
     public void addExerciseItem(ExerciseItem exerciseItem, int workout_id){
         exerciseItemRepository.addExerciseToWorkout(exerciseItem, workout_id);
     }
+
+    public int getLastWorkoutId(){
+        return exerciseItemRepository.getLastWorkoutId();
+    }
 }

@@ -25,8 +25,6 @@ public interface WorkoutItemDAO {
     @Query("SELECT * FROM Workout WHERE workout_id = :my_workout_id")
     WorkoutItem getWorkoutById(int my_workout_id);
 
-    @Query("SELECT MAX(workout_id) FROM Workout")
-    int getLastWorkoutId();
 
 
 

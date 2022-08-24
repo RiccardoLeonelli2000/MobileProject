@@ -49,7 +49,7 @@ public class WorkoutItemDiffCallback extends DiffUtil.Callback {
     public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
         final WorkoutItem oldItem = oldWorkouts.get(oldItemPosition);
         final WorkoutItem newItem = newWorkouts.get(newItemPosition);
-        return oldItem.getTitle().equals(newItem.getTitle()) && oldItem.getImageResource().equals(newItem.getImageResource());
+        return oldItem.getTitle().equals(newItem.getTitle());
     }
 
     @Nullable
