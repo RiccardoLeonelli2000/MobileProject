@@ -20,6 +20,7 @@ public abstract class MyFitnessDatabase extends RoomDatabase {
     public abstract NoticeItemDAO noticeItemDAO();
     public abstract WorkoutItemDAO workoutItemDAO();
     public abstract ExerciseItemDAO exerciseItemDAO();
+    public abstract ProfileItemDAO profileItemDAO();
 
     private static volatile MyFitnessDatabase INSTANCE;
 

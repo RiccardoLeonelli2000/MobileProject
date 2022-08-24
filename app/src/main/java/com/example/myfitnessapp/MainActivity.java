@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity{
     HomeFragment homeFragment = new HomeFragment();
     WorkoutsFragment workoutsFragment = new WorkoutsFragment();
     NotificationsFragment notificationsFragment = new NotificationsFragment();
-    ProfileFragment profileFragment = new ProfileFragment();
+    HomeFragment profileFragment = new HomeFragment();
 
     private AddNotificationsViewModel addNotificationsViewModel;
 
@@ -64,9 +64,6 @@ public class MainActivity extends AppCompatActivity{
                         return true;
                     case R.id.navigation_notifications:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, notificationsFragment).commit();
-                        return true;
-                    case R.id.navigation_profile:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, profileFragment).commit();
                         return true;
                 }
 

@@ -30,7 +30,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
-import com.example.myfitnessapp.Item.ProfileItem;
 import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -105,8 +104,8 @@ public class ModifyProfileFragment extends Fragment {
                     if (bitmap != null) {
                         saveImage(bitmap, activity);
                     }
-                    Utilities.insertFragment((AppCompatActivity) activity, new ProfileFragment(),
-                            ProfileFragment.class.getSimpleName());
+                    Utilities.insertFragment((AppCompatActivity) activity, new HomeFragment(),
+                            HomeFragment.class.getSimpleName());
                 }
             });
 

@@ -20,10 +20,4 @@
         android:title="@string/title_notifications"
         app:showAsAction="ifRoom"/>
 
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="@string/title_profile"
-        app:showAsAction="ifRoom"/>
-
 </menu>
