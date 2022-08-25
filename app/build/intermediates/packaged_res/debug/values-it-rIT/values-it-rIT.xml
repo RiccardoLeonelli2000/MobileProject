@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add">Aggiungi</string>
+    <string name="add_exercise">Aggiungi Esercizio</string>
+    <string name="add_new_workout">Nuovo Allenamento</string>
+    <string name="app_name">MyFitness</string>
+    <string name="birthday_date">Data di Nascita</string>
+    <string name="calendar">Calendario</string>
+    <string name="delete_workout">Elimina Allenamento</string>
+    <string name="elenco_esercizi">Elenco Esercizi</string>
+    <string name="images_for_exercise">Immagine Esercizio</string>
+    <string name="images_for_notice">Immagine Notifica</string>
+    <string name="modify_profile">Modifica Profilo</string>
+    <string name="name">Nome</string>
+    <string name="name_exercise">Nome Esercizio</string>
+    <string name="rest">Recupero (min)</string>
+    <string name="save_profile">Salva Profilo</string>
+    <string name="sets">Serie</string>
+    <string name="surname">Cognome</string>
+    <string name="take_new_image_profile">Scatta nuova Immagine</string>
+    <string name="title_addExercise">Aggiungi Esercizio</string>
+    <string name="title_addWorkout">Nuovo Allenamento</string>
+    <string name="title_detailsExercise">Dettagli Eserczio</string>
+    <string name="title_detailsWorkout">Dettagli Allenamento</string>
+    <string name="title_gymPos">Palestra</string>
+    <string name="title_notifications">Notifiche</string>
+    <string name="title_profile">Profilo</string>
+    <string name="title_settings">Impostazioni</string>
+    <string name="title_workouts">Allenamenti</string>
+    <string name="weights">Peso (Kg)</string>
+    <string name="workout_name">Nome Allenamento</string>
+</resources>

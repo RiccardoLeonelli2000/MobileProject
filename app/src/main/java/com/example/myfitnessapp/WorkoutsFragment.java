@@ -11,10 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
 import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
+import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
+import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -23,6 +31,7 @@ import java.util.List;
 public class WorkoutsFragment extends Fragment {
 
     private AllWorkoutAdapter adapter;
+    private ListWorkoutViewModel listWorkoutViewModel;
 
     @Nullable
     @Override
@@ -34,11 +43,11 @@ public class WorkoutsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final Activity activity = getActivity();
+        final FragmentActivity activity = getActivity();
 
         if (activity != null){
 
-            setRecyclerView(getActivity());
+
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_workouts));
 
             FloatingActionButton floatingActionButton = view.findViewById(R.id.fab_add);
@@ -47,6 +56,15 @@ public class WorkoutsFragment extends Fragment {
                 public void onClick(View view) {
                     Utilities.insertFragment((AppCompatActivity) activity, new AddWorkoutFragment(),
                             AddWorkoutFragment.class.getSimpleName());
+                }
+            });
+
+            setRecyclerView(activity);
+            listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
+            listWorkoutViewModel.getWorkoutsList().observe((LifecycleOwner) activity, new Observer<List<WorkoutItem>>() {
+                @Override
+                public void onChanged(List<WorkoutItem> cardItems) {
+                    adapter.setWorkoutList(cardItems);
                 }
             });
         }
@@ -61,11 +79,19 @@ public class WorkoutsFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<WorkoutItem> list = new ArrayList<>();
-        list.add(new WorkoutItem("Workout 1"));
-        list.add(new WorkoutItem("Workout 2"));
-        list.add(new WorkoutItem("Workout 3"));
 
         this.adapter = new AllWorkoutAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }
+
+    public void onItemClick(int position) {
+        Activity activity = getActivity();
+        if (activity != null){
+            Utilities.insertFragment((AppCompatActivity) activity, new DetailsWorkoutFragment(),
+                    DetailsWorkoutFragment.class.getSimpleName());
+
+            listWorkoutViewModel.setItemSelected(adapter.getItemSelected(position));
+        }
+    }
+
 }

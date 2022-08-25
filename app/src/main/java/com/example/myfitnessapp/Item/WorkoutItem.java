@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 public class WorkoutItem {
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "workout_id")
+    @ColumnInfo(name = "workoutId")
     private int workoutId;
 
     @ColumnInfo(name = "titleWorkout")

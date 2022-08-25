@@ -14,16 +14,23 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
+import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
+import com.example.myfitnessapp.RecyclerView.NotificationsAdapter;
 import com.example.myfitnessapp.ViewModel.AddExerciseViewModel;
 import com.example.myfitnessapp.ViewModel.AddWorkoutViewModel;
+import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddExerciseFragment extends Fragment {
@@ -31,7 +38,10 @@ public class AddExerciseFragment extends Fragment {
 
     private AddExerciseViewModel exerciseViewModel;
     private AddWorkoutViewModel workoutViewModel;
+    private AllWorkoutAdapter adapter;
+    ListWorkoutViewModel listWorkoutViewModel;
     private int workoutId;
+
 
     @Nullable
     @Override
@@ -53,9 +63,20 @@ public class AddExerciseFragment extends Fragment {
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addExercise));
 
-            exerciseViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(AddExerciseViewModel.class);
-            workoutId = exerciseViewModel.getLastWorkoutId();
 
+            List<WorkoutItem> list = new ArrayList<>();
+            this.adapter = new AllWorkoutAdapter(list, activity);
+            listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
+            listWorkoutViewModel.getWorkoutsList().observe((LifecycleOwner) activity, new Observer<List<WorkoutItem>>() {
+                @Override
+                public void onChanged(List<WorkoutItem> cardItems) {
+                    adapter.setWorkoutList(cardItems);
+
+                    workoutId = adapter.getItemSelected(adapter.getItemCount()-1).getWorkoutId()+1;
+                }
+            });
+
+            exerciseViewModel = new AddExerciseViewModel(activity.getApplication());
             TextInputEditText titleExercise = view.findViewById(R.id.title_exercise_edittext);
             TextInputEditText repsExercise = view.findViewById(R.id.sets_exercise_edittext);
             TextInputEditText weightsExercise = view.findViewById(R.id.weights_exercise_edittext);
@@ -67,7 +88,7 @@ public class AddExerciseFragment extends Fragment {
                     if (titleExercise.getText() != null && repsExercise.getText() != null
                             && weightsExercise.getText() != null && restExercise.getText() != null){
                         ExerciseItem newExerciseItem = new ExerciseItem(titleExercise.getText().toString(), repsExercise.getText().toString(),weightsExercise.getText().toString(),restExercise.getText().toString());
-                        exerciseViewModel.addExerciseItem(newExerciseItem,workoutId);
+                        exerciseViewModel.addExerciseItem(newExerciseItem, workoutId);
                         ((AppCompatActivity) activity).getSupportFragmentManager().popBackStack();
                     }
 

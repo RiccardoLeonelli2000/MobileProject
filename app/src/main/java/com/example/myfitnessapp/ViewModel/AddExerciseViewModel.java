@@ -1,21 +1,16 @@
 package com.example.myfitnessapp.ViewModel;
 
-import static com.example.myfitnessapp.Utilities.drawableToBitmap;
-
 import android.app.Application;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
 
 import com.example.myfitnessapp.Database.ExerciseItemRepository;
-import com.example.myfitnessapp.Database.NoticeItemRepository;
 import com.example.myfitnessapp.Item.ExerciseItem;
-import com.example.myfitnessapp.Item.NoticeItem;
-import com.example.myfitnessapp.R;
+import com.example.myfitnessapp.Item.WorkoutItem;
+
+import java.util.List;
 
 public class AddExerciseViewModel extends AndroidViewModel {
 
@@ -35,7 +30,7 @@ public class AddExerciseViewModel extends AndroidViewModel {
         exerciseItemRepository.addExerciseToWorkout(exerciseItem, workout_id);
     }
 
-    public int getLastWorkoutId(){
+    public LiveData<List<WorkoutItem>> getLastWorkoutId(){
         return exerciseItemRepository.getLastWorkoutId();
     }
 }

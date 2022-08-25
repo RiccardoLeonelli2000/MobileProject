@@ -5,7 +5,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
-import com.example.myfitnessapp.Item.NoticeItem;
+import com.example.myfitnessapp.Item.WorkoutItem;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class ExerciseItemRepository {
         return exerciseItemDAO.getExercisesInWorkout(my_workout_id);
     }
 
-    public int getLastWorkoutId(){
+    public LiveData<List<WorkoutItem>> getLastWorkoutId(){
         return exerciseItemDAO.getLastWorkoutId();
     }
 }

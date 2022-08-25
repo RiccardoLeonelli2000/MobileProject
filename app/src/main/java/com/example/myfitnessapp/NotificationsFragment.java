@@ -78,9 +78,6 @@ public class NotificationsFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<NoticeItem> list = new ArrayList<>();
-        list.add(new NoticeItem("Ciao bellissimo vatti ad allenare e ricordati l'appuntamento di domani per le gambe"));
-        list.add(new NoticeItem("Prendi la cretina "));
-
         this.adapter = new NotificationsAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }

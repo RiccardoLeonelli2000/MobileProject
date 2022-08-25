@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 
 import com.example.myfitnessapp.Database.NoticeItemRepository;
@@ -18,6 +19,8 @@ import java.util.List;
 public class ListWorkoutViewModel extends AndroidViewModel {
 
     private LiveData<List<WorkoutItem>> workoutsList;
+    private final MutableLiveData<WorkoutItem> itemSelected = new MutableLiveData<>();
+
 
 
 
@@ -31,4 +34,7 @@ public class ListWorkoutViewModel extends AndroidViewModel {
         return this.workoutsList;
     }
 
+    public void setItemSelected(WorkoutItem itemSelected) {
+        this.itemSelected.setValue(itemSelected);
+    }
 }

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "52639bebeffa0da15a4e15ce9d993938",
+    "identityHash": "1ee4e5f43fefddaa727f4ddbc3496dc3",
     "entities": [
       {
         "tableName": "Notice",
@@ -32,11 +32,11 @@
       },
       {
         "tableName": "Workout",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`workout_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `titleWorkout` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`workoutId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `titleWorkout` TEXT)",
         "fields": [
           {
             "fieldPath": "workoutId",
-            "columnName": "workout_id",
+            "columnName": "workoutId",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -49,7 +49,7 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "workout_id"
+            "workoutId"
           ],
           "autoGenerate": true
         },
@@ -58,11 +58,11 @@
       },
       {
         "tableName": "Exercise",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`exercise_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `workoutId` INTEGER NOT NULL, `titleExercise` TEXT, `setsExercise` TEXT, `weightsExercise` TEXT, `restExercise` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`exerciseId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `workoutId` INTEGER NOT NULL, `titleExercise` TEXT, `setsExercise` TEXT, `weightsExercise` TEXT, `restExercise` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
-            "columnName": "exercise_id",
+            "columnName": "exerciseId",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -99,7 +99,7 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "exercise_id"
+            "exerciseId"
           ],
           "autoGenerate": true
         },
@@ -154,7 +154,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '52639bebeffa0da15a4e15ce9d993938')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1ee4e5f43fefddaa727f4ddbc3496dc3')"
     ]
   }
 }

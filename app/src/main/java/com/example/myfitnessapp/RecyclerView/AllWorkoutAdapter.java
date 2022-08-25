@@ -8,11 +8,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.R;
 import com.example.myfitnessapp.Item.WorkoutItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllWorkoutAdapter extends RecyclerView.Adapter<AllWorkoutViewHolder> {
@@ -48,5 +51,17 @@ public class AllWorkoutAdapter extends RecyclerView.Adapter<AllWorkoutViewHolder
     @Override
     public int getItemCount() {
         return workoutItemList.size();
+    }
+
+    public void setWorkoutList(List<WorkoutItem> list){
+        final WorkoutItemDiffCallback diffCallback = new WorkoutItemDiffCallback(this.workoutItemList, list);
+        final DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
+
+        this.workoutItemList = new ArrayList<>(list);
+        diffResult.dispatchUpdatesTo(this);
+    }
+
+    public WorkoutItem getItemSelected(int position) {
+        return workoutItemList.get(position);
     }
 }

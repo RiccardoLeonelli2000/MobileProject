@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="dark_gray">#404040</color>
+    <color name="gray">#808080</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#FF0000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="add">Add</string>
+    <string name="add_exercise">Add Exercise</string>
+    <string name="add_new_workout">New workout</string>
+    <string name="app_name">MyFitness</string>
+    <string name="bac" translatable="false"><![CDATA[<-]]></string>
+    <string name="back" translatable="false"><![CDATA[<-]]></string>
+    <string name="birthday_date">Birthday date</string>
+    <string name="calendar">Calendar</string>
+    <string name="delete_workout">Delete Workout</string>
+    <string name="elenco_esercizi">Exercises</string>
+    <string name="forward" translatable="false"><![CDATA[->]]></string>
+    <string name="image_captured" translatable="false">Image Captured</string>
+    <string name="image_home" translatable="false"/>
+    <string name="images_for_exercise">Images for exercise</string>
+    <string name="images_for_notice">Immagine Notifica</string>
+    <string name="modify_profile">Modify Profile</string>
+    <string name="name">Name</string>
+    <string name="name_exercise">Name Exercise</string>
+    <string name="place_title" translatable="false"/>
+    <string name="rest">Rest for sets (min)</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="sets">Reps for Sets</string>
+    <string name="surname">Surname</string>
+    <string name="take_new_image_profile">Take new image profile</string>
+    <string name="title_addExercise">Add Exercise</string>
+    <string name="title_addWorkout">Add Workout</string>
+    <string name="title_detailsExercise">Exercise Details</string>
+    <string name="title_detailsWorkout">Workout Details</string>
+    <string name="title_gymPos">Gym</string>
+    <string name="title_home_navbar" translatable="false">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_workouts">Workouts</string>
+    <string name="weights">Weights for Sets (Kg)</string>
+    <string name="workout_name">Workout Name</string>
+    <style name="Theme.App.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    <style name="Theme.MyFitnessApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/gray</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/gray</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>

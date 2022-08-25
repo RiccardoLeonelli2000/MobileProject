@@ -14,21 +14,24 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
-import com.example.myfitnessapp.RecyclerView.WorkoutAdapter;
+import com.example.myfitnessapp.Item.WorkoutItem;
+import com.example.myfitnessapp.RecyclerView.ExerciseAdapter;
 import com.example.myfitnessapp.ViewModel.AddWorkoutViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddWorkoutFragment extends Fragment {
 
-    private WorkoutAdapter adapter;
-
-    private int workout_id;
+    private ExerciseAdapter adapter;
+    private AddWorkoutViewModel workoutViewModel;
 
     @Nullable
     @Override
@@ -52,6 +55,29 @@ public class AddWorkoutFragment extends Fragment {
                 public void onClick(View view) {
                     Utilities.insertFragment((AppCompatActivity) activity, new AddExerciseFragment(),
                             AddExerciseFragment.class.getSimpleName());
+                }
+            });
+
+
+
+            workoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity)
+                    .get(AddWorkoutViewModel.class);
+            TextInputEditText titleWorkout = view.findViewById(R.id.title_workout_edittext);
+
+            FloatingActionButton floatingActionButton = view.findViewById(R.id.fab_add);
+            floatingActionButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (titleWorkout!=null) {
+
+                        workoutViewModel.addWorkoutItem(new WorkoutItem(titleWorkout.getText().toString()));
+
+                        Utilities.insertFragment((AppCompatActivity) activity, new WorkoutsFragment(),
+                                WorkoutsFragment.class.getSimpleName());
+
+                    }
+
+
                 }
             });
 
@@ -86,7 +112,7 @@ public class AddWorkoutFragment extends Fragment {
         list.add(new ExerciseItem("Chest Press","10x10x8x8", "80Kgx80Kgx60Kgx60Kg", "1 Min"));
         list.add(new ExerciseItem("Bicipiti con Bilancere","10x10x10", "30Kg", "1 30 Min"));
 
-        this.adapter = new WorkoutAdapter(list, activity);
+        this.adapter = new ExerciseAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }
 

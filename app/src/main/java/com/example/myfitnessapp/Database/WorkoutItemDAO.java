@@ -19,10 +19,10 @@ public interface WorkoutItemDAO {
     void addWorkoutItem(WorkoutItem workoutItem);
 
     @Transaction
-    @Query("SELECT * FROM Workout ORDER BY workout_id")
+    @Query("SELECT * FROM Workout ORDER BY workoutId")
     LiveData<List<WorkoutItem>> getWorkouts();
 
-    @Query("SELECT * FROM Workout WHERE workout_id = :my_workout_id")
+    @Query("SELECT * FROM Workout WHERE workoutId = :my_workout_id")
     WorkoutItem getWorkoutById(int my_workout_id);
 
 
