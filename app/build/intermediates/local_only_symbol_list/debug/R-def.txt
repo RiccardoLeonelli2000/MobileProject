@@ -59,7 +59,7 @@ id notice_card
 id notice_content
 id picture_displayed_imageview
 id picture_profile
-id recyclerView
+id recyclerView_WorkoutDetails
 id recycler_view_exercises
 id recycler_view_notifications
 id recycler_view_workouts
@@ -72,10 +72,14 @@ id settings_card
 id surname_edittext
 id surname_textinput
 id textView
+id textView3
+id textView4
+id textView5
+id textView6
 id title_exercise_edittext
 id title_exercise_textinput
-id title_exercises
 id title_workout_edittext
+id title_workout_textView
 id toolbar
 id weights_exercise_edittext
 id weights_exercise_textinput
@@ -131,6 +135,7 @@ string save_profile
 string sets
 string surname
 string take_new_image_profile
+string titleAlertNOWorkout
 string title_addExercise
 string title_addWorkout
 string title_detailsExercise

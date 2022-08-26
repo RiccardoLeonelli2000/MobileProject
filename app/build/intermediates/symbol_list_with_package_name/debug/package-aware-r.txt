@@ -2914,7 +2914,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recyclerView
+id recyclerView_WorkoutDetails
 id recycler_view_exercises
 id recycler_view_notifications
 id recycler_view_workouts
@@ -3020,6 +3020,10 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView3
+id textView4
+id textView5
+id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3034,9 +3038,9 @@ id title
 id titleDividerNoCustom
 id title_exercise_edittext
 id title_exercise_textinput
-id title_exercises
 id title_template
 id title_workout_edittext
+id title_workout_textView
 id toggle
 id toolbar
 id top
@@ -3433,6 +3437,7 @@ string sets
 string status_bar_notification_info_overflow
 string surname
 string take_new_image_profile
+string titleAlertNOWorkout
 string title_addExercise
 string title_addWorkout
 string title_detailsExercise

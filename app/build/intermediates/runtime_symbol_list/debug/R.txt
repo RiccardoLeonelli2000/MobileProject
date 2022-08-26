@@ -2913,7 +2913,7 @@ int id progress_horizontal 0x7f080179
 int id radio 0x7f08017a
 int id ratio 0x7f08017b
 int id rectangles 0x7f08017c
-int id recyclerView 0x7f08017d
+int id recyclerView_WorkoutDetails 0x7f080226
 int id recycler_view_exercises 0x7f08017f
 int id recycler_view_notifications 0x7f080180
 int id recycler_view_workouts 0x7f080181
@@ -3019,6 +3019,10 @@ int id textSpacerNoTitle 0x7f0801e4
 int id textStart 0x7f0801e5
 int id textTop 0x7f0801e6
 int id textView 0x7f0801e7
+int id textView3 0x7f080227
+int id textView4 0x7f080228
+int id textView5 0x7f080229
+int id textView6 0x7f08022a
 int id text_input_end_icon 0x7f0801e8
 int id text_input_error_icon 0x7f0801e9
 int id text_input_start_icon 0x7f0801ea
@@ -3033,9 +3037,9 @@ int id title 0x7f0801f2
 int id titleDividerNoCustom 0x7f0801f3
 int id title_exercise_edittext 0x7f0801f4
 int id title_exercise_textinput 0x7f0801f5
-int id title_exercises 0x7f0801f6
 int id title_template 0x7f0801f7
 int id title_workout_edittext 0x7f080224
+int id title_workout_textView 0x7f080225
 int id toggle 0x7f0801f8
 int id toolbar 0x7f0801f9
 int id top 0x7f0801fa
@@ -3432,6 +3436,7 @@ int string sets 0x7f0f008e
 int string status_bar_notification_info_overflow 0x7f0f008f
 int string surname 0x7f0f0090
 int string take_new_image_profile 0x7f0f0091
+int string titleAlertNOWorkout 0x7f0f009e
 int string title_addExercise 0x7f0f0092
 int string title_addWorkout 0x7f0f0093
 int string title_detailsExercise 0x7f0f0094

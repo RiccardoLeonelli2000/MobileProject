@@ -18,23 +18,27 @@
 
 
             <TextView
-                android:id="@+id/title_exercises"
+                android:id="@+id/title_workout_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
                 android:text="@string/elenco_esercizi"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView_WorkoutDetails"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="10dp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/recyclerView_WorkoutDetails"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
+                app:layout_constraintBottom_toTopOf="@+id/button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_exercises">
+                app:layout_constraintTop_toBottomOf="@+id/title_workout_textView">
 
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -48,7 +52,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_WorkoutDetails" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

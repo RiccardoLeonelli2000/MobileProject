@@ -21,6 +21,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
 import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
+import com.example.myfitnessapp.RecyclerView.OnItemListener;
+import com.example.myfitnessapp.RecyclerView.WorkoutListenerAdapter;
 import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
 import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,9 +30,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WorkoutsFragment extends Fragment {
+public class WorkoutsFragment extends Fragment implements OnItemListener {
 
-    private AllWorkoutAdapter adapter;
+    private WorkoutListenerAdapter workoutListenerAdapter;
     private ListWorkoutViewModel listWorkoutViewModel;
 
     @Nullable
@@ -64,7 +66,7 @@ public class WorkoutsFragment extends Fragment {
             listWorkoutViewModel.getWorkoutsList().observe((LifecycleOwner) activity, new Observer<List<WorkoutItem>>() {
                 @Override
                 public void onChanged(List<WorkoutItem> cardItems) {
-                    adapter.setWorkoutList(cardItems);
+                    workoutListenerAdapter.setData(cardItems);
                 }
             });
         }
@@ -74,14 +76,12 @@ public class WorkoutsFragment extends Fragment {
     }
 
 
-    private void setRecyclerView(final Activity activity){
+    private void setRecyclerView(final Activity activity) {
         RecyclerView recyclerView = activity.findViewById(R.id.recycler_view_workouts);
         recyclerView.setHasFixedSize(true);
-
-        List<WorkoutItem> list = new ArrayList<>();
-
-        this.adapter = new AllWorkoutAdapter(list, activity);
-        recyclerView.setAdapter(this.adapter);
+        final OnItemListener listener = (OnItemListener) this;
+        workoutListenerAdapter = new WorkoutListenerAdapter(listener, activity);
+        recyclerView.setAdapter(workoutListenerAdapter);
     }
 
     public void onItemClick(int position) {
@@ -90,7 +90,7 @@ public class WorkoutsFragment extends Fragment {
             Utilities.insertFragment((AppCompatActivity) activity, new DetailsWorkoutFragment(),
                     DetailsWorkoutFragment.class.getSimpleName());
 
-            listWorkoutViewModel.setItemSelected(adapter.getItemSelected(position));
+            listWorkoutViewModel.setItemSelected(workoutListenerAdapter.getItemSelected(position));
         }
     }
 

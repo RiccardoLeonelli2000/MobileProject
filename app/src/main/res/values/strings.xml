@@ -35,4 +35,5 @@
     <string name="title_detailsExercise">Exercise Details</string>
     <string name="title_gymPos">Gym</string>
     <string name="title_settings">Settings</string>
+    <string name="titleAlertNOWorkout">Insert Title</string>
 </resources>

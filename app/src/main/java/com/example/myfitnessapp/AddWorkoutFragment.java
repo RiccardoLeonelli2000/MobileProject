@@ -1,6 +1,8 @@
 package com.example.myfitnessapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -100,13 +102,24 @@ public class AddWorkoutFragment extends Fragment {
             floatingActionButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (titleWorkout!=null) {
+                    if (titleWorkout.getText()!=null && titleWorkout.getText().length()!=0 ) {
 
                         workoutViewModel.addWorkoutItem(new WorkoutItem(titleWorkout.getText().toString()));
 
                         Utilities.insertFragment((AppCompatActivity) activity, new WorkoutsFragment(),
                                 WorkoutsFragment.class.getSimpleName());
 
+                    }
+                    else{
+                        AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
+                        alertDialog.setTitle(R.string.titleAlertNOWorkout);
+                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                        alertDialog.show();
                     }
 
 

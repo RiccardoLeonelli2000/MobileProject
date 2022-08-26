@@ -34,6 +34,10 @@ public class ListWorkoutViewModel extends AndroidViewModel {
         return this.workoutsList;
     }
 
+    public MutableLiveData<WorkoutItem> getItemSelected() {
+        return itemSelected;
+    }
+
     public void setItemSelected(WorkoutItem itemSelected) {
         this.itemSelected.setValue(itemSelected);
     }

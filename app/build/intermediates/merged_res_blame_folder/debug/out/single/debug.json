@@ -80,10 +80,6 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-31:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.myfitnessapp-merged_res-29:/layout_add_workout.xml.flat",
-        "source": "com.example.myfitnessapp-main-31:/layout/add_workout.xml"
-    },
-    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/drawable_ic_baseline_add_24.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-31:/drawable/ic_baseline_add_24.xml"
     },
@@ -100,12 +96,12 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-31:/drawable/ic_baseline_notifications_24.xml"
     },
     {
-        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-pngs-24:/drawable-anydpi-v24/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/layout_workout_details.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-31:/layout/workout_details.xml"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-pngs-24:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/drawable-v24_ic_notifications_black_24dp.xml.flat",
@@ -134,6 +130,10 @@
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/layout_calendar_cell.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-31:/layout/calendar_cell.xml"
+    },
+    {
+        "merged": "com.example.myfitnessapp-merged_res-29:/layout_card_exercise_layout.xml.flat",
+        "source": "com.example.myfitnessapp-main-31:/layout/card_exercise_layout.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-29:/mipmap-xhdpi_ic_launcher_round.webp.flat",
