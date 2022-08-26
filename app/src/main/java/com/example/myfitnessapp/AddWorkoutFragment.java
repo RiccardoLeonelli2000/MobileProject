@@ -14,14 +14,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
+import com.example.myfitnessapp.RecyclerView.AllWorkoutAdapter;
 import com.example.myfitnessapp.RecyclerView.ExerciseAdapter;
 import com.example.myfitnessapp.ViewModel.AddWorkoutViewModel;
+import com.example.myfitnessapp.ViewModel.ListExerciseViewModel;
+import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
+import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -31,7 +38,9 @@ import java.util.List;
 public class AddWorkoutFragment extends Fragment {
 
     private ExerciseAdapter adapter;
+    private AllWorkoutAdapter workoutAdapter;
     private AddWorkoutViewModel workoutViewModel;
+    private int workout_id;
 
     @Nullable
     @Override
@@ -47,7 +56,30 @@ public class AddWorkoutFragment extends Fragment {
         final Activity activity = getActivity();
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addWorkout));
+
+
+
+            List<WorkoutItem> list = new ArrayList<>();
+            this.workoutAdapter = new AllWorkoutAdapter(list, activity);
+            ListWorkoutViewModel listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
+            listWorkoutViewModel.getWorkoutsList().observe((LifecycleOwner) activity, new Observer<List<WorkoutItem>>() {
+                @Override
+                public void onChanged(List<WorkoutItem> cardItems) {
+                    workoutAdapter.setWorkoutList(cardItems);
+
+                    workout_id = workoutAdapter.getItemSelected(workoutAdapter.getItemCount()-1).getWorkoutId()+1;
+                }
+            });
+
             setRecyclerView(activity);
+            ListExerciseViewModel exerciseViewModel = new ViewModelProvider((ViewModelStoreOwner) activity)
+                    .get(ListExerciseViewModel.class);
+            exerciseViewModel.getExercisesInWorkoutList(this.workout_id).observe((LifecycleOwner) activity, new Observer<List<ExerciseItem>>() {
+                @Override
+                public void onChanged(List<ExerciseItem> cardItems) {
+                    adapter.setExerciseItemList(cardItems);
+                }
+            });
 
             Button button = view.findViewById(R.id.add_exercise_button);
             button.setOnClickListener(new View.OnClickListener() {
@@ -108,10 +140,6 @@ public class AddWorkoutFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<ExerciseItem> list = new ArrayList<>();
-        list.add(new ExerciseItem("Panca Piana", " 5x5x5x5x5", "100Kg", "1 Min"));
-        list.add(new ExerciseItem("Chest Press","10x10x8x8", "80Kgx80Kgx60Kgx60Kg", "1 Min"));
-        list.add(new ExerciseItem("Bicipiti con Bilancere","10x10x10", "30Kg", "1 30 Min"));
-
         this.adapter = new ExerciseAdapter(list, activity);
         recyclerView.setAdapter(this.adapter);
     }

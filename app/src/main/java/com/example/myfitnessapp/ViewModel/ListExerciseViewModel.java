@@ -19,17 +19,18 @@ import java.util.List;
 public class ListExerciseViewModel extends AndroidViewModel {
 
     private LiveData<List<ExerciseItem>> exercisesInWorkoutList;
+    private ExerciseItemRepository exerciseItemRepository;
 
 
 
-    public ListExerciseViewModel(@NotNull Application application, int workout_id) {
+    public ListExerciseViewModel(@NotNull Application application) {
         super(application);
-        ExerciseItemRepository exerciseItemRepository = new ExerciseItemRepository(application);
-        this.exercisesInWorkoutList = exerciseItemRepository.getExercisesInWorkout(workout_id);
+        exerciseItemRepository = new ExerciseItemRepository(application);
+
     }
 
-    public LiveData<List<ExerciseItem>> getExercisesInWorkoutList() {
-        return this.exercisesInWorkoutList;
+    public LiveData<List<ExerciseItem>> getExercisesInWorkoutList(int workout_id) {
+        return exerciseItemRepository.getExercisesInWorkout(workout_id);
     }
 
 }

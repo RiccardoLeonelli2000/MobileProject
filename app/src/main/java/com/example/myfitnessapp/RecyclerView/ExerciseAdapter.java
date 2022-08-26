@@ -6,11 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseViewHolder> {
@@ -43,5 +46,13 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseViewHolder> {
     @Override
     public int getItemCount() {
         return exerciseItemList.size();
+    }
+
+    public void setExerciseItemList(List<ExerciseItem> list){
+        final ExerciseItemDiffCallback diffCallback = new ExerciseItemDiffCallback(this.exerciseItemList, list);
+        final DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
+
+        this.exerciseItemList = new ArrayList<>(list);
+        diffResult.dispatchUpdatesTo(this);
     }
 }

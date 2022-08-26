@@ -21,6 +21,7 @@ import java.util.List;
 public class AllWorkoutAdapter extends RecyclerView.Adapter<AllWorkoutViewHolder> {
 
     private List<WorkoutItem> workoutItemList;
+
     Activity activity;
 
     public AllWorkoutAdapter(List<WorkoutItem> list, Activity activity) {
