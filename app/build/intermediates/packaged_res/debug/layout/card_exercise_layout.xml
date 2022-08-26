@@ -42,9 +42,10 @@
 
         <TextView
             android:id="@+id/exercise_name"
-            android:layout_width="0dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
+            android:layout_marginTop="8dp"
             android:text=""
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
@@ -55,34 +56,70 @@
 
         <TextView
             android:id="@+id/exercise_sets"
-            android:layout_width="0dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
             android:text=""
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/exercise_weights"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline" />
-
-        <TextView
-            android:id="@+id/exercise_weights"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/exercise_name" />
 
         <TextView
+            android:id="@+id/exercise_weights"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_sets" />
+
+        <TextView
             android:id="@+id/exercise_rest"
-            android:layout_width="0dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/exercise_weights" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Sets: "
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/exercise_sets" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wheights:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_sets" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Rest:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/exercise_rest" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="Kg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/exercise_weights"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_sets" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
