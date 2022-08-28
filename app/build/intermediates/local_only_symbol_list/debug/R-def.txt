@@ -31,7 +31,8 @@ id add_exercise_button2
 id app_bar_calendar
 id birthday_date_edittext
 id birthday_date_textinput
-id button
+id button_deleteEx
+id button_deleteW
 id calendarRecyclerView
 id calendar_card
 id calendar_cell
@@ -63,6 +64,8 @@ id recyclerView_WorkoutDetails
 id recycler_view_exercises
 id recycler_view_notifications
 id recycler_view_workouts
+id reps_details
+id rest_details
 id rest_exercise_edittext
 id rest_exercise_textinput
 id scrollView2
@@ -72,15 +75,20 @@ id settings_card
 id surname_edittext
 id surname_textinput
 id textView
+id textView10
+id textView12
 id textView3
 id textView4
 id textView5
 id textView6
+id textView7
+id title_esDetails
 id title_exercise_edittext
 id title_exercise_textinput
 id title_workout_edittext
 id title_workout_textView
 id toolbar
+id weights_details
 id weights_exercise_edittext
 id weights_exercise_textinput
 id workout_card
@@ -119,6 +127,7 @@ string bac
 string back
 string birthday_date
 string calendar
+string delete_exercise
 string delete_workout
 string elenco_esercizi
 string forward

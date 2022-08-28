@@ -103,6 +103,11 @@ public class ExerciseListenerAdapter extends RecyclerView.Adapter<ExerciseListen
         diffResult.dispatchUpdatesTo(this);
     }
 
+    public void setExerciseItemList(List<ExerciseItem> list){
+        this.exerciseItemList = new ArrayList<>(list);
+        this.cardItemListNotFiltered = new ArrayList<>(list);
+    }
+
     /**
      *
      * @param position the position of the item selected in the list displayed

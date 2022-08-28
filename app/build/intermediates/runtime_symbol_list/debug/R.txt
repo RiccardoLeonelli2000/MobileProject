@@ -2636,8 +2636,9 @@ int id bounce 0x7f080062
 int id bounceBoth 0x7f080063
 int id bounceEnd 0x7f080064
 int id bounceStart 0x7f080065
-int id button 0x7f080066
 int id buttonPanel 0x7f080067
+int id button_deleteEx 0x7f08022b
+int id button_deleteW 0x7f08022c
 int id cache_measures 0x7f080068
 int id calendarRecyclerView 0x7f080069
 int id calendar_card 0x7f080221
@@ -2917,6 +2918,8 @@ int id recyclerView_WorkoutDetails 0x7f080226
 int id recycler_view_exercises 0x7f08017f
 int id recycler_view_notifications 0x7f080180
 int id recycler_view_workouts 0x7f080181
+int id reps_details 0x7f08022d
+int id rest_details 0x7f08022e
 int id rest_exercise_edittext 0x7f080182
 int id rest_exercise_textinput 0x7f080183
 int id reverseSawtooth 0x7f080184
@@ -3019,10 +3022,13 @@ int id textSpacerNoTitle 0x7f0801e4
 int id textStart 0x7f0801e5
 int id textTop 0x7f0801e6
 int id textView 0x7f0801e7
+int id textView10 0x7f08022f
+int id textView12 0x7f080230
 int id textView3 0x7f080227
 int id textView4 0x7f080228
 int id textView5 0x7f080229
 int id textView6 0x7f08022a
+int id textView7 0x7f080232
 int id text_input_end_icon 0x7f0801e8
 int id text_input_error_icon 0x7f0801e9
 int id text_input_start_icon 0x7f0801ea
@@ -3035,6 +3041,7 @@ int id textinput_suffix_text 0x7f0801f0
 int id time 0x7f0801f1
 int id title 0x7f0801f2
 int id titleDividerNoCustom 0x7f0801f3
+int id title_esDetails 0x7f080234
 int id title_exercise_edittext 0x7f0801f4
 int id title_exercise_textinput 0x7f0801f5
 int id title_template 0x7f0801f7
@@ -3066,6 +3073,7 @@ int id view_tree_saved_state_registry_owner 0x7f08020e
 int id view_tree_view_model_store_owner 0x7f08020f
 int id visible 0x7f080210
 int id visible_removing_fragment_view_tag 0x7f080211
+int id weights_details 0x7f080233
 int id weights_exercise_edittext 0x7f080212
 int id weights_exercise_textinput 0x7f080213
 int id west 0x7f080214
@@ -3334,6 +3342,7 @@ int string character_counter_overflowed_content_description 0x7f0f0028
 int string character_counter_pattern 0x7f0f0029
 int string chip_text 0x7f0f002a
 int string clear_text_end_icon_content_description 0x7f0f002b
+int string delete_exercise 0x7f0f009f
 int string delete_workout 0x7f0f002c
 int string elenco_esercizi 0x7f0f002d
 int string error_icon_content_description 0x7f0f002e

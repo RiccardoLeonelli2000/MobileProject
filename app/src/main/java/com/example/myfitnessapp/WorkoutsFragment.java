@@ -84,6 +84,7 @@ public class WorkoutsFragment extends Fragment implements OnItemListener {
         recyclerView.setAdapter(workoutListenerAdapter);
     }
 
+
     public void onItemClick(int position) {
         Activity activity = getActivity();
         if (activity != null){

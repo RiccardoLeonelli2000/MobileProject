@@ -2637,8 +2637,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
 id buttonPanel
+id button_deleteEx
+id button_deleteW
 id cache_measures
 id calendarRecyclerView
 id calendar_card
@@ -2918,6 +2919,8 @@ id recyclerView_WorkoutDetails
 id recycler_view_exercises
 id recycler_view_notifications
 id recycler_view_workouts
+id reps_details
+id rest_details
 id rest_exercise_edittext
 id rest_exercise_textinput
 id reverseSawtooth
@@ -3020,10 +3023,13 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView10
+id textView12
 id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3036,6 +3042,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id title_esDetails
 id title_exercise_edittext
 id title_exercise_textinput
 id title_template
@@ -3067,6 +3074,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weights_details
 id weights_exercise_edittext
 id weights_exercise_textinput
 id west
@@ -3335,6 +3343,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string delete_exercise
 string delete_workout
 string elenco_esercizi
 string error_icon_content_description

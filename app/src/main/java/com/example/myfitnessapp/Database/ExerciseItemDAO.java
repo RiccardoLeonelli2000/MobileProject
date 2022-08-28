@@ -2,6 +2,8 @@ package com.example.myfitnessapp.Database;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Ignore;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -24,7 +26,15 @@ public interface ExerciseItemDAO {
     LiveData<List<ExerciseItem>> getExercisesInWorkout(int my_workout_id);
 
     @Transaction
+    @Query("SELECT * FROM Exercise")
+    LiveData<List<ExerciseItem>> getAllExercises();
+
+    @Transaction
     @Query("SELECT * FROM Workout ORDER BY workoutId DESC")
     LiveData<List<WorkoutItem>> getLastWorkoutId();
+
+
+    @Query("DELETE FROM Exercise WHERE exerciseId = :exerciseId")
+    void deleteExercise(int exerciseId);
 
 }

@@ -18,6 +18,7 @@
     <string name="back" translatable="false"><![CDATA[<-]]></string>
     <string name="birthday_date">Birthday date</string>
     <string name="calendar">Calendar</string>
+    <string name="delete_exercise">Delete Exercise</string>
     <string name="delete_workout">Delete Workout</string>
     <string name="elenco_esercizi">Exercises</string>
     <string name="forward" translatable="false"><![CDATA[->]]></string>

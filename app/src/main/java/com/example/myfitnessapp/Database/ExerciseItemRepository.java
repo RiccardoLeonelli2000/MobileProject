@@ -36,7 +36,15 @@ public class ExerciseItemRepository {
         return exerciseItemDAO.getExercisesInWorkout(my_workout_id);
     }
 
+    public LiveData<List<ExerciseItem>> getAllExercises(){
+        return exerciseItemDAO.getAllExercises();
+    }
+
     public LiveData<List<WorkoutItem>> getLastWorkoutId(){
         return exerciseItemDAO.getLastWorkoutId();
+    }
+
+    public void deleteExercise(int exerciseId){
+        exerciseItemDAO.deleteExercise(exerciseId);
     }
 }

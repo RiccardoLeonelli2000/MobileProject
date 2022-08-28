@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -25,6 +26,8 @@ public final class ExerciseItemDAO_Impl implements ExerciseItemDAO {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<ExerciseItem> __insertionAdapterOfExerciseItem;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteExercise;
 
   public ExerciseItemDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -60,6 +63,13 @@ public final class ExerciseItemDAO_Impl implements ExerciseItemDAO {
         }
       }
     };
+    this.__preparedStmtOfDeleteExercise = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM Exercise WHERE exerciseId = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -75,11 +85,97 @@ public final class ExerciseItemDAO_Impl implements ExerciseItemDAO {
   }
 
   @Override
+  public void deleteExercise(final int exerciseId) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteExercise.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, exerciseId);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteExercise.release(_stmt);
+    }
+  }
+
+  @Override
   public LiveData<List<ExerciseItem>> getExercisesInWorkout(final int my_workout_id) {
     final String _sql = "SELECT * FROM Exercise WHERE workoutId = ? ORDER BY exerciseId";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, my_workout_id);
+    return __db.getInvalidationTracker().createLiveData(new String[]{"Exercise"}, true, new Callable<List<ExerciseItem>>() {
+      @Override
+      public List<ExerciseItem> call() throws Exception {
+        __db.beginTransaction();
+        try {
+          final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+          try {
+            final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "exerciseId");
+            final int _cursorIndexOfWorkoutId = CursorUtil.getColumnIndexOrThrow(_cursor, "workoutId");
+            final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "titleExercise");
+            final int _cursorIndexOfSets = CursorUtil.getColumnIndexOrThrow(_cursor, "setsExercise");
+            final int _cursorIndexOfWeights = CursorUtil.getColumnIndexOrThrow(_cursor, "weightsExercise");
+            final int _cursorIndexOfRest = CursorUtil.getColumnIndexOrThrow(_cursor, "restExercise");
+            final List<ExerciseItem> _result = new ArrayList<ExerciseItem>(_cursor.getCount());
+            while(_cursor.moveToNext()) {
+              final ExerciseItem _item;
+              final String _tmpTitle;
+              if (_cursor.isNull(_cursorIndexOfTitle)) {
+                _tmpTitle = null;
+              } else {
+                _tmpTitle = _cursor.getString(_cursorIndexOfTitle);
+              }
+              final String _tmpSets;
+              if (_cursor.isNull(_cursorIndexOfSets)) {
+                _tmpSets = null;
+              } else {
+                _tmpSets = _cursor.getString(_cursorIndexOfSets);
+              }
+              final String _tmpWeights;
+              if (_cursor.isNull(_cursorIndexOfWeights)) {
+                _tmpWeights = null;
+              } else {
+                _tmpWeights = _cursor.getString(_cursorIndexOfWeights);
+              }
+              final String _tmpRest;
+              if (_cursor.isNull(_cursorIndexOfRest)) {
+                _tmpRest = null;
+              } else {
+                _tmpRest = _cursor.getString(_cursorIndexOfRest);
+              }
+              _item = new ExerciseItem(_tmpTitle,_tmpSets,_tmpWeights,_tmpRest);
+              final int _tmpId;
+              _tmpId = _cursor.getInt(_cursorIndexOfId);
+              _item.setId(_tmpId);
+              final int _tmpWorkoutId;
+              _tmpWorkoutId = _cursor.getInt(_cursorIndexOfWorkoutId);
+              _item.setWorkoutId(_tmpWorkoutId);
+              _result.add(_item);
+            }
+            __db.setTransactionSuccessful();
+            return _result;
+          } finally {
+            _cursor.close();
+          }
+        } finally {
+          __db.endTransaction();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public LiveData<List<ExerciseItem>> getAllExercises() {
+    final String _sql = "SELECT * FROM Exercise";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return __db.getInvalidationTracker().createLiveData(new String[]{"Exercise"}, true, new Callable<List<ExerciseItem>>() {
       @Override
       public List<ExerciseItem> call() throws Exception {

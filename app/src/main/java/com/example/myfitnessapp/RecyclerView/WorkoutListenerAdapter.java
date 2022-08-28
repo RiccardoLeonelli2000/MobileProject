@@ -102,6 +102,8 @@ public class WorkoutListenerAdapter extends RecyclerView.Adapter<WorkoutListener
         diffResult.dispatchUpdatesTo(this);
     }
 
+
+
     /**
      *
      * @param position the position of the item selected in the list displayed

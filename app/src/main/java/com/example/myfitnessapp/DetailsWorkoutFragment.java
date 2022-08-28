@@ -18,6 +18,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.ExerciseItem;
@@ -28,6 +29,7 @@ import com.example.myfitnessapp.RecyclerView.WorkoutListenerAdapter;
 import com.example.myfitnessapp.ViewModel.ListExerciseViewModel;
 import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
@@ -59,9 +61,6 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
             titleView = view.findViewById(R.id.title_workout_textView);
 
-            setRecyclerView(activity);
-            exerciseViewModel = new ViewModelProvider((ViewModelStoreOwner) activity)
-                    .get(ListExerciseViewModel.class);
 
             ListWorkoutViewModel listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
             listWorkoutViewModel.getItemSelected().observe(getViewLifecycleOwner(), new Observer<WorkoutItem>() {
@@ -70,16 +69,28 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
                     titleView.setText(workoutItem.getTitle());
                     workoutId = workoutItem.getWorkoutId();
-                    exerciseViewModel.getExercisesInWorkoutList(workoutId).observe((LifecycleOwner) activity,new Observer<List<ExerciseItem>>() {
-                        @Override
-                        public void onChanged(List<ExerciseItem> cardItems) {
-                            adapter.setData(cardItems);
-                        }
-                    });
+
                 }
             });
 
 
+            setRecyclerView(activity);
+            exerciseViewModel = new ViewModelProvider((ViewModelStoreOwner) activity)
+                    .get(ListExerciseViewModel.class);
+
+            exerciseViewModel.getAllExercises().observe((LifecycleOwner) activity,new Observer<List<ExerciseItem>>() {
+                @Override
+                public void onChanged(List<ExerciseItem> cardItems) {
+                    exerciseItemList = new ArrayList<>();
+                    for (ExerciseItem exerciseItem: cardItems ) {
+                        if (exerciseItem.getWorkoutId() == workoutId) {
+                            exerciseItemList.add(exerciseItem);
+                        }
+                    }
+                    System.out.println(exerciseItemList);
+                    adapter.setData(exerciseItemList);
+                }
+            });
 
 
 
@@ -94,8 +105,10 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
     }
 
-    private void setRecyclerView(Activity activity) {
+    private void setRecyclerView(final Activity activity) {
         RecyclerView recyclerView = activity.findViewById(R.id.recyclerView_WorkoutDetails);
+        LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
+        recyclerView.setLayoutManager(manager);
         recyclerView.setHasFixedSize(true);
         final OnItemListener listener = (OnItemListener) this;
         adapter = new ExerciseListenerAdapter(listener, activity);

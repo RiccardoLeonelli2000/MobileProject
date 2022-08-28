@@ -25,6 +25,7 @@ public class ListExerciseViewModel extends AndroidViewModel {
 
 
 
+
     public ListExerciseViewModel(@NotNull Application application) {
         super(application);
         exerciseItemRepository = new ExerciseItemRepository(application);
@@ -35,7 +36,21 @@ public class ListExerciseViewModel extends AndroidViewModel {
         return exerciseItemRepository.getExercisesInWorkout(workout_id);
     }
 
+    public LiveData<List<ExerciseItem>> getAllExercises(){
+        return exerciseItemRepository.getAllExercises();
+    }
+
     public void setItemSelected(ExerciseItem itemSelected) {
         this.itemSelected.setValue(itemSelected);
     }
+
+    public MutableLiveData<ExerciseItem> getItemSelected() {
+        return itemSelected;
+    }
+
+    public void deleteExercise(int exerciseId){
+        exerciseItemRepository.deleteExercise(exerciseId);
+    }
+
+
 }
