@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myfitnessapp-mergeDebugResources-27:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.example.myfitnessapp-mergeDebugResources-30:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "/home/riccardo/.gradle/caches/transforms-3/0c734a8f9451ded3159b05d46fc9a23a/transformed/core-1.7.0/res/values-en-rCA/values-en-rCA.xml",

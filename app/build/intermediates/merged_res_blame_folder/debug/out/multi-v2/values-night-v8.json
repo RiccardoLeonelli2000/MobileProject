@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myfitnessapp-mergeDebugResources-27:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.myfitnessapp-mergeDebugResources-30:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/home/riccardo/.gradle/caches/transforms-3/6dd341f1aaa781be49a8f752078a6907/transformed/material-1.6.0/res/values-night-v8/values-night-v8.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/riccardo/AndroidStudioProjects/MyFitnessApp/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "16,2",
                         "startColumns": "4,4",

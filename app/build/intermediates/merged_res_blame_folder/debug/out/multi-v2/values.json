@@ -205,25 +205,6 @@
                     }
                 },
                 {
-                    "source": "/home/riccardo/AndroidStudioProjects/MyFitnessApp/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "16,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "812,100",
-                        "endLines": "18,14",
-                        "endColumns": "12,12",
-                        "endOffsets": "980,806"
-                    },
-                    "to": {
-                        "startLines": "5676,5870",
-                        "startColumns": "4,4",
-                        "startOffsets": "378682,393452",
-                        "endLines": "5678,5882",
-                        "endColumns": "12,12",
-                        "endOffsets": "378850,394035"
-                    }
-                },
-                {
                     "source": "/home/riccardo/.gradle/caches/transforms-3/558a376c9715ce970c82065b28321b39/transformed/viewpager2-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -243,24 +224,7 @@
                     }
                 },
                 {
-                    "source": "/home/riccardo/AndroidStudioProjects/MyFitnessApp/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "7,10,9,2,3,4,11,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "286,409,370,55,102,149,453,196,241,328",
-                        "endColumns": "41,43,38,46,46,46,37,44,44,41",
-                        "endOffsets": "323,448,404,97,144,191,486,236,281,365"
-                    },
-                    "to": {
-                        "startLines": "572,593,637,806,807,808,809,820,821,825",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "28618,30221,33234,45430,45477,45524,45571,46306,46351,46559",
-                        "endColumns": "41,43,38,46,46,46,37,44,44,41",
-                        "endOffsets": "28655,30260,33268,45472,45519,45566,45604,46346,46391,46596"
-                    }
-                },
-                {
-                    "source": "/home/riccardo/AndroidStudioProjects/MyFitnessApp/app/src/main/res/values/strings.xml",
+                    "source": "/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "40,41,33,11,9,1,18,17,23,8,38,21,13,19,27,2,12,15,22,26,29,3,32,28,30,24,25,42,39,37,16,10,34,20,35,4,6,7,36,5,31,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -387,6 +351,23 @@
                     }
                 },
                 {
+                    "source": "/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "7,10,9,2,3,4,11,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "286,409,370,55,102,149,453,196,241,328",
+                        "endColumns": "41,43,38,46,46,46,37,44,44,41",
+                        "endOffsets": "323,448,404,97,144,191,486,236,281,365"
+                    },
+                    "to": {
+                        "startLines": "572,593,637,806,807,808,809,820,821,825",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "28618,30221,33234,45430,45477,45524,45571,46306,46351,46559",
+                        "endColumns": "41,43,38,46,46,46,37,44,44,41",
+                        "endOffsets": "28655,30260,33268,45472,45519,45566,45604,46346,46391,46596"
+                    }
+                },
+                {
                     "source": "/home/riccardo/.gradle/caches/transforms-3/0bd030da6605483a160c827afce306d9/transformed/fragment-1.4.1/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -422,6 +403,25 @@
                         "endLines": "8210,8216,8226,11629,11633",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "540903,541081,541365,664367,664494"
+                    }
+                },
+                {
+                    "source": "/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "16,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "812,100",
+                        "endLines": "18,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "980,806"
+                    },
+                    "to": {
+                        "startLines": "5676,5870",
+                        "startColumns": "4,4",
+                        "startOffsets": "378682,393452",
+                        "endLines": "5678,5882",
+                        "endColumns": "12,12",
+                        "endOffsets": "378850,394035"
                     }
                 }
             ]

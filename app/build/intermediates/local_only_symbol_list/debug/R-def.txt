@@ -26,12 +26,12 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
+id addOtherExercise
 id add_exercise_button
 id add_exercise_button2
 id app_bar_calendar
 id birthday_date_edittext
 id birthday_date_textinput
-id button
 id button_deleteEx
 id button_deleteW
 id calendarRecyclerView
@@ -49,6 +49,7 @@ id fragment_container_view
 id guideline
 id gym_localization_card
 id map
+id mapView
 id modify_profile_card
 id monthYearTV
 id name_edittext
@@ -110,6 +111,7 @@ layout card_workout_layout
 layout exercise_details
 layout fab_add
 layout gym
+layout local
 layout map
 layout modify_profile
 layout notifications

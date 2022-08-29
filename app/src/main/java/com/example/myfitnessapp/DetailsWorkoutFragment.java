@@ -23,6 +23,7 @@ import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Global.GlobalClass;
 import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
 import com.example.myfitnessapp.RecyclerView.ExerciseListenerAdapter;
@@ -63,6 +64,8 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
             titleView = view.findViewById(R.id.title_workout_textView);
 
+            GlobalClass globalClass = (GlobalClass) activity.getApplicationContext();
+
 
             ListWorkoutViewModel listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
             listWorkoutViewModel.getItemSelected().observe(getViewLifecycleOwner(), new Observer<WorkoutItem>() {
@@ -71,6 +74,7 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
                     titleView.setText(workoutItem.getTitle());
                     workoutId = workoutItem.getWorkoutId();
+                    globalClass.setWorkoutId(workoutId);
 
                 }
             });
@@ -128,7 +132,13 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
                 }
             });
 
-
+            view.findViewById(R.id.addOtherExercise).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new AddExerciseInWorkoutFragment(),
+                            AddExerciseInWorkoutFragment.class.getSimpleName());
+                }
+            });
 
 
 
@@ -167,4 +177,3 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
     }
 }
-

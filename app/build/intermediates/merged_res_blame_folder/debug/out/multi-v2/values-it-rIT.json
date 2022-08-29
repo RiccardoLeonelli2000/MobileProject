@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myfitnessapp-mergeDebugResources-27:/values-it-rIT/values-it-rIT.xml",
+            "outputFile": "com.example.myfitnessapp-mergeDebugResources-30:/values-it-rIT/values-it-rIT.xml",
             "map": [
                 {
-                    "source": "/home/riccardo/AndroidStudioProjects/MyFitnessApp/app/src/main/res/values-it-rIT/strings.xml",
+                    "source": "/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/res/values-it-rIT/strings.xml",
                     "from": {
                         "startLines": "27,9,7,2,18,6,16,11,10,13,17,21,23,26,22,24,19,20,14,8,28,15,29,4,5,30,3,25,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

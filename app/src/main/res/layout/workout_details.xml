@@ -34,8 +34,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_WorkoutDetails"
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
-                app:layout_constraintBottom_toTopOf="@+id/button_deleteW"
+                android:layout_height="400dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,21 +47,23 @@
                 android:id="@+id/button_deleteW"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:background="@color/red"
                 android:text="@string/delete_workout"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView_WorkoutDetails" />
+                app:layout_constraintTop_toBottomOf="@+id/addOtherExercise" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/addOtherExercise"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/add_exercise"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button_deleteW"
-                app:layout_constraintTop_toTopOf="@+id/button_deleteW" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_WorkoutDetails" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

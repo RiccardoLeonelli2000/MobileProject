@@ -2667,6 +2667,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addOtherExercise
 id add_exercise_button
 id add_exercise_button2
 id adjust_height
@@ -2701,7 +2702,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
 id buttonPanel
 id button_deleteEx
 id button_deleteW
@@ -2872,6 +2872,7 @@ id linear
 id listMode
 id list_item
 id map
+id mapView
 id masked
 id match_constraint
 id match_parent
@@ -3285,6 +3286,7 @@ layout design_text_input_start_icon
 layout exercise_details
 layout fab_add
 layout gym
+layout local
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
