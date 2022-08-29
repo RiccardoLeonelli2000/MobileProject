@@ -25,6 +25,8 @@ public interface WorkoutItemDAO {
     @Query("SELECT * FROM Workout WHERE workoutId = :my_workout_id")
     WorkoutItem getWorkoutById(int my_workout_id);
 
+    @Query("DELETE FROM Workout WHERE workoutId = :my_workout_id")
+    void deleteWorkout(int my_workout_id);
 
 
 

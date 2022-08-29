@@ -37,4 +37,8 @@
     <string name="title_settings">Settings</string>
     <string name="titleAlertNOWorkout">Insert Title</string>
     <string name="delete_exercise">Delete Exercise</string>
+    <string name="titleAlertDeleteW">Delete this workout?</string>
+    <string name="DELETE">DELETE</string>
+    <string name="DISMISS">DISMISS</string>
+    <string name="titleAlertDeleteEx">Delete this Exercise?</string>
 </resources>

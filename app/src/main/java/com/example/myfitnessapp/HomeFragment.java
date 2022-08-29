@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
@@ -47,15 +48,6 @@ public class HomeFragment extends Fragment {
                 }
             });
 
-            view.findViewById(R.id.gym_localization_card).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(activity, MapsActivity.class);
-                    startActivity(intent);
-
-                }
-            });
-
             view.findViewById(R.id.settings_card).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -79,6 +71,18 @@ public class HomeFragment extends Fragment {
                             CalendarFragment.class.getSimpleName());
                 }
             });
+
+            CardView gymCard = view.findViewById(R.id.gym_localization_card);
+            gymCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(activity, MapActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+
+
 
         }
         else {

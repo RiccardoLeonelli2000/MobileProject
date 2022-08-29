@@ -37,6 +37,10 @@ public class WorkoutItemRepository {
         return this.workouts;
     }
 
+    public void deleteWorkout(int workoutId){
+        workoutItemDAO.deleteWorkout(workoutId);
+    }
+
 
 
 }

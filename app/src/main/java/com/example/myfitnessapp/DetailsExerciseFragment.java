@@ -1,6 +1,8 @@
 package com.example.myfitnessapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -74,10 +76,36 @@ public class DetailsExerciseFragment extends Fragment {
             deleteExercise.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listExerciseViewModel.deleteExercise(exercise_id);
-                    ((AppCompatActivity) activity).getSupportFragmentManager().popBackStack();
+                    AlertDialog alertDialog = new AlertDialog.Builder(activity).create();
+                    alertDialog.setTitle(R.string.titleAlertDeleteEx);
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE,"DISMISS", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "DELETE", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            Thread thread = new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    listExerciseViewModel.deleteExercise(exercise_id);
+                                }
+                            });
+                            thread.start();
+                            thread.interrupt();
+                            ((AppCompatActivity) activity).getSupportFragmentManager().popBackStack();
+                            dialog.dismiss();
+                        }
+                    });
+                    alertDialog.show();
+
+
                 }
             });
+
 
 
         }

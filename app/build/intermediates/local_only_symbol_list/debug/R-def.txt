@@ -31,6 +31,7 @@ id add_exercise_button2
 id app_bar_calendar
 id birthday_date_edittext
 id birthday_date_textinput
+id button
 id button_deleteEx
 id button_deleteW
 id calendarRecyclerView
@@ -47,6 +48,7 @@ id fab_add
 id fragment_container_view
 id guideline
 id gym_localization_card
+id map
 id modify_profile_card
 id monthYearTV
 id name_edittext
@@ -108,6 +110,7 @@ layout card_workout_layout
 layout exercise_details
 layout fab_add
 layout gym
+layout map
 layout modify_profile
 layout notifications
 layout profile
@@ -119,6 +122,8 @@ menu bottom_nav_menu
 menu top_app_bar_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+string DELETE
+string DISMISS
 string add
 string add_exercise
 string add_new_workout
@@ -144,6 +149,8 @@ string save_profile
 string sets
 string surname
 string take_new_image_profile
+string titleAlertDeleteEx
+string titleAlertDeleteW
 string titleAlertNOWorkout
 string title_addExercise
 string title_addWorkout

@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -25,6 +26,8 @@ public final class WorkoutItemDAO_Impl implements WorkoutItemDAO {
 
   private final EntityInsertionAdapter<WorkoutItem> __insertionAdapterOfWorkoutItem;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeleteWorkout;
+
   public WorkoutItemDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfWorkoutItem = new EntityInsertionAdapter<WorkoutItem>(__db) {
@@ -43,6 +46,13 @@ public final class WorkoutItemDAO_Impl implements WorkoutItemDAO {
         }
       }
     };
+    this.__preparedStmtOfDeleteWorkout = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM Workout WHERE workoutId = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -54,6 +64,22 @@ public final class WorkoutItemDAO_Impl implements WorkoutItemDAO {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void deleteWorkout(final int my_workout_id) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteWorkout.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, my_workout_id);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteWorkout.release(_stmt);
     }
   }
 

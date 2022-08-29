@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.annotation.SuppressLint;
@@ -15,6 +16,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
@@ -72,7 +74,6 @@ public class MainActivity extends AppCompatActivity{
         });
 
         addNotificationsViewModel = new ViewModelProvider(this).get(AddNotificationsViewModel.class);
-
     }
 
     @Override
@@ -84,8 +85,9 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
-        if (item.getItemId() == R.id.app_bar_calendar) {
-            Utilities.insertFragment(this, new CalendarFragment(), CalendarFragment.class.getSimpleName());
+        if (item.getItemId() == R.id.gym_localization_card){
+            Intent intent = new Intent(this, MapActivity.class);
+            this.startActivity(intent);
             return true;
         }
         return false;

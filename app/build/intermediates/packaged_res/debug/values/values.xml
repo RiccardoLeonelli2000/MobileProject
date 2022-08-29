@@ -10,6 +10,8 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="DELETE">DELETE</string>
+    <string name="DISMISS">DISMISS</string>
     <string name="add">Add</string>
     <string name="add_exercise">Add Exercise</string>
     <string name="add_new_workout">New workout</string>
@@ -35,6 +37,8 @@
     <string name="sets">Reps for Sets</string>
     <string name="surname">Surname</string>
     <string name="take_new_image_profile">Take new image profile</string>
+    <string name="titleAlertDeleteEx">Delete this Exercise?</string>
+    <string name="titleAlertDeleteW">Delete this workout?</string>
     <string name="titleAlertNOWorkout">Insert Title</string>
     <string name="title_addExercise">Add Exercise</string>
     <string name="title_addWorkout">Add Workout</string>

@@ -21,12 +21,12 @@ public class ListWorkoutViewModel extends AndroidViewModel {
     private LiveData<List<WorkoutItem>> workoutsList;
     private final MutableLiveData<WorkoutItem> itemSelected = new MutableLiveData<>();
 
-
+    private WorkoutItemRepository workoutItemRepository;
 
 
     public ListWorkoutViewModel(@NotNull Application application) {
         super(application);
-        WorkoutItemRepository workoutItemRepository = new WorkoutItemRepository(application);
+        workoutItemRepository = new WorkoutItemRepository(application);
         this.workoutsList = workoutItemRepository.getWorkouts();
     }
 
@@ -41,4 +41,9 @@ public class ListWorkoutViewModel extends AndroidViewModel {
     public void setItemSelected(WorkoutItem itemSelected) {
         this.itemSelected.setValue(itemSelected);
     }
+
+    public void deleteWorkout(int workoutId){
+        workoutItemRepository.deleteWorkout(workoutId);
+    }
+
 }
