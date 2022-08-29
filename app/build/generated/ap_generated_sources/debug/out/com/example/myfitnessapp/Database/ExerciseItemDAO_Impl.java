@@ -29,6 +29,8 @@ public final class ExerciseItemDAO_Impl implements ExerciseItemDAO {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteExercise;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeleteExercisesInWorkout;
+
   public ExerciseItemDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfExerciseItem = new EntityInsertionAdapter<ExerciseItem>(__db) {
@@ -70,6 +72,13 @@ public final class ExerciseItemDAO_Impl implements ExerciseItemDAO {
         return _query;
       }
     };
+    this.__preparedStmtOfDeleteExercisesInWorkout = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM Exercise WHERE workoutId = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -97,6 +106,22 @@ public final class ExerciseItemDAO_Impl implements ExerciseItemDAO {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteExercise.release(_stmt);
+    }
+  }
+
+  @Override
+  public void deleteExercisesInWorkout(final int workoutId) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteExercisesInWorkout.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, workoutId);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteExercisesInWorkout.release(_stmt);
     }
   }
 

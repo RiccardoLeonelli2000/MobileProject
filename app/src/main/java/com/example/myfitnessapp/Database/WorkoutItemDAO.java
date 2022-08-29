@@ -15,6 +15,9 @@ import java.util.List;
 @Dao
 public interface WorkoutItemDAO {
 
+    @Query("INSERT INTO Workout VALUES (:workoutId, :workoutTitle)")
+    void addWorkoutById(int workoutId, String workoutTitle);
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void addWorkoutItem(WorkoutItem workoutItem);
 

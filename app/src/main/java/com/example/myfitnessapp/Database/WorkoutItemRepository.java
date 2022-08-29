@@ -41,6 +41,10 @@ public class WorkoutItemRepository {
         workoutItemDAO.deleteWorkout(workoutId);
     }
 
+    public void addWorkoutById(int workoutId, String workoutTitle){
+        workoutItemDAO.addWorkoutById(workoutId, workoutTitle);
+    }
+
 
 
 }

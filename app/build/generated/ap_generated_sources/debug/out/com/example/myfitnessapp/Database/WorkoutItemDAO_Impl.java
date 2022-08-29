@@ -26,6 +26,8 @@ public final class WorkoutItemDAO_Impl implements WorkoutItemDAO {
 
   private final EntityInsertionAdapter<WorkoutItem> __insertionAdapterOfWorkoutItem;
 
+  private final SharedSQLiteStatement __preparedStmtOfAddWorkoutById;
+
   private final SharedSQLiteStatement __preparedStmtOfDeleteWorkout;
 
   public WorkoutItemDAO_Impl(RoomDatabase __db) {
@@ -46,6 +48,13 @@ public final class WorkoutItemDAO_Impl implements WorkoutItemDAO {
         }
       }
     };
+    this.__preparedStmtOfAddWorkoutById = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "INSERT INTO Workout VALUES (?, ?)";
+        return _query;
+      }
+    };
     this.__preparedStmtOfDeleteWorkout = new SharedSQLiteStatement(__db) {
       @Override
       public String createQuery() {
@@ -64,6 +73,28 @@ public final class WorkoutItemDAO_Impl implements WorkoutItemDAO {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void addWorkoutById(final int workoutId, final String workoutTitle) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfAddWorkoutById.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, workoutId);
+    _argIndex = 2;
+    if (workoutTitle == null) {
+      _stmt.bindNull(_argIndex);
+    } else {
+      _stmt.bindString(_argIndex, workoutTitle);
+    }
+    __db.beginTransaction();
+    try {
+      _stmt.executeInsert();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfAddWorkoutById.release(_stmt);
     }
   }
 

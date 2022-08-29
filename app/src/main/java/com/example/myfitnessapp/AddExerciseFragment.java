@@ -20,6 +20,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.example.myfitnessapp.Global.GlobalClass;
 import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
@@ -63,18 +64,9 @@ public class AddExerciseFragment extends Fragment {
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addExercise));
 
+            GlobalClass globalClass = (GlobalClass) activity.getApplicationContext();
 
-            List<WorkoutItem> list = new ArrayList<>();
-            this.adapter = new AllWorkoutAdapter(list, activity);
-            listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
-            listWorkoutViewModel.getWorkoutsList().observe((LifecycleOwner) activity, new Observer<List<WorkoutItem>>() {
-                @Override
-                public void onChanged(List<WorkoutItem> cardItems) {
-                    adapter.setWorkoutList(cardItems);
-
-                    workoutId = adapter.getItemSelected(adapter.getItemCount()-1).getWorkoutId()+1;
-                }
-            });
+            workoutId = globalClass.getWorkoutId();
 
             exerciseViewModel = new AddExerciseViewModel(activity.getApplication());
             TextInputEditText titleExercise = view.findViewById(R.id.title_exercise_edittext);

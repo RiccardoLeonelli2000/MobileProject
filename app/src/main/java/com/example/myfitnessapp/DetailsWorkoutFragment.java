@@ -74,7 +74,7 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
 
                     titleView.setText(workoutItem.getTitle());
                     workoutId = workoutItem.getWorkoutId();
-                    globalClass.setWorkoutId(workoutId);
+                    globalClass.setWorkoutIdSelected(workoutId);
 
                 }
             });
@@ -118,6 +118,7 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
                                 @Override
                                 public void run() {
                                     listWorkoutViewModel.deleteWorkout(workoutId);
+                                    exerciseViewModel.deleteExercisesInWorkout(workoutId);
                                 }
                             });
                             thread.start();

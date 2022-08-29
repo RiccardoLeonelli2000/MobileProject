@@ -22,6 +22,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Global.GlobalClass;
 import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
@@ -60,23 +61,12 @@ public class AddWorkoutFragment extends Fragment {
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addWorkout));
 
 
-
-            List<WorkoutItem> list = new ArrayList<>();
-            this.workoutAdapter = new AllWorkoutAdapter(list, activity);
-            ListWorkoutViewModel listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) activity).get(ListWorkoutViewModel.class);
-            listWorkoutViewModel.getWorkoutsList().observe((LifecycleOwner) activity, new Observer<List<WorkoutItem>>() {
-                @Override
-                public void onChanged(List<WorkoutItem> cardItems) {
-                    workoutAdapter.setWorkoutList(cardItems);
-
-                    workout_id = workoutAdapter.getItemSelected(workoutAdapter.getItemCount()-1).getWorkoutId()+1;
-                }
-            });
+            GlobalClass globalClass = (GlobalClass) activity.getApplicationContext();
 
             setRecyclerView(activity);
             ListExerciseViewModel exerciseViewModel = new ViewModelProvider((ViewModelStoreOwner) activity)
                     .get(ListExerciseViewModel.class);
-            exerciseViewModel.getExercisesInWorkoutList(this.workout_id).observe((LifecycleOwner) activity, new Observer<List<ExerciseItem>>() {
+            exerciseViewModel.getExercisesInWorkoutList(globalClass.getWorkoutId()).observe((LifecycleOwner) activity, new Observer<List<ExerciseItem>>() {
                 @Override
                 public void onChanged(List<ExerciseItem> cardItems) {
                     adapter.setExerciseItemList(cardItems);
@@ -87,6 +77,7 @@ public class AddWorkoutFragment extends Fragment {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     Utilities.insertFragment((AppCompatActivity) activity, new AddExerciseFragment(),
                             AddExerciseFragment.class.getSimpleName());
                 }
@@ -103,8 +94,15 @@ public class AddWorkoutFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if (titleWorkout.getText()!=null && titleWorkout.getText().length()!=0 ) {
-
-                        workoutViewModel.addWorkoutItem(new WorkoutItem(titleWorkout.getText().toString()));
+                        Thread thread = new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                workoutViewModel.addWorkoutById(globalClass.getWorkoutId(), titleWorkout.getText().toString());
+                                globalClass.setWorkoutId(globalClass.getWorkoutId()+1);
+                            }
+                        });
+                        thread.start();
+                        thread.interrupt();
 
                         Utilities.insertFragment((AppCompatActivity) activity, new WorkoutsFragment(),
                                 WorkoutsFragment.class.getSimpleName());

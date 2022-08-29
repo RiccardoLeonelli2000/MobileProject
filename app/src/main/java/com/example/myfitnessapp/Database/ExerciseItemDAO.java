@@ -37,4 +37,7 @@ public interface ExerciseItemDAO {
     @Query("DELETE FROM Exercise WHERE exerciseId = :exerciseId")
     void deleteExercise(int exerciseId);
 
+    @Query("DELETE FROM Exercise WHERE workoutId = :workoutId")
+    void deleteExercisesInWorkout(int workoutId);
+
 }

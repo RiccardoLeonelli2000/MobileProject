@@ -52,5 +52,9 @@ public class ListExerciseViewModel extends AndroidViewModel {
         exerciseItemRepository.deleteExercise(exerciseId);
     }
 
+    public void deleteExercisesInWorkout(int workoutId){
+        exerciseItemRepository.deleteExercisesInWorkout(workoutId);
+    }
+
 
 }

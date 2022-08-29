@@ -47,4 +47,8 @@ public class ExerciseItemRepository {
     public void deleteExercise(int exerciseId){
         exerciseItemDAO.deleteExercise(exerciseId);
     }
+
+    public void deleteExercisesInWorkout(int workoutId){
+        exerciseItemDAO.deleteExercisesInWorkout(workoutId);
+    }
 }

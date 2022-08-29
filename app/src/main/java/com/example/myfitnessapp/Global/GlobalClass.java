@@ -11,6 +11,14 @@ public class GlobalClass extends Application {
         this.workoutId = workoutId;
     }
 
-    private int workoutId;
+    private int workoutId = 1;
+    private int workoutIdSelected = 0;
 
+    public int getWorkoutIdSelected() {
+        return workoutIdSelected;
+    }
+
+    public void setWorkoutIdSelected(int workoutIdSelected) {
+        this.workoutIdSelected = workoutIdSelected;
+    }
 }

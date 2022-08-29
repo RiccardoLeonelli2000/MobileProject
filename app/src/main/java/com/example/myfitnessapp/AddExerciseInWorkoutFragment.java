@@ -60,7 +60,7 @@ public class AddExerciseInWorkoutFragment extends Fragment {
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_addExercise));
 
             GlobalClass globalClass = (GlobalClass) activity.getApplicationContext();
-            workoutId = globalClass.getWorkoutId();
+            workoutId = globalClass.getWorkoutIdSelected();
 
             exerciseViewModel = new AddExerciseViewModel(activity.getApplication());
             TextInputEditText titleExercise = view.findViewById(R.id.title_exercise_edittext);
