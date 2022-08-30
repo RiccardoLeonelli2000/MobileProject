@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.MainActivity;
+import com.example.myfitnessapp.MapActivity;
 import com.example.myfitnessapp.R;
 
 import java.time.LocalDate;
@@ -47,7 +49,12 @@ public class CalendarActivity extends AppCompatActivity implements CalendarAdapt
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.app_bar_calendar){
+            Intent intent = new Intent(this, MainActivity.class);
+            this.startActivity(intent);
+            return true;
+        }
+        return false;
     }
 
     private void initWidgets()

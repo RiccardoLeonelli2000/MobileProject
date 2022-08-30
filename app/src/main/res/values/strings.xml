@@ -41,4 +41,5 @@
     <string name="DELETE">DELETE</string>
     <string name="DISMISS">DISMISS</string>
     <string name="titleAlertDeleteEx">Delete this Exercise?</string>
+    <string name="titleAlertDeleteN">Delete this Notice?</string>
 </resources>

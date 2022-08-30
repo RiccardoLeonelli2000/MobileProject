@@ -38,6 +38,9 @@ public class NoticeItemRepository {
         return notificationsList;
     }
 
+    public void deleteNotice(int noticeId){
+        noticeItemDAO.deleteNotice(noticeId);
+    }
 
 
 

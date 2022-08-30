@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -25,6 +26,8 @@ public final class NoticeItemDAO_Impl implements NoticeItemDAO {
 
   private final EntityInsertionAdapter<NoticeItem> __insertionAdapterOfNoticeItem;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeleteNotice;
+
   public NoticeItemDAO_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfNoticeItem = new EntityInsertionAdapter<NoticeItem>(__db) {
@@ -43,6 +46,13 @@ public final class NoticeItemDAO_Impl implements NoticeItemDAO {
         }
       }
     };
+    this.__preparedStmtOfDeleteNotice = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM Notice WHERE noticeId = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -54,6 +64,22 @@ public final class NoticeItemDAO_Impl implements NoticeItemDAO {
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void deleteNotice(final int noticeId) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteNotice.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, noticeId);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteNotice.release(_stmt);
     }
   }
 

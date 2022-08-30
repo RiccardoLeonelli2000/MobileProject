@@ -34,11 +34,13 @@ id app_bar_calendar
 id birthday_date_edittext
 id birthday_date_textinput
 id button_deleteEx
+id button_deleteN
 id button_deleteW
 id calendarRecyclerView
 id calendar_card
 id capture_button
 id cellDayText
+id content_noticeDetails
 id dayOfWeekTV
 id event1
 id event2
@@ -134,6 +136,7 @@ layout hour_cell
 layout local
 layout map_activity
 layout modify_profile
+layout notice_details
 layout notifications
 layout profile
 layout settings
@@ -172,6 +175,7 @@ string sets
 string surname
 string take_new_image_profile
 string titleAlertDeleteEx
+string titleAlertDeleteN
 string titleAlertDeleteW
 string titleAlertNOWorkout
 string title_addExercise

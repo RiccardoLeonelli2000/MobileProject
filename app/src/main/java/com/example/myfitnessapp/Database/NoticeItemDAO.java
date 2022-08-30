@@ -21,5 +21,8 @@ public interface NoticeItemDAO {
     @Query("SELECT * FROM Notice ORDER BY noticeId DESC")
     LiveData<List<NoticeItem>> getNotifications();
 
+    @Query("DELETE FROM Notice WHERE noticeId = :noticeId")
+    void deleteNotice(int noticeId);
+
 
 }

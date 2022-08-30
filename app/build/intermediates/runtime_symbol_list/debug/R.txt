@@ -2705,6 +2705,7 @@ int id bounceEnd 0x7f080068
 int id bounceStart 0x7f080069
 int id buttonPanel 0x7f08006a
 int id button_deleteEx 0x7f08006b
+int id button_deleteN 0x7f080246
 int id button_deleteW 0x7f08006c
 int id cache_measures 0x7f08006d
 int id calendarRecyclerView 0x7f08006e
@@ -2743,6 +2744,7 @@ int id constraint 0x7f08008e
 int id container 0x7f08008f
 int id content 0x7f080090
 int id contentPanel 0x7f080091
+int id content_noticeDetails 0x7f080247
 int id contiguous 0x7f080092
 int id continuousVelocity 0x7f080093
 int id coordinator 0x7f080094
@@ -3357,6 +3359,7 @@ int layout mtrl_picker_header_title_text 0x7f0b006d
 int layout mtrl_picker_header_toggle 0x7f0b006e
 int layout mtrl_picker_text_input_date 0x7f0b006f
 int layout mtrl_picker_text_input_date_range 0x7f0b0070
+int layout notice_details 0x7f0b0091
 int layout notification_action 0x7f0b0071
 int layout notification_action_tombstone 0x7f0b0072
 int layout notification_template_custom_big 0x7f0b0073
@@ -3564,6 +3567,7 @@ int string status_bar_notification_info_overflow 0x7f0f00a4
 int string surname 0x7f0f00a5
 int string take_new_image_profile 0x7f0f00a6
 int string titleAlertDeleteEx 0x7f0f00a7
+int string titleAlertDeleteN 0x7f0f00b6
 int string titleAlertDeleteW 0x7f0f00a8
 int string titleAlertNOWorkout 0x7f0f00a9
 int string title_addExercise 0x7f0f00aa

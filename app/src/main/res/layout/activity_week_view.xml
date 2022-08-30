@@ -42,6 +42,8 @@
             android:layout_height="wrap_content"
             android:text="Feb 2021"
             android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/black"/>
 

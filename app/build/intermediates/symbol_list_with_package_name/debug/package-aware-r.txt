@@ -2706,6 +2706,7 @@ id bounceEnd
 id bounceStart
 id buttonPanel
 id button_deleteEx
+id button_deleteN
 id button_deleteW
 id cache_measures
 id calendarRecyclerView
@@ -2744,6 +2745,7 @@ id constraint
 id container
 id content
 id contentPanel
+id content_noticeDetails
 id contiguous
 id continuousVelocity
 id coordinator
@@ -3358,6 +3360,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout notice_details
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -3565,6 +3568,7 @@ string status_bar_notification_info_overflow
 string surname
 string take_new_image_profile
 string titleAlertDeleteEx
+string titleAlertDeleteN
 string titleAlertDeleteW
 string titleAlertNOWorkout
 string title_addExercise

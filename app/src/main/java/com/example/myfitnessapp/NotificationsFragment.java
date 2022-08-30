@@ -21,12 +21,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.RecyclerView.NotificationsAdapter;
+import com.example.myfitnessapp.RecyclerView.OnItemListener;
+import com.example.myfitnessapp.RecyclerView.WorkoutListenerAdapter;
 import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotificationsFragment extends Fragment {
+public class NotificationsFragment extends Fragment implements OnItemListener{
     private NotificationsAdapter adapter;
     private ListNotificationsViewModel listNotificationsViewModel;
 
@@ -49,7 +51,7 @@ public class NotificationsFragment extends Fragment {
             listNotificationsViewModel.getNotificationsList().observe(activity, new Observer<List<NoticeItem>>() {
                 @Override
                 public void onChanged(List<NoticeItem> cardItems) {
-                    adapter.setNotifications(cardItems);
+                    adapter.setData(cardItems);
                 }
             });
         }
@@ -76,9 +78,19 @@ public class NotificationsFragment extends Fragment {
     private void setRecyclerView(final Activity activity){
         RecyclerView recyclerView = activity.findViewById(R.id.recycler_view_notifications);
         recyclerView.setHasFixedSize(true);
+        final OnItemListener listener = (OnItemListener) this;
+        adapter = new NotificationsAdapter(listener, activity);
+        recyclerView.setAdapter(adapter);
+    }
 
-        List<NoticeItem> list = new ArrayList<>();
-        this.adapter = new NotificationsAdapter(list, activity);
-        recyclerView.setAdapter(this.adapter);
+    @Override
+    public void onItemClick(int position) {
+        Activity activity = getActivity();
+        if (activity != null){
+            Utilities.insertFragment((AppCompatActivity) activity, new DetailsNoticeFragment(),
+                    DetailsNoticeFragment.class.getSimpleName());
+
+            listNotificationsViewModel.setItemSelected(adapter.getItemSelected(position));
+        }
     }
 }
