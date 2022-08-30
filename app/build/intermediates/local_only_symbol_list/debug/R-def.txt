@@ -46,9 +46,9 @@ id exercise_sets
 id exercise_weights
 id fab_add
 id fragment_container_view
+id fragment_container_view_maps
 id guideline
 id gym_localization_card
-id map
 id mapView
 id modify_profile_card
 id monthYearTV
@@ -112,7 +112,7 @@ layout exercise_details
 layout fab_add
 layout gym
 layout local
-layout map
+layout map_activity
 layout modify_profile
 layout notifications
 layout profile

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
 MERGED from [com.google.android.material:material:1.6.0] /home/riccardo/.gradle/caches/transforms-3/6dd341f1aaa781be49a8f752078a6907/transformed/material-1.6.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/riccardo/.gradle/caches/transforms-3/8ad4b0562467dfb6f3cd10869bd03e3f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] /home/riccardo/.gradle/caches/transforms-3/69592bd19cec1de513dd3643bec51fc2/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
@@ -52,20 +52,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/riccardo/.gradle/ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/riccardo/.gradle/caches/transforms-3/daafd13ed6472e5d90ee94a442cae491/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/riccardo/.gradle/caches/transforms-3/bd2b858bc6569916fd0b165974e7ef03/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/riccardo/.gradle/caches/transforms-3/2af33ecfc53e92df0b334d3008fd6eb8/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
+INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-47:12
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:1-48:12
 		INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:2:11-69
@@ -96,7 +96,7 @@ ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/Andro
 	android:name
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:14:22-76
 application
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:17:5-42:19
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:18:5-43:19
 MERGED from [com.google.android.material:material:1.6.0] /home/riccardo/.gradle/caches/transforms-3/6dd341f1aaa781be49a8f752078a6907/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.0] /home/riccardo/.gradle/caches/transforms-3/6dd341f1aaa781be49a8f752078a6907/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/riccardo/.gradle/caches/transforms-3/8ad4b0562467dfb6f3cd10869bd03e3f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -126,49 +126,53 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/riccardo/.gradle/cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] /home/riccardo/.gradle/caches/transforms-3/0c734a8f9451ded3159b05d46fc9a23a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:21:9-41
 	android:roundIcon
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:21:9-54
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-54
 	android:icon
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:19:9-43
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-43
 	android:allowBackup
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:18:9-35
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:19:9-35
 	android:theme
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:23:9-50
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:24:9-50
 	android:name
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:24:9-43
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:25:9-43
 activity#com.example.myfitnessapp.MainActivity
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:25:9-33:20
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:26:9-34:20
 	android:exported
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:27:13-36
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:26:13-41
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:27:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:28:13-32:29
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:31:17-77
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:31:27-74
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:32:27-74
+activity#com.example.myfitnessapp.MapActivity
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:9-49
+	android:name
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:19-46
 meta-data#com.google.android.gms.version
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:9-37:69
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:9-38:69
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] /home/riccardo/.gradle/caches/transforms-3/b47fa07eeab5eb3a3e29169c35af0d8e/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:18.0.0] /home/riccardo/.gradle/caches/transforms-3/b47fa07eeab5eb3a3e29169c35af0d8e/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:13-66
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:13-66
 	android:name
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:13-58
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:9-41:71
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:40:9-42:71
 	android:value
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:41:13-68
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:42:13-68
 	android:name
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:40:13-58
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:41:13-58
 uses-sdk
 INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml

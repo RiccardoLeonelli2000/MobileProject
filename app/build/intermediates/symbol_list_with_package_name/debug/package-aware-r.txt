@@ -2821,6 +2821,7 @@ id flip
 id floating
 id forever
 id fragment_container_view
+id fragment_container_view_maps
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -2872,7 +2873,6 @@ id line3
 id linear
 id listMode
 id list_item
-id map
 id mapView
 id masked
 id match_constraint
@@ -3292,7 +3292,7 @@ layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
 layout m3_auto_complete_simple_item
-layout map
+layout map_activity
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

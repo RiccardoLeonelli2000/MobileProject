@@ -4,6 +4,7 @@ package com.example.myfitnessapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -19,14 +20,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Set the layout file as the content view.
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.map_activity);
 
-        // Get a handle to the fragment and register the callback.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        assert mapFragment != null;
-        mapFragment.getMapAsync(this);
+    }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        this.startActivity(intent);
     }
 
     // Get a handle to the GoogleMap object and display marker.
