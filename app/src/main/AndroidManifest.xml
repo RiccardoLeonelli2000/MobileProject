@@ -32,6 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Calendar.CalendarActivity"/>
+        <activity android:name=".Calendar.WeekViewActivity"/>
+        <activity android:name=".Calendar.EventEditActivity"/>
+        <activity android:name=".Calendar.DailyCalendarActivity"/>
         <activity android:name=".MapActivity" />
         <meta-data
             android:name="com.google.android.gms.version"

@@ -2536,6 +2536,7 @@ drawable ic_baseline_calendar_month_24
 drawable ic_baseline_dashboard_24
 drawable ic_baseline_fitness_center_24
 drawable ic_baseline_gps_fixed_24
+drawable ic_baseline_home_24
 drawable ic_baseline_notifications_24
 drawable ic_baseline_settings_24
 drawable ic_clock_black_24dp
@@ -2709,11 +2710,11 @@ id button_deleteW
 id cache_measures
 id calendarRecyclerView
 id calendar_card
-id calendar_cell
 id callMeasure
 id cancel_button
 id capture_button
 id carryVelocity
+id cellDayText
 id center
 id centerCrop
 id centerInside
@@ -2754,6 +2755,7 @@ id customPanel
 id cut
 id dark
 id date_picker_actions
+id dayOfWeekTV
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -2796,6 +2798,14 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id event1
+id event2
+id event3
+id eventCellTV
+id eventDateTV
+id eventListView
+id eventNameET
+id eventTimeTV
 id exercise_card
 id exercise_image
 id exercise_name
@@ -2841,6 +2851,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hourListView
 id hybrid
 id icon
 id icon_group
@@ -2901,6 +2912,7 @@ id message
 id middle
 id mini
 id modify_profile_card
+id monthDayText
 id monthYearTV
 id month_grid
 id month_navigation_bar
@@ -2971,6 +2983,7 @@ id parallax
 id parent
 id parentPanel
 id parentRelative
+id parentView
 id parent_matrix
 id password_toggle
 id path
@@ -3114,6 +3127,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timeTV
 id title
 id titleDividerNoCustom
 id title_esDetails
@@ -3259,11 +3273,15 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_daily_calendar
+layout activity_event_edit
 layout activity_main
+layout activity_week_view
 layout add_event_calendar
 layout add_exercise
 layout add_workout
 layout calendar
+layout calendar_activity
 layout calendar_cell
 layout card_exercise_layout
 layout card_notice_layout
@@ -3284,9 +3302,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout event_cell
 layout exercise_details
 layout fab_add
 layout gym
+layout hour_cell
 layout local
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

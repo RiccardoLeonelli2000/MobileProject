@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.myfitnessapp.Calendar.CalendarActivity;
+
 public class HomeFragment extends Fragment {
     @Nullable
     @Override
@@ -67,8 +69,8 @@ public class HomeFragment extends Fragment {
             view.findViewById(R.id.calendar_card).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Utilities.insertFragment((AppCompatActivity) activity, new CalendarFragment(),
-                            CalendarFragment.class.getSimpleName());
+                    Intent intent = new Intent(activity, CalendarActivity.class);
+                    startActivity(intent);
                 }
             });
 
