@@ -2968,7 +2968,6 @@ id noState
 id none
 id normal
 id north
-id notfications_card
 id notice_card
 id notice_content
 id notification_background
@@ -3044,7 +3043,6 @@ id selected
 id selection_type
 id sets_exercise_edittext
 id sets_exercise_textinput
-id settings_card
 id sharedValueSet
 id sharedValueUnset
 id shortcut

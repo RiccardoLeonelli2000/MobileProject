@@ -72,7 +72,6 @@ id nav_view
 id navigation_home
 id navigation_notifications
 id navigation_workouts
-id notfications_card
 id notice_card
 id notice_content
 id parentView
@@ -89,7 +88,6 @@ id rest_exercise_textinput
 id scrollView2
 id sets_exercise_edittext
 id sets_exercise_textinput
-id settings_card
 id surname_edittext
 id surname_textinput
 id textView

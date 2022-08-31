@@ -32,6 +32,10 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-mdpi/ic_launcher.webp"
     },
     {
+        "merged": "com.example.myfitnessapp-merged_res-32:/layout_profile.xml.flat",
+        "source": "com.example.myfitnessapp-main-34:/layout/profile.xml"
+    },
+    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
@@ -168,10 +172,6 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/event_cell.xml"
     },
     {
-        "merged": "com.example.myfitnessapp-merged_res-32:/layout_card_notice_layout.xml.flat",
-        "source": "com.example.myfitnessapp-main-34:/layout/card_notice_layout.xml"
-    },
-    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_activity_week_view.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/activity_week_view.xml"
     },
@@ -208,12 +208,12 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/fab_add.xml"
     },
     {
-        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_card_notice_layout.xml.flat",
-        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/card_notice_layout.xml"
-    },
-    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_add_workout.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/add_workout.xml"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_card_notice_layout.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/card_notice_layout.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_modify_profile.xml.flat",

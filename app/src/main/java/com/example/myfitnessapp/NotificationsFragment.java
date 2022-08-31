@@ -51,6 +51,7 @@ public class NotificationsFragment extends Fragment implements OnItemListener{
             listNotificationsViewModel.getNotificationsList().observe(activity, new Observer<List<NoticeItem>>() {
                 @Override
                 public void onChanged(List<NoticeItem> cardItems) {
+
                     adapter.setData(cardItems);
                 }
             });

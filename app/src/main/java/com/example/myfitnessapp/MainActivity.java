@@ -7,7 +7,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 
 import android.annotation.SuppressLint;
 
@@ -19,11 +23,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
+import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -38,6 +45,7 @@ public class MainActivity extends AppCompatActivity{
     HomeFragment profileFragment = new HomeFragment();
 
     private AddNotificationsViewModel addNotificationsViewModel;
+    private ListNotificationsViewModel listNotificationsViewModel;
 
 
     @Override
@@ -52,6 +60,14 @@ public class MainActivity extends AppCompatActivity{
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_notifications);
         badgeDrawable.setVisible(true);
         badgeDrawable.setNumber(8);
+
+        listNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) this).get(ListNotificationsViewModel.class);
+        listNotificationsViewModel.getNotificationsList().observe(this, new Observer<List<NoticeItem>>() {
+            @Override
+            public void onChanged(List<NoticeItem> cardItems) {
+
+            }
+        });
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")

@@ -42,21 +42,6 @@ public class HomeFragment extends Fragment {
                 }
             });
 
-            view.findViewById(R.id.notfications_card).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Utilities.insertFragment((AppCompatActivity) activity, new NotificationsFragment(),
-                            NotificationsFragment.class.getSimpleName());
-                }
-            });
-
-            view.findViewById(R.id.settings_card).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Utilities.insertFragment((AppCompatActivity) activity, new SettingsFragment(),
-                            SettingsFragment.class.getSimpleName());
-                }
-            });
 
             view.findViewById(R.id.workouts_card).setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -38,6 +38,7 @@
     <string name="surname">Surname</string>
     <string name="take_new_image_profile">Take new image profile</string>
     <string name="titleAlertDeleteEx">Delete this Exercise?</string>
+    <string name="titleAlertDeleteN">Delete this Notice?</string>
     <string name="titleAlertDeleteW">Delete this workout?</string>
     <string name="titleAlertNOWorkout">Insert Title</string>
     <string name="title_addExercise">Add Exercise</string>
