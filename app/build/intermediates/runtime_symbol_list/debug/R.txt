@@ -2525,6 +2525,7 @@ int drawable design_ic_visibility 0x7f070075
 int drawable design_ic_visibility_off 0x7f070076
 int drawable design_password_eye 0x7f070077
 int drawable design_snackbar_background 0x7f070078
+int drawable fitness 0x7f0700c1
 int drawable googleg_disabled_color_18 0x7f070079
 int drawable googleg_standard_color_18 0x7f07007a
 int drawable ic_baseline_account_box_24 0x7f07007b

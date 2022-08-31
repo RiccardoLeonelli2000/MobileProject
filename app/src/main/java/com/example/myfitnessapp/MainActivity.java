@@ -23,9 +23,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+import com.example.myfitnessapp.Global.GlobalClass;
 import com.example.myfitnessapp.Item.NoticeItem;
+import com.example.myfitnessapp.Item.WorkoutItem;
 import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
+import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity{
     private ListNotificationsViewModel listNotificationsViewModel;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,13 +63,22 @@ public class MainActivity extends AppCompatActivity{
 
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_notifications);
         badgeDrawable.setVisible(true);
-        badgeDrawable.setNumber(8);
+
 
         listNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) this).get(ListNotificationsViewModel.class);
         listNotificationsViewModel.getNotificationsList().observe(this, new Observer<List<NoticeItem>>() {
             @Override
             public void onChanged(List<NoticeItem> cardItems) {
+                badgeDrawable.setNumber(cardItems.size());
+            }
+        });
 
+        GlobalClass globalClass = (GlobalClass) getApplicationContext();
+        ListWorkoutViewModel listWorkoutViewModel = new ViewModelProvider((ViewModelStoreOwner) this).get(ListWorkoutViewModel.class);
+        listWorkoutViewModel.getWorkoutsList().observe(this, new Observer<List<WorkoutItem>>() {
+            @Override
+            public void onChanged(List<WorkoutItem> workoutItems) {
+                globalClass.setWorkoutId(workoutItems.get(workoutItems.size()-1).getWorkoutId()+1);
             }
         });
 

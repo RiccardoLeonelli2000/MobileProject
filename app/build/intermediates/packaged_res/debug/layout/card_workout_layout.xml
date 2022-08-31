@@ -31,10 +31,9 @@
             android:id="@+id/workout_imageview"
             android:layout_width="match_parent"
             android:layout_height="108dp"
-            android:background="@color/black"
+            android:contentDescription="@string/image_home"
             android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:contentDescription="@string/image_home" />
+            tools:srcCompat="@drawable/fitness" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>

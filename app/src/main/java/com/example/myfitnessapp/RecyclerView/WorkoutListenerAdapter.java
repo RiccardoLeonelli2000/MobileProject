@@ -66,8 +66,8 @@ public class WorkoutListenerAdapter extends RecyclerView.Adapter<WorkoutListener
         WorkoutItem currentWorkoutItem = workoutItemList.get(position);
         holder.titleView.setText(currentWorkoutItem.getTitle());
 
-        String image = "ic_baseline_fitness_center_24";
-        if (image.contains("ic_")){
+        String image = "fitness";
+        if (image.contains("fitness")){
             Drawable drawable = AppCompatResources.getDrawable(activity, activity.getResources().getIdentifier(image, "drawable", activity.getPackageName()));
             holder.imageView.setImageDrawable(drawable);
         }
