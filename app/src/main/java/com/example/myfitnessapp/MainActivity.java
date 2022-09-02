@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
         addNotificationsViewModel = new ViewModelProvider(this).get(AddNotificationsViewModel.class);
+        globalClass.setAddNotificationsViewModel(addNotificationsViewModel);
     }
 
     @Override

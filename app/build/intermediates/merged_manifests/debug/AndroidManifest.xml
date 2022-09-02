@@ -54,6 +54,10 @@
         <activity android:name="com.example.myfitnessapp.Calendar.WeekViewActivity" />
         <activity android:name="com.example.myfitnessapp.Calendar.EventEditActivity" />
         <activity android:name="com.example.myfitnessapp.Calendar.DailyCalendarActivity" />
+        <activity
+            android:name="com.example.myfitnessapp.PopUp.NewImagePopUp"
+            android:theme="@style/AppThemeCustomTheme" >
+        </activity>
         <activity android:name="com.example.myfitnessapp.MapActivity" />
 
         <meta-data

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -18,12 +19,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="16dp"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/capture_button">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/name_edittext"
@@ -79,21 +80,23 @@
                 style="@style/ThemeOverlay.Material3.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/take_new_image_profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/birthday_date_textinput" />
+                app:layout_constraintTop_toBottomOf="@+id/picture_displayed_imageview" />
 
             <ImageView
                 android:id="@+id/picture_displayed_imageview"
-                android:layout_width="372dp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:layout_marginTop="32dp"
                 android:background="@color/white"
                 android:contentDescription="@string/image_captured"
                 android:src="@drawable/ic_baseline_account_circle_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/capture_button" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/add_exercise_button2"
@@ -101,10 +104,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/save_profile"
-                android:layout_marginTop="40dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/picture_displayed_imageview" />
+                app:layout_constraintTop_toBottomOf="@+id/birthday_date_textinput" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

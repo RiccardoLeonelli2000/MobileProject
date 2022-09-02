@@ -42,4 +42,8 @@
     <string name="DISMISS">DISMISS</string>
     <string name="titleAlertDeleteEx">Delete this Exercise?</string>
     <string name="titleAlertDeleteN">Delete this Notice?</string>
+    <string name="nameProfile">nameProfile</string>
+    <string name="surnameProfile">surnameProfile</string>
+    <string name="dateBirthayProfile">dateBirthayProfile</string>
+    <string name="imageProfile">imageProfile</string>
 </resources>
