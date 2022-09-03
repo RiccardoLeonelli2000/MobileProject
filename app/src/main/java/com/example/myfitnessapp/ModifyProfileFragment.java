@@ -134,13 +134,13 @@ public class ModifyProfileFragment extends Fragment {
                         } else {
                             imageUriString = "ic_baseline_account_circle_24";
                         }
-                        if (nameEditText.getText() != null) {
+                        if (nameEditText.getText() != null && !nameEditText.getText().toString().equals("")) {
                             editor.putString(getString(R.string.nameProfile), nameEditText.getText().toString());
                         }
-                        if (surnameEditText.getText() != null) {
+                        if (surnameEditText.getText() != null && !surnameEditText.getText().toString().equals("")) {
                             editor.putString(getString(R.string.surnameProfile), surnameEditText.getText().toString());
                         }
-                        if (dateEditText.getText() != null) {
+                        if (dateEditText.getText() != null  && !dateEditText.getText().toString().equals("")) {
                             editor.putString(getString(R.string.dateBirthayProfile), dateEditText.getText().toString());
                         }
                         if (imageUriString != null) {

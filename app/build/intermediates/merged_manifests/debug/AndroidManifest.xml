@@ -35,9 +35,9 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/my_fitness"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/my_fitness"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MyFitnessApp" >
@@ -50,10 +50,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.myfitnessapp.Calendar.CalendarActivity" />
-        <activity android:name="com.example.myfitnessapp.Calendar.WeekViewActivity" />
-        <activity android:name="com.example.myfitnessapp.Calendar.EventEditActivity" />
-        <activity android:name="com.example.myfitnessapp.Calendar.DailyCalendarActivity" />
+        <activity
+            android:name="com.example.myfitnessapp.Calendar.CalendarActivity"
+            android:theme="@style/CalendarTheme" />
+        <activity
+            android:name="com.example.myfitnessapp.Calendar.WeekViewActivity"
+            android:theme="@style/CalendarTheme" />
+        <activity
+            android:name="com.example.myfitnessapp.Calendar.EventEditActivity"
+            android:theme="@style/CalendarTheme" />
+        <activity
+            android:name="com.example.myfitnessapp.Calendar.DailyCalendarActivity"
+            android:theme="@style/CalendarTheme" />
         <activity
             android:name="com.example.myfitnessapp.PopUp.NewImagePopUp"
             android:theme="@style/AppThemeCustomTheme" >

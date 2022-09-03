@@ -130,9 +130,9 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/riccardo/.gradle/cach
 	android:label
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:21:9-41
 	android:roundIcon
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-54
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-49
 	android:icon
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-43
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-44
 	android:allowBackup
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:19:9-35
 	android:theme
@@ -156,19 +156,27 @@ ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/Andro
 	android:name
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:32:27-74
 activity#com.example.myfitnessapp.Calendar.CalendarActivity
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:9-62
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:9-99
+	android:theme
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:61-97
 	android:name
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:19-60
 activity#com.example.myfitnessapp.Calendar.WeekViewActivity
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:9-62
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:9-99
+	android:theme
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:61-97
 	android:name
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:19-60
 activity#com.example.myfitnessapp.Calendar.EventEditActivity
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:9-63
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:9-100
+	android:theme
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:62-98
 	android:name
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:19-61
 activity#com.example.myfitnessapp.Calendar.DailyCalendarActivity
-ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:9-67
+ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:9-104
+	android:theme
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:66-102
 	android:name
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:19-65
 activity#com.example.myfitnessapp.PopUp.NewImagePopUp

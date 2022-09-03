@@ -2494,6 +2494,7 @@ int drawable abc_vector_test 0x7f070055
 int drawable avd_hide_password 0x7f070056
 int drawable avd_show_password 0x7f070057
 int drawable bg_calendar 0x7f070058
+int drawable black_border_rounded_cornwe 0x7f0700cb
 int drawable btn_checkbox_checked_mtrl 0x7f070059
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07005a
 int drawable btn_checkbox_unchecked_mtrl 0x7f07005b
@@ -2585,6 +2586,7 @@ int drawable mtrl_navigation_bar_item_background 0x7f0700ae
 int drawable mtrl_popupmenu_background 0x7f0700af
 int drawable mtrl_popupmenu_background_overlay 0x7f0700b0
 int drawable mtrl_tabs_default_indicator 0x7f0700b1
+int drawable my_fitness 0x7f0700c6
 int drawable navigation_empty_icon 0x7f0700b2
 int drawable notification_action_background 0x7f0700b3
 int drawable notification_bg 0x7f0700b4
@@ -2597,11 +2599,14 @@ int drawable notification_icon_background 0x7f0700ba
 int drawable notification_template_icon_bg 0x7f0700bb
 int drawable notification_template_icon_low_bg 0x7f0700bc
 int drawable notification_tile_bg 0x7f0700bd
+int drawable notifications_logo 0x7f0700ca
 int drawable notify_panel_notification_icon_bg 0x7f0700be
+int drawable presenter 0x7f0700c7
 int drawable test_custom_background 0x7f0700bf
 int drawable test_level_drawable 0x7f0700c0
 int drawable tooltip_frame_dark 0x7f0700c1
 int drawable tooltip_frame_light 0x7f0700c2
+int drawable workouts_logo 0x7f0700c9
 int font font 0x7f130000
 int font poppins_medium 0x7f130001
 int font poppins_regular 0x7f130002
@@ -2760,6 +2765,9 @@ int id continuousVelocity 0x7f080096
 int id coordinator 0x7f080097
 int id cos 0x7f080098
 int id counterclockwise 0x7f080099
+int id cover 0x7f080251
+int id cover_notifications 0x7f080252
+int id cover_workouts 0x7f080253
 int id currentState 0x7f08009a
 int id custom 0x7f08009b
 int id customPanel 0x7f08009c
@@ -2871,6 +2879,7 @@ int id ifRoom 0x7f080105
 int id ignore 0x7f080106
 int id ignoreRequest 0x7f080107
 int id image 0x7f080108
+int id imageCard 0x7f08024f
 int id immediateStop 0x7f080109
 int id included 0x7f08010a
 int id info 0x7f08010b
@@ -3868,6 +3877,7 @@ int style Base_Widget_MaterialComponents_Snackbar 0x7f100109
 int style Base_Widget_MaterialComponents_TextInputEditText 0x7f10010a
 int style Base_Widget_MaterialComponents_TextInputLayout 0x7f10010b
 int style Base_Widget_MaterialComponents_TextView 0x7f10010c
+int style CalendarTheme 0x7f100420
 int style CardView 0x7f10010d
 int style CardView_Dark 0x7f10010e
 int style CardView_Light 0x7f10010f

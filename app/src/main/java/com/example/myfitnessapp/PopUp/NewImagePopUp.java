@@ -34,7 +34,6 @@ public class NewImagePopUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.pop_up_profileimage);
-        Bundle datipassati = getIntent().getExtras();
         GlobalClass globalClass = (GlobalClass) getApplicationContext();
 
         addNotificationsViewModel = globalClass.getAddNotificationsViewModel();
@@ -72,14 +71,14 @@ public class NewImagePopUp extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK && data != null){
             Bundle bundle = data.getExtras();
             if (bundle != null){
                 Bitmap imageBitmap = (Bitmap) bundle.get("data");
                 addNotificationsViewModel.setImageBitmap(imageBitmap);
             }
         }
-        else if (requestCode == 3 && resultCode == RESULT_OK){
+        else if (requestCode == 3 && resultCode == RESULT_OK && data != null){
             Uri selectedImage = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);

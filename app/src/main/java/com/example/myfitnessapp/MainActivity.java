@@ -78,7 +78,9 @@ public class MainActivity extends AppCompatActivity{
         listWorkoutViewModel.getWorkoutsList().observe(this, new Observer<List<WorkoutItem>>() {
             @Override
             public void onChanged(List<WorkoutItem> workoutItems) {
-                globalClass.setWorkoutId(workoutItems.get(workoutItems.size()-1).getWorkoutId()+1);
+                if (workoutItems.size()>0){
+                    globalClass.setWorkoutId(workoutItems.get(workoutItems.size()-1).getWorkoutId()+1);
+                }
             }
         });
 

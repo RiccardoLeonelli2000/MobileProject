@@ -50,6 +50,8 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             android:textStyle="bold"
+            android:background="@drawable/black_border_rounded_cornwe"
+            android:fontFamily="@font/poppins_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
