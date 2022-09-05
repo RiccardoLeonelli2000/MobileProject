@@ -1,5 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+anim anim_left_to_right
+anim anim_right_to_left
+anim exit_left_to_right
+anim exit_right_to_left
 color black
 color dark_gray
 color gray
@@ -11,8 +15,13 @@ color red
 color teal_200
 color teal_700
 color white
+drawable add_exercise_logo
+drawable add_workout
 drawable bg_calendar
 drawable black_border_rounded_cornwe
+drawable calendar_logo
+drawable details_ex_logo
+drawable face
 drawable fitness
 drawable ic_baseline_account_box_24
 drawable ic_baseline_account_circle_24
@@ -32,10 +41,14 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
+drawable left
+drawable logo
 drawable manubrio
+drawable modify_profile_logo
 drawable my_fitness
 drawable notifications_logo
 drawable presenter
+drawable right
 drawable workouts_logo
 font font
 font poppins_medium
@@ -47,6 +60,7 @@ id app_bar_calendar
 id birthdayTextView
 id birthday_date_edittext
 id birthday_date_textinput
+id button
 id button_deleteEx
 id button_deleteN
 id button_deleteW
@@ -57,6 +71,7 @@ id cellDayText
 id choose_photo
 id content_noticeDetails
 id cover
+id cover_addworkouts
 id cover_notifications
 id cover_workouts
 id dayOfWeekTV
@@ -78,7 +93,6 @@ id fab_add
 id fragment_container_view
 id fragment_container_view_maps
 id guideline
-id gym_localization_card
 id hourListView
 id imageCard
 id mapView
@@ -93,6 +107,7 @@ id navigation_notifications
 id navigation_workouts
 id notice_card
 id notice_content
+id notifications_card
 id parentView
 id picture_displayed_imageview
 id picture_profile
@@ -188,6 +203,7 @@ string image_captured
 string image_home
 string images_for_exercise
 string images_for_notice
+string modify_exercise
 string modify_profile
 string name
 string nameProfile

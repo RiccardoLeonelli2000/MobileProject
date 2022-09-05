@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Weekly"
+        android:layout_margin="10dp"
         android:background="@null"
         android:textStyle="bold"
         android:onClick="weeklyAction"
@@ -26,11 +27,11 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp">
 
-        <Button
+        <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/back"
+            android:src="@drawable/left"
             android:background="@null"
             android:textStyle="bold"
             android:onClick="previousMonthAction"
@@ -42,15 +43,16 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:text="Feb 2021"
-            android:textSize="20sp"
+            android:textSize="25sp"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/black"/>
 
-        <Button
+        <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/forward"
+            android:src="@drawable/right"
             android:background="@null"
             android:textStyle="bold"
             android:onClick="nextMonthAction"

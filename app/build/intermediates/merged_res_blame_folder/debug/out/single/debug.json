@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_left.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/left.png"
+    },
+    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_ic_baseline_fitness_center_24.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/ic_baseline_fitness_center_24.xml"
     },
@@ -10,6 +14,10 @@
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_ic_baseline_calendar_month_24.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/ic_baseline_calendar_month_24.xml"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_face.jpeg.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/face.jpeg"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable-v24_ic_launcher_foreground.xml.flat",
@@ -44,6 +52,10 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/notifications_logo.png"
     },
     {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/anim_anim_right_to_left.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/anim/anim_right_to_left.xml"
+    },
+    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
@@ -60,12 +72,20 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/activity_event_edit.xml"
     },
     {
-        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_workouts.xml.flat",
-        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/workouts.xml"
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_calendar_logo.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/calendar_logo.png"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/anim_exit_left_to_right.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/anim/exit_left_to_right.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_workouts.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/workouts.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable-v24_ic_notifications_black_24dp.xml.flat",
@@ -90,6 +110,10 @@
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_ic_baseline_home_24.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/ic_baseline_home_24.xml"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_logo.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/logo.png"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_ic_launcher_background.xml.flat",
@@ -128,12 +152,12 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/gym.xml"
     },
     {
-        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable-v24_ic_home_black_24dp.xml.flat",
-        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable-v24/ic_home_black_24dp.xml"
-    },
-    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable-v24_ic_home_black_24dp.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable-v24/ic_home_black_24dp.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_ic_baseline_add_a_photo_24.xml.flat",
@@ -162,6 +186,10 @@
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_hour_cell.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/hour_cell.xml"
+    },
+    {
+        "merged": "com.example.myfitnessapp-merged_res-32:/layout_exercise_details.xml.flat",
+        "source": "com.example.myfitnessapp-main-34:/layout/exercise_details.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_activity_main.xml.flat",
@@ -204,16 +232,24 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/event_cell.xml"
     },
     {
-        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_workouts.png.flat",
-        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/workouts.png"
-    },
-    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_activity_week_view.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/activity_week_view.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/anim_anim_left_to_right.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/anim/anim_left_to_right.xml"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_right.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/right.png"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_details_ex_logo.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/details_ex_logo.png"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -236,6 +272,10 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_modify_profile_logo.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/modify_profile_logo.png"
+    },
+    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable-v24_black_border_rounded_cornwe.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable-v24/black_border_rounded_cornwe.xml"
     },
@@ -254,10 +294,6 @@
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_fab_add.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/fab_add.xml"
-    },
-    {
-        "merged": "com.example.myfitnessapp-merged_res-32:/layout_card_exercise_layout.xml.flat",
-        "source": "com.example.myfitnessapp-main-34:/layout/card_exercise_layout.xml"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/layout_add_workout.xml.flat",
@@ -284,16 +320,24 @@
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/layout/calendar_cell.xml"
     },
     {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/anim_exit_right_to_left.xml.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/anim/exit_right_to_left.xml"
+    },
+    {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/menu_bottom_nav_menu.xml.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "com.example.myfitnessapp-merged_res-32:/layout_workout_details.xml.flat",
-        "source": "com.example.myfitnessapp-main-34:/layout/workout_details.xml"
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_add_workout.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/add_workout.png"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_my_fitness.png.flat",
         "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/my_fitness.png"
+    },
+    {
+        "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_add_exercise_logo.png.flat",
+        "source": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-main-34:/drawable/add_exercise_logo.png"
     },
     {
         "merged": "/home/riccardo/.gradle/daemon/7.3.3/com.example.myfitnessapp-merged_res-32:/drawable_ic_baseline_notifications_24.xml.flat",

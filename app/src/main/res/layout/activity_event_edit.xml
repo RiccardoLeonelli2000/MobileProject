@@ -13,7 +13,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="Name:"
-        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textSize="25sp"
         android:textAlignment="center"
         android:textColor="@color/black"/>
 

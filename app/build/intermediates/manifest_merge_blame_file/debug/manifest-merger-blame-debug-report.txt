@@ -62,12 +62,12 @@
 35-->[androidx.core:core:1.7.0] /home/riccardo/.gradle/caches/transforms-3/0c734a8f9451ded3159b05d46fc9a23a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 36        android:debuggable="true"
 37        android:extractNativeLibs="false"
-38        android:icon="@drawable/my_fitness"
-38-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-44
+38        android:icon="@drawable/logo"
+38-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-38
 39        android:label="@string/app_name"
 39-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:21:9-41
-40        android:roundIcon="@drawable/my_fitness"
-40-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-49
+40        android:roundIcon="@drawable/logo"
+40-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-43
 41        android:supportsRtl="true"
 41-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:23:9-35
 42        android:testOnly="true"

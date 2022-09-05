@@ -130,9 +130,9 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/riccardo/.gradle/cach
 	android:label
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:21:9-41
 	android:roundIcon
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-49
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:22:9-43
 	android:icon
-		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-44
+		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:20:9-38
 	android:allowBackup
 		ADDED from /home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:19:9-35
 	android:theme

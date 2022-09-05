@@ -1,6 +1,9 @@
 package com.example.myfitnessapp.Calendar;
 
+import com.example.myfitnessapp.R.*;
+
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.example.myfitnessapp.R;
 
@@ -30,7 +34,7 @@ public class HourAdapter extends ArrayAdapter<HourEvent>
         HourEvent event = getItem(position);
 
         if (convertView == null)
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.hour_cell, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(layout.hour_cell, parent, false);
 
         setHour(convertView, event.time);
         setEvents(convertView, event.events);
@@ -40,15 +44,15 @@ public class HourAdapter extends ArrayAdapter<HourEvent>
 
     private void setHour(View convertView, LocalTime time)
     {
-        TextView timeTV = convertView.findViewById(R.id.timeTV);
+        TextView timeTV = convertView.findViewById(id.timeTV);
         timeTV.setText(CalendarUtils.formattedShortTime(time));
     }
 
     private void setEvents(View convertView, ArrayList<Event> events)
     {
-        TextView event1 = convertView.findViewById(R.id.event1);
-        TextView event2 = convertView.findViewById(R.id.event2);
-        TextView event3 = convertView.findViewById(R.id.event3);
+        TextView event1 = convertView.findViewById(id.event1);
+        TextView event2 = convertView.findViewById(id.event2);
+        TextView event3 = convertView.findViewById(id.event3);
 
         if(events.size() == 0)
         {
@@ -89,6 +93,7 @@ public class HourAdapter extends ArrayAdapter<HourEvent>
     {
         textView.setText(event.getName());
         textView.setVisibility(View.VISIBLE);
+        textView.setTextColor(ContextCompat.getColor(getContext(), color.black));
     }
 
     private void hideEvent(TextView tv)

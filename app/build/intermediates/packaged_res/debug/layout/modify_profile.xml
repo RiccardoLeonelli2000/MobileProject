@@ -18,8 +18,9 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="32dp"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -84,19 +85,27 @@
                 android:text="@string/take_new_image_profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/picture_displayed_imageview" />
+                app:layout_constraintTop_toBottomOf="@+id/imageCard" />
 
-            <ImageView
-                android:id="@+id/picture_displayed_imageview"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="32dp"
-                android:background="@color/white"
-                android:contentDescription="@string/image_captured"
-                android:src="@drawable/ic_baseline_account_circle_24"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/picture_displayed_imageview"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_baseline_account_circle_24" />
+
+            </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/add_exercise_button2"

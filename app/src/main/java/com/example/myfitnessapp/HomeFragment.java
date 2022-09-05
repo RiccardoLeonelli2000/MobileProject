@@ -10,7 +10,6 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,14 +25,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelStoreOwner;
 
 import com.example.myfitnessapp.Calendar.CalendarActivity;
-import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 
-import java.io.IOException;
 import java.text.MessageFormat;
 
 public class HomeFragment extends Fragment {
@@ -59,7 +53,7 @@ public class HomeFragment extends Fragment {
             TextView birthday = view.findViewById(R.id.birthdayTextView);
             username.setText(MessageFormat.format("{0} {1}", sharedPreferences.getString(getString(R.string.nameProfile), "Name"), sharedPreferences.getString(getString(R.string.surnameProfile), "Surname")));
             birthday.setText(sharedPreferences.getString(getString(R.string.dateBirthayProfile), "Birthday date"));
-            String image_path = sharedPreferences.getString(getString(R.string.imageProfile), "ic_baseline_account_circle_24");
+            String image_path = sharedPreferences.getString(getString(R.string.imageProfile), "face");
             if (image_path.contains("ic_")){
                 Drawable drawable = ResourcesCompat.getDrawable(activity.getResources(),
                         R.drawable.ic_baseline_account_circle_24, activity.getTheme());
@@ -97,12 +91,12 @@ public class HomeFragment extends Fragment {
                 }
             });
 
-            CardView gymCard = view.findViewById(R.id.gym_localization_card);
+            CardView gymCard = view.findViewById(R.id.notifications_card);
             gymCard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(activity, MapActivity.class);
-                    startActivity(intent);
+                    Utilities.insertFragment((AppCompatActivity) activity, new NotificationsFragment(),
+                            NotificationsFragment.class.getSimpleName());
                 }
             });
 

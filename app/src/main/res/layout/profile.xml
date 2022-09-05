@@ -35,7 +35,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="3dp"
-            android:src="@drawable/ic_baseline_account_circle_24" />
+            android:src="@drawable/face" />
 
 
     </androidx.cardview.widget.CardView>
@@ -75,7 +75,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/black"
                 app:cardMaxElevation="5dp">
 
                 <LinearLayout
@@ -85,31 +85,22 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_baseline_account_box_24" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Modify Profile"
-                        android:fontFamily="@font/poppins_regular"
-                        android:textAlignment="center"
-                        android:textColor="@color/white" />
+                        android:src="@drawable/modify_profile_logo" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/gym_localization_card"
+                android:id="@+id/notifications_card"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/black"
                 app:cardMaxElevation="5dp">
 
                 <LinearLayout
@@ -119,19 +110,10 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_baseline_gps_fixed_24" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Gym"
-                        android:fontFamily="@font/poppins_regular"
-                        android:textAlignment="center"
-                        android:textColor="@color/white" />
+                        android:src="@drawable/notifications_logo" />
 
                 </LinearLayout>
 
@@ -151,7 +133,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/black"
                 app:cardMaxElevation="5dp">
 
                 <LinearLayout
@@ -161,19 +143,10 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_baseline_calendar_month_24" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/calendar"
-                        android:fontFamily="@font/poppins_regular"
-                        android:textAlignment="center"
-                        android:textColor="@color/white" />
+                        android:src="@drawable/calendar_logo" />
 
                 </LinearLayout>
 
@@ -185,7 +158,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/dark_gray"
+                app:cardBackgroundColor="@color/black"
                 app:cardMaxElevation="5dp">
 
                 <LinearLayout
@@ -195,19 +168,10 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_baseline_dashboard_24" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/title_workouts"
-                        android:fontFamily="@font/poppins_regular"
-                        android:textAlignment="center"
-                        android:textColor="@color/white" />
+                        android:src="@drawable/workouts_logo" />
 
                 </LinearLayout>
 

@@ -11,6 +11,8 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim anim_left_to_right
+anim anim_right_to_left
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -27,6 +29,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim exit_left_to_right
+anim exit_right_to_left
 anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
@@ -2492,6 +2496,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add_exercise_logo
+drawable add_workout
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_calendar
@@ -2504,6 +2510,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable calendar_logo
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -2528,6 +2535,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable details_ex_logo
+drawable face
 drawable fitness
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -2558,6 +2567,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable left
+drawable logo
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2577,6 +2588,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable modify_profile_logo
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2603,6 +2615,7 @@ drawable notification_tile_bg
 drawable notifications_logo
 drawable notify_panel_notification_icon_bg
 drawable presenter
+drawable right
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2718,6 +2731,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
 id buttonPanel
 id button_deleteEx
 id button_deleteN
@@ -2767,6 +2781,7 @@ id coordinator
 id cos
 id counterclockwise
 id cover
+id cover_addworkouts
 id cover_notifications
 id cover_workouts
 id currentState
@@ -2864,7 +2879,6 @@ id group_divider
 id grouping
 id groups
 id guideline
-id gym_localization_card
 id header_title
 id hideable
 id home
@@ -2992,6 +3006,7 @@ id notice_content
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notifications_card
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3538,6 +3553,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string modify_exercise
 string modify_profile
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description

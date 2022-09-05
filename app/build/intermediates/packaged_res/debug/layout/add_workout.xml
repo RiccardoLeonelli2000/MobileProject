@@ -15,6 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/cover_addworkouts"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add_workout"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/workout_name_textinput"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -24,8 +33,8 @@
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="@id/cover_addworkouts"
+                app:layout_constraintTop_toBottomOf="@+id/cover_addworkouts">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/title_workout_edittext"

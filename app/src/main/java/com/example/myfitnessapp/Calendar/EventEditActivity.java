@@ -68,7 +68,7 @@ public class EventEditActivity extends AppCompatActivity
     {
         String eventName = eventNameET.getText().toString();
         Event newEvent = new Event(eventName, CalendarUtils.selectedDate, time);
-        NoticeItem noticeItem = new NoticeItem(eventName+"\nOn date: "+CalendarUtils.selectedDate.toString());
+        NoticeItem noticeItem = new NoticeItem(eventName+"\n\nOn date: "+CalendarUtils.selectedDate.toString());
         Event.eventsList.add(newEvent);
         notificationsViewModel.addNoticeItem(noticeItem);
         finish();

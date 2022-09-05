@@ -46,4 +46,5 @@
     <string name="surnameProfile">surnameProfile</string>
     <string name="dateBirthayProfile">dateBirthayProfile</string>
     <string name="imageProfile">imageProfile</string>
+    <string name="modify_exercise">modify exercise</string>
 </resources>

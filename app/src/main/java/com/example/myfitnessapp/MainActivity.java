@@ -6,9 +6,6 @@ import androidx.annotation.NonNull;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
@@ -20,7 +17,6 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
 import com.example.myfitnessapp.Global.GlobalClass;
@@ -62,14 +58,21 @@ public class MainActivity extends AppCompatActivity{
         Utilities.insertFragment(this, new HomeFragment(), HomeFragment.class.getSimpleName());
 
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_notifications);
-        badgeDrawable.setVisible(true);
+
 
 
         listNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) this).get(ListNotificationsViewModel.class);
         listNotificationsViewModel.getNotificationsList().observe(this, new Observer<List<NoticeItem>>() {
             @Override
             public void onChanged(List<NoticeItem> cardItems) {
-                badgeDrawable.setNumber(cardItems.size());
+                if (cardItems.size()!=0){
+                    badgeDrawable.setVisible(true);
+                    badgeDrawable.setNumber(cardItems.size());
+                }
+                else{
+                    badgeDrawable.setVisible(false);
+                }
+
             }
         });
 
@@ -90,13 +93,16 @@ public class MainActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, homeFragment).commit();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.anim_left_to_right, R.anim.exit_left_to_right)
+                            .setReorderingAllowed(true).replace(R.id.fragment_container_view, homeFragment).commit();
                         return true;
                     case R.id.navigation_workouts:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, workoutsFragment).commit();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.anim_left_to_right, R.anim.exit_left_to_right)
+                                .setReorderingAllowed(true).replace(R.id.fragment_container_view, workoutsFragment).commit();
                         return true;
                     case R.id.navigation_notifications:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view, notificationsFragment).commit();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.anim_left_to_right, R.anim.exit_left_to_right)
+                                .setReorderingAllowed(true).replace(R.id.fragment_container_view, notificationsFragment).commit();
                         return true;
                 }
 
@@ -117,7 +123,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
-        if (item.getItemId() == R.id.gym_localization_card){
+        if (item.getItemId() == R.id.notifications_card){
             Intent intent = new Intent(this, MapActivity.class);
             this.startActivity(intent);
             return true;
