@@ -16,6 +16,7 @@ public class GlobalClass extends Application {
     private int workoutId = 1;
     private int workoutIdSelected = 0;
     private AddNotificationsViewModel addNotificationsViewModel;
+    private int exerciseId;
 
     public int getWorkoutIdSelected() {
         return workoutIdSelected;
@@ -31,5 +32,13 @@ public class GlobalClass extends Application {
 
     public void setAddNotificationsViewModel(AddNotificationsViewModel addNotificationsViewModel) {
         this.addNotificationsViewModel = addNotificationsViewModel;
+    }
+
+    public int getExerciseId() {
+        return exerciseId;
+    }
+
+    public void setExerciseId(int exerciseId) {
+        this.exerciseId = exerciseId;
     }
 }

@@ -6,22 +6,30 @@ import androidx.annotation.NonNull;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import com.example.myfitnessapp.Global.GlobalClass;
 import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
+import com.example.myfitnessapp.PopUp.NewImagePopUp;
 import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 import com.example.myfitnessapp.ViewModel.ListNotificationsViewModel;
 import com.example.myfitnessapp.ViewModel.ListWorkoutViewModel;
@@ -34,7 +42,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
-
+    private int STORAGE_PERMISSION_CODE = 1;
 
     BottomNavigationView bottomNavigationView;
 
@@ -59,6 +67,12 @@ public class MainActivity extends AppCompatActivity{
 
         BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_notifications);
 
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+
+        }
+        else{
+            this.requestStoragePermission();
+        }
 
 
         listNotificationsViewModel = new ViewModelProvider((ViewModelStoreOwner) this).get(ListNotificationsViewModel.class);
@@ -139,6 +153,38 @@ public class MainActivity extends AppCompatActivity{
             if (bundle != null){
                 Bitmap imageBitmap = (Bitmap) bundle.get("data");
                 addNotificationsViewModel.setImageBitmap(imageBitmap);
+            }
+        }
+    }
+
+    public void requestStoragePermission(){
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
+            new AlertDialog.Builder(this).setTitle("Permission Needed").setMessage("This permission is needed").setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
+
+                }
+            }).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            }).create().show();
+        }
+        else{
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == STORAGE_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission GRANDED", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show();
             }
         }
     }

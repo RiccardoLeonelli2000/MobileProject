@@ -2616,6 +2616,7 @@ drawable notifications_logo
 drawable notify_panel_notification_icon_bg
 drawable presenter
 drawable right
+drawable splash_screen
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2731,11 +2732,13 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
 id buttonPanel
 id button_deleteEx
+id button_deleteEx_edit
 id button_deleteN
 id button_deleteW
+id button_modifyEx
+id button_modifyEx_edit
 id cache_measures
 id calendarRecyclerView
 id calendar_card
@@ -3042,6 +3045,7 @@ id recycler_view_workouts
 id reps_details
 id rest_details
 id rest_exercise_edittext
+id rest_exercise_edittext_edit
 id rest_exercise_textinput
 id reverseSawtooth
 id right
@@ -3076,6 +3080,7 @@ id select_dialog_listview
 id selected
 id selection_type
 id sets_exercise_edittext
+id sets_exercise_edittext_edit
 id sets_exercise_textinput
 id sharedValueSet
 id sharedValueUnset
@@ -3167,6 +3172,7 @@ id timeTV
 id title
 id titleDividerNoCustom
 id title_esDetails
+id title_esDetails_edit
 id title_exercise_edittext
 id title_exercise_textinput
 id title_template
@@ -3201,6 +3207,7 @@ id visible
 id visible_removing_fragment_view_tag
 id weights_details
 id weights_exercise_edittext
+id weights_exercise_edittext_edit
 id weights_exercise_textinput
 id west
 id wide
@@ -3313,6 +3320,7 @@ layout abc_tooltip
 layout activity_daily_calendar
 layout activity_event_edit
 layout activity_main
+layout activity_splash_screen
 layout activity_week_view
 layout add_event_calendar
 layout add_exercise
@@ -3364,6 +3372,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout modify_exercise
 layout modify_profile
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions

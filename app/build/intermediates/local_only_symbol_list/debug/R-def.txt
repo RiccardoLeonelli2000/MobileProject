@@ -49,6 +49,7 @@ drawable my_fitness
 drawable notifications_logo
 drawable presenter
 drawable right
+drawable splash_screen
 drawable workouts_logo
 font font
 font poppins_medium
@@ -60,10 +61,12 @@ id app_bar_calendar
 id birthdayTextView
 id birthday_date_edittext
 id birthday_date_textinput
-id button
 id button_deleteEx
+id button_deleteEx_edit
 id button_deleteN
 id button_deleteW
+id button_modifyEx
+id button_modifyEx_edit
 id calendarRecyclerView
 id calendar_card
 id capture_button
@@ -118,9 +121,11 @@ id recycler_view_workouts
 id reps_details
 id rest_details
 id rest_exercise_edittext
+id rest_exercise_edittext_edit
 id rest_exercise_textinput
 id scrollView2
 id sets_exercise_edittext
+id sets_exercise_edittext_edit
 id sets_exercise_textinput
 id surname_edittext
 id surname_textinput
@@ -136,6 +141,7 @@ id textView6
 id textView7
 id timeTV
 id title_esDetails
+id title_esDetails_edit
 id title_exercise_edittext
 id title_exercise_textinput
 id title_workout_edittext
@@ -144,6 +150,7 @@ id toolbar
 id usernameTextView
 id weights_details
 id weights_exercise_edittext
+id weights_exercise_edittext_edit
 id weights_exercise_textinput
 id workout_card
 id workout_imageview
@@ -153,6 +160,7 @@ id workouts_card
 layout activity_daily_calendar
 layout activity_event_edit
 layout activity_main
+layout activity_splash_screen
 layout activity_week_view
 layout add_event_calendar
 layout add_exercise
@@ -170,6 +178,7 @@ layout gym
 layout hour_cell
 layout local
 layout map_activity
+layout modify_exercise
 layout modify_profile
 layout notice_details
 layout notifications

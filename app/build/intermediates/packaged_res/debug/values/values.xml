@@ -31,6 +31,7 @@
     <string name="image_home" translatable="false"/>
     <string name="images_for_exercise">Images for exercise</string>
     <string name="images_for_notice">Immagine Notifica</string>
+    <string name="modify_exercise">modify exercise</string>
     <string name="modify_profile">Modify Profile</string>
     <string name="name">Name</string>
     <string name="nameProfile">nameProfile</string>

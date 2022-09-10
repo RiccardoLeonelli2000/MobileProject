@@ -2615,6 +2615,7 @@ int drawable notifications_logo 0x7f0700c9
 int drawable notify_panel_notification_icon_bg 0x7f0700ca
 int drawable presenter 0x7f0700cb
 int drawable right 0x7f0700d1
+int drawable splash_screen 0x7f0700d3
 int drawable test_custom_background 0x7f0700cc
 int drawable test_level_drawable 0x7f0700cd
 int drawable tooltip_frame_dark 0x7f0700ce
@@ -2730,11 +2731,13 @@ int id bounce 0x7f090067
 int id bounceBoth 0x7f090068
 int id bounceEnd 0x7f090069
 int id bounceStart 0x7f09006a
-int id button 0x7f090250
 int id buttonPanel 0x7f09006b
 int id button_deleteEx 0x7f09006c
+int id button_deleteEx_edit 0x7f090251
 int id button_deleteN 0x7f09006d
 int id button_deleteW 0x7f09006e
+int id button_modifyEx 0x7f090252
+int id button_modifyEx_edit 0x7f090253
 int id cache_measures 0x7f09006f
 int id calendarRecyclerView 0x7f090070
 int id calendar_card 0x7f090071
@@ -3041,6 +3044,7 @@ int id recycler_view_workouts 0x7f09019d
 int id reps_details 0x7f09019e
 int id rest_details 0x7f09019f
 int id rest_exercise_edittext 0x7f0901a0
+int id rest_exercise_edittext_edit 0x7f090258
 int id rest_exercise_textinput 0x7f0901a1
 int id reverseSawtooth 0x7f0901a2
 int id right 0x7f0901a3
@@ -3075,6 +3079,7 @@ int id select_dialog_listview 0x7f0901bf
 int id selected 0x7f0901c0
 int id selection_type 0x7f0901c1
 int id sets_exercise_edittext 0x7f0901c2
+int id sets_exercise_edittext_edit 0x7f090259
 int id sets_exercise_textinput 0x7f0901c3
 int id sharedValueSet 0x7f0901c4
 int id sharedValueUnset 0x7f0901c5
@@ -3166,6 +3171,7 @@ int id timeTV 0x7f09021a
 int id title 0x7f09021b
 int id titleDividerNoCustom 0x7f09021c
 int id title_esDetails 0x7f09021d
+int id title_esDetails_edit 0x7f090256
 int id title_exercise_edittext 0x7f09021e
 int id title_exercise_textinput 0x7f09021f
 int id title_template 0x7f090220
@@ -3200,6 +3206,7 @@ int id visible 0x7f09023c
 int id visible_removing_fragment_view_tag 0x7f09023d
 int id weights_details 0x7f09023e
 int id weights_exercise_edittext 0x7f09023f
+int id weights_exercise_edittext_edit 0x7f09025a
 int id weights_exercise_textinput 0x7f090240
 int id west 0x7f090241
 int id wide 0x7f090242
@@ -3312,6 +3319,7 @@ int layout abc_tooltip 0x7f0c001b
 int layout activity_daily_calendar 0x7f0c001c
 int layout activity_event_edit 0x7f0c001d
 int layout activity_main 0x7f0c001e
+int layout activity_splash_screen 0x7f0c0094
 int layout activity_week_view 0x7f0c001f
 int layout add_event_calendar 0x7f0c0020
 int layout add_exercise 0x7f0c0021
@@ -3363,6 +3371,7 @@ int layout material_time_input 0x7f0c004e
 int layout material_timepicker 0x7f0c004f
 int layout material_timepicker_dialog 0x7f0c0050
 int layout material_timepicker_textinput_display 0x7f0c0051
+int layout modify_exercise 0x7f0c0093
 int layout modify_profile 0x7f0c0052
 int layout mtrl_alert_dialog 0x7f0c0053
 int layout mtrl_alert_dialog_actions 0x7f0c0054

@@ -93,7 +93,6 @@ public class DetailsWorkoutFragment extends Fragment implements OnItemListener {
                             exerciseItemList.add(exerciseItem);
                         }
                     }
-                    System.out.println(exerciseItemList);
                     adapter.setData(exerciseItemList);
                 }
             });

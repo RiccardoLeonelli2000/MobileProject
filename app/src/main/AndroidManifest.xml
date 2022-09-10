@@ -24,7 +24,7 @@
         android:theme="@style/Theme.MyFitnessApp"
         android:name=".Global.GlobalClass">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Calendar.CalendarActivity" android:theme="@style/CalendarTheme"/>
         <activity android:name=".Calendar.WeekViewActivity" android:theme="@style/CalendarTheme"/>
         <activity android:name=".Calendar.EventEditActivity" android:theme="@style/CalendarTheme"/>

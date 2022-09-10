@@ -21,6 +21,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.example.myfitnessapp.Global.GlobalClass;
 import com.example.myfitnessapp.Item.ExerciseItem;
 import com.example.myfitnessapp.Item.WorkoutItem;
 import com.example.myfitnessapp.ViewModel.ListExerciseViewModel;
@@ -54,6 +55,8 @@ public class DetailsExerciseFragment extends Fragment {
         if (activity != null){
             Utilities.setUpToolbar((AppCompatActivity) activity, getString(R.string.title_detailsExercise) );
 
+            GlobalClass globalClass = (GlobalClass) activity.getApplicationContext();
+
             titleView = view.findViewById(R.id.title_esDetails);
             setsView = view.findViewById(R.id.reps_details);
             weightsView = view.findViewById(R.id.weights_details);
@@ -64,6 +67,8 @@ public class DetailsExerciseFragment extends Fragment {
                 @Override
                 public void onChanged(ExerciseItem exerciseItem) {
                     exercise_id = exerciseItem.getId();
+
+                    globalClass.setExerciseId(exercise_id);
 
                     titleView.setText(exerciseItem.getTitle());
                     setsView.setText(exerciseItem.getSets());
@@ -106,7 +111,14 @@ public class DetailsExerciseFragment extends Fragment {
                 }
             });
 
-
+            Button modifyExercise = view.findViewById(R.id.button_modifyEx);
+            modifyExercise.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utilities.insertFragment((AppCompatActivity) activity, new ModifyExerciseFragment(),
+                            ModifyExerciseFragment.class.getSimpleName());
+                }
+            });
 
         }
         else {
