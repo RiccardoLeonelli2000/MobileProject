@@ -107,10 +107,10 @@ public class ModifyProfileFragment extends Fragment {
             SharedPreferences sharedPreferences = activity.getPreferences(Context.MODE_PRIVATE);
 
 
-            String image_path = sharedPreferences.getString(getString(R.string.imageProfile), "ic_baseline_account_circle_24");
+            String image_path = sharedPreferences.getString(getString(R.string.imageProfile), "ic_image_profile_basic");
             if (image_path.contains("ic_")){
                 Drawable drawable = ResourcesCompat.getDrawable(activity.getResources(),
-                        R.drawable.ic_baseline_account_circle_24, activity.getTheme());
+                        R.drawable.image_profile_basic, activity.getTheme());
                 modifyImageView.setImageDrawable(drawable);
             } else {
                 Bitmap bitmap = Utilities.getImageBitmap(activity, Uri.parse(image_path));

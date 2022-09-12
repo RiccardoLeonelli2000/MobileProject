@@ -24,7 +24,7 @@
         android:theme="@style/Theme.MyFitnessApp"
         android:name=".Global.GlobalClass">
         <activity
-            android:name=".SplashActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

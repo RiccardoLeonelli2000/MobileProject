@@ -53,10 +53,10 @@ public class HomeFragment extends Fragment {
             TextView birthday = view.findViewById(R.id.birthdayTextView);
             username.setText(MessageFormat.format("{0} {1}", sharedPreferences.getString(getString(R.string.nameProfile), "Name"), sharedPreferences.getString(getString(R.string.surnameProfile), "Surname")));
             birthday.setText(sharedPreferences.getString(getString(R.string.dateBirthayProfile), "Birthday date"));
-            String image_path = sharedPreferences.getString(getString(R.string.imageProfile), "face");
+            String image_path = sharedPreferences.getString(getString(R.string.imageProfile), "image_profile_basic");
             if (image_path.contains("ic_")){
                 Drawable drawable = ResourcesCompat.getDrawable(activity.getResources(),
-                        R.drawable.ic_baseline_account_circle_24, activity.getTheme());
+                        R.drawable.image_profile_basic, activity.getTheme());
                 imageProfile.setImageDrawable(drawable);
             } else {
                 Bitmap bitmap = Utilities.getImageBitmap(activity, Uri.parse(image_path));

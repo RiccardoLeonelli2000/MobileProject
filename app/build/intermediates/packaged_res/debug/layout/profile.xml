@@ -35,7 +35,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="3dp"
-            android:src="@drawable/face" />
+            android:src="@drawable/image_profile_basic" />
 
 
     </androidx.cardview.widget.CardView>
@@ -44,9 +44,9 @@
         android:id="@+id/usernameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Username"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Username"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
         android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"

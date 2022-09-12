@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity{
 
     public void requestStoragePermission(){
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
-            new AlertDialog.Builder(this).setTitle("Permission Needed").setMessage("This permission is needed").setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            new AlertDialog.Builder(this).setTitle("Permission Needed").setMessage("READ EXTERNAL STORAGE permission is needed").setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);

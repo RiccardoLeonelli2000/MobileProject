@@ -53,13 +53,13 @@
 30-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
 31
 32    <application
-32-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:18:5-50:19
+32-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:18:5-51:19
 33        android:name="com.example.myfitnessapp.Global.GlobalClass"
 33-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:25:9-43
 34        android:allowBackup="true"
 34-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:19:9-35
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.7.0] /home/riccardo/.gradle/caches/transforms-3/0c734a8f9451ded3159b05d46fc9a23a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+35-->[androidx.core:core:1.8.0] /home/riccardo/.gradle/caches/transforms-3/cd33f26b4f6a5be75c2c675ec5e179dc/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 36        android:debuggable="true"
 37        android:extractNativeLibs="false"
 38        android:icon="@drawable/logo"
@@ -75,8 +75,8 @@
 43-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:24:9-50
 44        <activity
 44-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:26:9-34:20
-45            android:name="com.example.myfitnessapp.MainActivity"
-45-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:27:13-41
+45            android:name="com.example.myfitnessapp.SplashScreenActivity"
+45-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:27:13-49
 46            android:exported="true" >
 46-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:28:13-36
 47            <intent-filter>
@@ -90,100 +90,103 @@
 50-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:32:27-74
 51            </intent-filter>
 52        </activity>
-53        <activity
-53-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:9-99
-54            android:name="com.example.myfitnessapp.Calendar.CalendarActivity"
-54-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:19-60
-55            android:theme="@style/CalendarTheme" />
-55-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:61-97
-56        <activity
-56-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:9-99
-57            android:name="com.example.myfitnessapp.Calendar.WeekViewActivity"
-57-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:19-60
-58            android:theme="@style/CalendarTheme" />
-58-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:61-97
-59        <activity
-59-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:9-100
-60            android:name="com.example.myfitnessapp.Calendar.EventEditActivity"
-60-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:19-61
-61            android:theme="@style/CalendarTheme" />
-61-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:62-98
-62        <activity
-62-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:9-104
-63            android:name="com.example.myfitnessapp.Calendar.DailyCalendarActivity"
-63-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:19-65
-64            android:theme="@style/CalendarTheme" />
-64-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:66-102
-65        <activity
-65-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:9-41:20
-66            android:name="com.example.myfitnessapp.PopUp.NewImagePopUp"
-66-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:19-54
-67            android:theme="@style/AppThemeCustomTheme" >
-67-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:55-97
-68        </activity>
-69        <activity android:name="com.example.myfitnessapp.MapActivity" />
-69-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:42:9-49
-69-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:42:19-46
-70
-71        <meta-data
-71-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:43:9-45:69
-72            android:name="com.google.android.gms.version"
-72-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:44:13-58
-73            android:value="@integer/google_play_services_version" />
-73-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:45:13-66
-74        <meta-data
-74-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:47:9-49:71
-75            android:name="com.google.android.geo.API_KEY"
-75-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:48:13-58
-76            android:value="AIzaSyAPYU1BtiKkqSjv9S0tj7xml9zPZRkb0ik" />
-76-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:49:13-68
-77        <!-- Needs to be explicitly declared on P+ -->
-78        <uses-library
-78-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
-79            android:name="org.apache.http.legacy"
-79-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
-80            android:required="false" />
-80-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
-81
-82        <activity
-82-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-83            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-83-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-84            android:exported="false"
-84-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-85            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-85-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-86
-87        <service
-87-->[androidx.room:room-runtime:2.4.2] /home/riccardo/.gradle/caches/transforms-3/4a3b5f33337ded1b81c553095eeef74a/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
-88            android:name="androidx.room.MultiInstanceInvalidationService"
-88-->[androidx.room:room-runtime:2.4.2] /home/riccardo/.gradle/caches/transforms-3/4a3b5f33337ded1b81c553095eeef74a/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
-89            android:directBootAware="true"
-89-->[androidx.room:room-runtime:2.4.2] /home/riccardo/.gradle/caches/transforms-3/4a3b5f33337ded1b81c553095eeef74a/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
-90            android:exported="false" />
-90-->[androidx.room:room-runtime:2.4.2] /home/riccardo/.gradle/caches/transforms-3/4a3b5f33337ded1b81c553095eeef74a/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
-91
-92        <provider
-92-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-93            android:name="androidx.startup.InitializationProvider"
-93-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-94            android:authorities="com.example.myfitnessapp.androidx-startup"
-94-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-95            android:exported="false" >
-95-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-96            <meta-data
-96-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-97-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-98                android:value="androidx.startup" />
-98-->[androidx.emoji2:emoji2:1.0.0] /home/riccardo/.gradle/caches/transforms-3/9cb5d0b2fd275b8005e0d8fda37c4df6/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-99            <meta-data
-99-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/riccardo/.gradle/caches/transforms-3/8eef53d9995d138e5396bc0361630197/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-100-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/riccardo/.gradle/caches/transforms-3/8eef53d9995d138e5396bc0361630197/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-101                android:value="androidx.startup" />
-101-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/riccardo/.gradle/caches/transforms-3/8eef53d9995d138e5396bc0361630197/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-102        </provider>
-103    </application>
-104
-105</manifest>
+53        <activity android:name="com.example.myfitnessapp.MainActivity" />
+53-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:9-49
+53-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:35:19-47
+54        <activity
+54-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:9-99
+55            android:name="com.example.myfitnessapp.Calendar.CalendarActivity"
+55-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:19-60
+56            android:theme="@style/CalendarTheme" />
+56-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:36:61-97
+57        <activity
+57-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:9-99
+58            android:name="com.example.myfitnessapp.Calendar.WeekViewActivity"
+58-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:19-60
+59            android:theme="@style/CalendarTheme" />
+59-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:37:61-97
+60        <activity
+60-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:9-100
+61            android:name="com.example.myfitnessapp.Calendar.EventEditActivity"
+61-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:19-61
+62            android:theme="@style/CalendarTheme" />
+62-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:38:62-98
+63        <activity
+63-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:9-104
+64            android:name="com.example.myfitnessapp.Calendar.DailyCalendarActivity"
+64-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:19-65
+65            android:theme="@style/CalendarTheme" />
+65-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:39:66-102
+66        <activity
+66-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:40:9-42:20
+67            android:name="com.example.myfitnessapp.PopUp.NewImagePopUp"
+67-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:40:19-54
+68            android:theme="@style/AppThemeCustomTheme" >
+68-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:40:55-97
+69        </activity>
+70        <activity android:name="com.example.myfitnessapp.MapActivity" />
+70-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:43:9-49
+70-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:43:19-46
+71
+72        <meta-data
+72-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:44:9-46:69
+73            android:name="com.google.android.gms.version"
+73-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:45:13-58
+74            android:value="@integer/google_play_services_version" />
+74-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:46:13-66
+75        <meta-data
+75-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:48:9-50:71
+76            android:name="com.google.android.geo.API_KEY"
+76-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:49:13-58
+77            android:value="AIzaSyAPYU1BtiKkqSjv9S0tj7xml9zPZRkb0ik" />
+77-->/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/AndroidManifest.xml:50:13-68
+78        <!-- Needs to be explicitly declared on P+ -->
+79        <uses-library
+79-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+80            android:name="org.apache.http.legacy"
+80-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+81            android:required="false" />
+81-->[com.google.android.gms:play-services-maps:18.1.0] /home/riccardo/.gradle/caches/transforms-3/1b3b113de29989e5f158bf236441b103/transformed/play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+82
+83        <activity
+83-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+84            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+84-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+85            android:exported="false"
+85-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+86            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+86-->[com.google.android.gms:play-services-base:18.0.1] /home/riccardo/.gradle/caches/transforms-3/f0ff57dd6ae16d6002dfd7bacfd458a4/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+87
+88        <service
+88-->[androidx.room:room-runtime:2.4.3] /home/riccardo/.gradle/caches/transforms-3/40ebcf943379640a4578cd0ad69ab190/transformed/room-runtime-2.4.3/AndroidManifest.xml:25:9-28:40
+89            android:name="androidx.room.MultiInstanceInvalidationService"
+89-->[androidx.room:room-runtime:2.4.3] /home/riccardo/.gradle/caches/transforms-3/40ebcf943379640a4578cd0ad69ab190/transformed/room-runtime-2.4.3/AndroidManifest.xml:26:13-74
+90            android:directBootAware="true"
+90-->[androidx.room:room-runtime:2.4.3] /home/riccardo/.gradle/caches/transforms-3/40ebcf943379640a4578cd0ad69ab190/transformed/room-runtime-2.4.3/AndroidManifest.xml:27:13-43
+91            android:exported="false" />
+91-->[androidx.room:room-runtime:2.4.3] /home/riccardo/.gradle/caches/transforms-3/40ebcf943379640a4578cd0ad69ab190/transformed/room-runtime-2.4.3/AndroidManifest.xml:28:13-37
+92
+93        <provider
+93-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+94            android:name="androidx.startup.InitializationProvider"
+94-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+95            android:authorities="com.example.myfitnessapp.androidx-startup"
+95-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+96            android:exported="false" >
+96-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+97            <meta-data
+97-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+98                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+98-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+99                android:value="androidx.startup" />
+99-->[androidx.emoji2:emoji2:1.2.0] /home/riccardo/.gradle/caches/transforms-3/112a099502228b2b317b1c79d5f085b0/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+100            <meta-data
+100-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/riccardo/.gradle/caches/transforms-3/7cfe2704946b18bb678666b3953b74c4/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+101                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+101-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/riccardo/.gradle/caches/transforms-3/7cfe2704946b18bb678666b3953b74c4/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+102                android:value="androidx.startup" />
+102-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/riccardo/.gradle/caches/transforms-3/7cfe2704946b18bb678666b3953b74c4/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+103        </provider>
+104    </application>
+105
+106</manifest>

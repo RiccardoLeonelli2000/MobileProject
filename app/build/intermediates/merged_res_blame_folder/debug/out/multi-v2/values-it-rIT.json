@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myfitnessapp-mergeDebugResources-30:/values-it-rIT/values-it-rIT.xml",
+            "outputFile": "com.example.myfitnessapp-mergeDebugResources-34:/values-it-rIT/values-it-rIT.xml",
             "map": [
                 {
                     "source": "/home/riccardo/AndroidStudioProjects/MobileProject/app/src/main/res/values-it-rIT/strings.xml",

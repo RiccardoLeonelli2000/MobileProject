@@ -2567,6 +2567,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable image_profile_basic
 drawable left
 drawable logo
 drawable m3_appbar_background
@@ -2616,6 +2617,7 @@ drawable notifications_logo
 drawable notify_panel_notification_icon_bg
 drawable presenter
 drawable right
+drawable splash_logo
 drawable splash_screen
 drawable test_custom_background
 drawable test_level_drawable
@@ -2781,6 +2783,7 @@ id content_noticeDetails
 id contiguous
 id continuousVelocity
 id coordinator
+id coordinatorLayout2
 id cos
 id counterclockwise
 id cover
@@ -2904,10 +2907,6 @@ id info
 id invisible
 id inward
 id italic
-id item1
-id item2
-id item3
-id item4
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -3201,6 +3200,7 @@ id vertical_only
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
+id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
@@ -3439,8 +3439,6 @@ layout top_app_bar
 layout workout_details
 layout workouts
 menu bottom_nav_menu
-menu example_menu
-menu example_menu2
 menu top_app_bar_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

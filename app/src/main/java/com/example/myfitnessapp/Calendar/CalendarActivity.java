@@ -16,17 +16,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myfitnessapp.Item.NoticeItem;
 import com.example.myfitnessapp.MainActivity;
 import com.example.myfitnessapp.MapActivity;
 import com.example.myfitnessapp.R;
+import com.example.myfitnessapp.ViewModel.AddNotificationsViewModel;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class CalendarActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
+    private AddNotificationsViewModel notificationsViewModel;
 
 
     @Override
@@ -37,6 +41,15 @@ public class CalendarActivity extends AppCompatActivity implements CalendarAdapt
         initWidgets();
         CalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
+        notificationsViewModel = new AddNotificationsViewModel(getApplication());
+
+        if (Event.eventsList.size() == 0){
+            String eventName = "Start Gym card";
+            Event newEvent = new Event(eventName, LocalDate.ofYearDay(2023,23), LocalTime.of(18,40,40,1));
+            NoticeItem noticeItem = new NoticeItem(eventName+"\n\nOn date: "+CalendarUtils.selectedDate.toString());
+            Event.eventsList.add(newEvent);
+        }
+
 
     }
 

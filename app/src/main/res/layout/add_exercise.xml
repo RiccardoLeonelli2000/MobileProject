@@ -41,7 +41,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name_exercise"
-                    android:imeOptions="flagNoExtractUi" />
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -62,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/sets"
                     android:imeOptions="flagNoExtractUi"
-                    android:inputType="date"/>
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/weights"
                     android:imeOptions="flagNoExtractUi"
-                    android:inputType="date" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -105,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/rest"
                     android:imeOptions="flagNoExtractUi"
-                    android:inputType="date" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

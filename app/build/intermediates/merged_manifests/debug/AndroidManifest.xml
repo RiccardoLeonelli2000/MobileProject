@@ -42,7 +42,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyFitnessApp" >
         <activity
-            android:name="com.example.myfitnessapp.MainActivity"
+            android:name="com.example.myfitnessapp.SplashScreenActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +50,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.myfitnessapp.MainActivity" />
         <activity
             android:name="com.example.myfitnessapp.Calendar.CalendarActivity"
             android:theme="@style/CalendarTheme" />

@@ -41,6 +41,7 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
+drawable image_profile_basic
 drawable left
 drawable logo
 drawable manubrio
@@ -49,6 +50,7 @@ drawable my_fitness
 drawable notifications_logo
 drawable presenter
 drawable right
+drawable splash_logo
 drawable splash_screen
 drawable workouts_logo
 font font
@@ -73,6 +75,7 @@ id capture_button
 id cellDayText
 id choose_photo
 id content_noticeDetails
+id coordinatorLayout2
 id cover
 id cover_addworkouts
 id cover_notifications
